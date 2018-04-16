@@ -1,4 +1,5 @@
 package br.com.involves.selecao.controlador;
 
-public interface Controlador {
+public interface Controlador<T> {
+    T leia();
 }
