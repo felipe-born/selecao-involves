@@ -10,7 +10,7 @@ public class ControladorDeParametros implements Controlador<ParametrosAplicacao>
         this.parametros = parametros;
     }
 
-    public ParametrosAplicacao leia() {
+    public ParametrosAplicacao controle() {
         return null;
     }
 }
