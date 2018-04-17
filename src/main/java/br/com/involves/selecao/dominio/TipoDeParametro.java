@@ -3,7 +3,7 @@ package br.com.involves.selecao.dominio;
 public enum TipoDeParametro {
 
     PARAMETRO_ARQUIVO("--file=", "cidades.csv"),
-    PARAMETRO_IGNORAR_ERROS("--skipErros=", "false");
+    PARAMETRO_IGNORAR_ERROS("--ignorarErros=", "false");
 
 
     private String argumento;

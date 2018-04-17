@@ -1,8 +1,8 @@
 package br.com.involves.selecao.model;
 
 public class ParametrosAplicacao {
-    private String arquivo;
-    private boolean ignorarErrosDasLinhas;
+    private final String arquivo;
+    private final boolean ignorarErrosDasLinhas;
 
     public ParametrosAplicacao(String arquivo, boolean ignorarErrosDasLinhas) {
 
@@ -16,5 +16,13 @@ public class ParametrosAplicacao {
                 "arquivo='" + arquivo + '\'' +
                 ", ignorarErrosDasLinhas=" + ignorarErrosDasLinhas +
                 '}';
+    }
+
+    public String getArquivo() {
+        return arquivo;
+    }
+
+    public boolean isIgnorarErrosDasLinhas() {
+        return ignorarErrosDasLinhas;
     }
 }

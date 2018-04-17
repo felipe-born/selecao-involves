@@ -7,7 +7,7 @@ public class InvolvesApp {
 
     private ParametrosAplicacao parametrosAplicacao;
 
-    public InvolvesApp(String[] args) {
+    public InvolvesApp(String... args) {
         if(args == null)
             args = new String[0];
         parametrosAplicacao = new ControladorDeParametrosFactory()
@@ -21,5 +21,13 @@ public class InvolvesApp {
         System.out.println("========================Involves APP========================");
         System.out.println("==========Felipe Born de Jesus __ Futuro Involvido==========");
         System.out.println(parametrosAplicacao);
+    }
+
+    public String getParametroArquivo() {
+        return parametrosAplicacao.getArquivo();
+    }
+
+    public boolean getParametroIgnorarErroDasLinhas() {
+        return parametrosAplicacao.isIgnorarErrosDasLinhas();
     }
 }

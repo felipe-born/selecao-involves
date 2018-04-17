@@ -22,13 +22,15 @@ public class ControladorDeParametrosAplicacao implements Controlador<ParametrosA
     private void lidaComParametrosInexistentes() {
         parametros
                 .stream()
+                .map(argumento -> argumento.substring(0, argumento.indexOf("=")+1))
                 .filter(argumento -> TipoDeParametro.getTipo(argumento) == null)
                 .forEach(argumento -> System.out.println("Argumento inexistente: " + argumento));
     }
 
     private ParametrosAplicacao geraParametrosAplicacao() {
         String arquivo = getValorDoParametro(TipoDeParametro.PARAMETRO_ARQUIVO);
-        boolean ignorarErro = Boolean.getBoolean(getValorDoParametro(TipoDeParametro.PARAMETRO_IGNORAR_ERROS));
+        String valorDoParametro = getValorDoParametro(TipoDeParametro.PARAMETRO_IGNORAR_ERROS);
+        boolean ignorarErro = Boolean.parseBoolean(valorDoParametro);
 
         return new ParametrosAplicacao(arquivo, ignorarErro);
     }
