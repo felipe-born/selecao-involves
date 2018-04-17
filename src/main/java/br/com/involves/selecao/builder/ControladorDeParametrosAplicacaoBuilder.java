@@ -12,7 +12,7 @@ public class ControladorDeParametrosAplicacaoBuilder implements Builder<Controla
     private ControladorDeAlertas controladorDeAlertas;
 
     public ControladorDeParametrosAplicacaoBuilder comParametros(String[] parametros) {
-        this.parametros = parametros;
+        this.parametros = parametros == null ? new String[0] : parametros;
         return this;
     }
 

@@ -1,6 +1,8 @@
 package br.com.involves.selecao.principal;
 
+import br.com.involves.selecao.controlador.ControladorDaAplicacao;
 import br.com.involves.selecao.controlador.ControladorDeAlertas;
+import br.com.involves.selecao.fabrica.ControladorDaAplicacaoFactory;
 import br.com.involves.selecao.fabrica.ControladorDeAlertasFactory;
 import br.com.involves.selecao.fabrica.ControladorDeParametrosFactory;
 import br.com.involves.selecao.model.Alerta;
@@ -12,10 +14,10 @@ public class InvolvesApp {
 
     private ParametrosAplicacao parametrosAplicacao;
     private ControladorDeAlertas controladorDeAlertas;
+    private ControladorDaAplicacao controladorDaAplicacao;
+
 
     public InvolvesApp(String... args) {
-        if (args == null)
-            args = new String[0];
         controladorDeAlertas = new ControladorDeAlertasFactory()
                 .getControladorDeAlertas()
                 .build();
@@ -25,12 +27,17 @@ public class InvolvesApp {
                 .comParametros(args)
                 .build()
                 .controle();
+        controladorDaAplicacao = new ControladorDaAplicacaoFactory()
+                .getControladorDaAplicacao()
+                .comControladorDeAlertas(controladorDeAlertas)
+                .comParametros(parametrosAplicacao)
+                .build();
     }
 
     public void run() {
-        System.out.println("========================Involves APP========================");
-        System.out.println("==========Felipe Born de Jesus __ Futuro Involvido==========");
-        System.out.println(parametrosAplicacao);
+        System.out.println("======================== Involves APP ========================");
+        System.out.println("========== Felipe Born de Jesus __ Futuro Involvido ==========");
+        controladorDaAplicacao.inicializaAplicacao();
     }
 
     public String getParametroArquivo() {

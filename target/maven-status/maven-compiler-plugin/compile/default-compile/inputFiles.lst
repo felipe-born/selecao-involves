@@ -1,0 +1,8 @@
+/home/desenvolvimento/projetos/involves/selecao-involves/src/main/java/br/com/involves/selecao/model/ParametrosAplicacao.java
+/home/desenvolvimento/projetos/involves/selecao-involves/src/main/java/br/com/involves/selecao/builder/ControladorDeParametrosAplicacaoBuilder.java
+/home/desenvolvimento/projetos/involves/selecao-involves/src/main/java/br/com/involves/selecao/fabrica/ControladorDeParametrosFactory.java
+/home/desenvolvimento/projetos/involves/selecao-involves/src/main/java/br/com/involves/selecao/principal/Programa.java
+/home/desenvolvimento/projetos/involves/selecao-involves/src/main/java/br/com/involves/selecao/dominio/TipoDeParametro.java
+/home/desenvolvimento/projetos/involves/selecao-involves/src/main/java/br/com/involves/selecao/controlador/ControladorDeParametrosAplicacao.java
+/home/desenvolvimento/projetos/involves/selecao-involves/src/main/java/br/com/involves/selecao/principal/InvolvesApp.java
+/home/desenvolvimento/projetos/involves/selecao-involves/src/main/java/br/com/involves/selecao/controlador/Controlador.java

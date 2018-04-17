@@ -10,19 +10,19 @@ public class ParametrosAplicacao {
         this.ignorarErrosDasLinhas = ignorarErrosDasLinhas;
     }
 
-    @Override
-    public String toString() {
-        return "ParametrosAplicacao{" +
-                "arquivo='" + arquivo + '\'' +
-                ", ignorarErrosDasLinhas=" + ignorarErrosDasLinhas +
-                '}';
-    }
-
     public String getArquivo() {
         return arquivo;
     }
 
     public boolean isIgnorarErrosDasLinhas() {
         return ignorarErrosDasLinhas;
+    }
+
+    @Override
+    public String toString() {
+        return "ParametrosAplicacao{" +
+                "arquivo='" + arquivo + '\'' +
+                ", ignorarErrosDasLinhas=" + ignorarErrosDasLinhas +
+                '}';
     }
 }
