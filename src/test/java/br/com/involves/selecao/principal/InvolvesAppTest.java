@@ -1,12 +1,15 @@
 package br.com.involves.selecao.principal;
 
 import br.com.involves.selecao.dominio.TipoDeParametro;
+import br.com.involves.selecao.model.Alerta;
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
 
-public class InvolvesAppTeste {
+public class InvolvesAppTest {
 
     @Test
     public void testConstrutorInvolveAppSemParametros() {
@@ -31,6 +34,12 @@ public class InvolvesAppTeste {
 
     @Test
     public void testConstrutorInvolveComParametrosInvalidos() {
+        InvolvesApp involvesApp = new InvolvesApp("--parametroEstranho=olá");
+        List<Alerta> alertas = involvesApp.getAlertas();
+
+        assertEquals(1, alertas.size());
+
+        expectDefaultParamsValues(involvesApp);
     }
 
     private void expectDefaultParamsValues(InvolvesApp involvesApp) {

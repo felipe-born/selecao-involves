@@ -1,17 +1,27 @@
 package br.com.involves.selecao.principal;
 
+import br.com.involves.selecao.controlador.ControladorDeAlertas;
+import br.com.involves.selecao.fabrica.ControladorDeAlertasFactory;
 import br.com.involves.selecao.fabrica.ControladorDeParametrosFactory;
+import br.com.involves.selecao.model.Alerta;
 import br.com.involves.selecao.model.ParametrosAplicacao;
+
+import java.util.List;
 
 public class InvolvesApp {
 
     private ParametrosAplicacao parametrosAplicacao;
+    private ControladorDeAlertas controladorDeAlertas;
 
     public InvolvesApp(String... args) {
-        if(args == null)
+        if (args == null)
             args = new String[0];
+        controladorDeAlertas = new ControladorDeAlertasFactory()
+                .getControladorDeAlertas()
+                .build();
         parametrosAplicacao = new ControladorDeParametrosFactory()
                 .getControladorDeParametros()
+                .comControladorDeAlertas(controladorDeAlertas)
                 .comParametros(args)
                 .build()
                 .controle();
@@ -29,5 +39,9 @@ public class InvolvesApp {
 
     public boolean getParametroIgnorarErroDasLinhas() {
         return parametrosAplicacao.isIgnorarErrosDasLinhas();
+    }
+
+    public List<Alerta> getAlertas() {
+        return controladorDeAlertas.getAlertas();
     }
 }
