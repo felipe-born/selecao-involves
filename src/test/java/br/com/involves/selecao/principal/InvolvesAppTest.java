@@ -1,7 +1,7 @@
 package br.com.involves.selecao.principal;
 
 import br.com.involves.selecao.dominio.TipoDeParametro;
-import br.com.involves.selecao.model.Alerta;
+import br.com.involves.selecao.modelo.Alerta;
 import org.junit.Test;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package br.com.involves.selecao.controlador;
 
-import br.com.involves.selecao.model.Alerta;
+import br.com.involves.selecao.modelo.Alerta;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

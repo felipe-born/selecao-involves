@@ -2,7 +2,7 @@ package br.com.involves.selecao.builder;
 
 import br.com.involves.selecao.controlador.ControladorDaAplicacao;
 import br.com.involves.selecao.controlador.ControladorDeAlertas;
-import br.com.involves.selecao.model.ParametrosAplicacao;
+import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import javafx.util.Builder;
 
 public class ControladorDaAplicacaoBuilder implements Builder<ControladorDaAplicacao> {

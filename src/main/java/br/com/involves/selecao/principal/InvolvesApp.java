@@ -5,8 +5,8 @@ import br.com.involves.selecao.controlador.ControladorDeAlertas;
 import br.com.involves.selecao.fabrica.ControladorDaAplicacaoFactory;
 import br.com.involves.selecao.fabrica.ControladorDeAlertasFactory;
 import br.com.involves.selecao.fabrica.ControladorDeParametrosFactory;
-import br.com.involves.selecao.model.Alerta;
-import br.com.involves.selecao.model.ParametrosAplicacao;
+import br.com.involves.selecao.modelo.Alerta;
+import br.com.involves.selecao.modelo.ParametrosAplicacao;
 
 import java.util.List;
 

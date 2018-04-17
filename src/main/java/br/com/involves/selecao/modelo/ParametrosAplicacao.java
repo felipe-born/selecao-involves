@@ -1,4 +1,4 @@
-package br.com.involves.selecao.model;
+package br.com.involves.selecao.modelo;
 
 public class ParametrosAplicacao {
     private final String arquivo;

@@ -1,4 +1,4 @@
-package br.com.involves.selecao.model;
+package br.com.involves.selecao.modelo;
 
 import java.time.LocalDateTime;
 

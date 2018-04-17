@@ -1,7 +1,7 @@
 package br.com.involves.selecao.controlador;
 
 import br.com.involves.selecao.dominio.TipoDeParametro;
-import br.com.involves.selecao.model.ParametrosAplicacao;
+import br.com.involves.selecao.modelo.ParametrosAplicacao;
 
 import java.util.Arrays;
 import java.util.List;
