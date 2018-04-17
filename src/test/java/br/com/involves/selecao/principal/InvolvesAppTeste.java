@@ -2,16 +2,16 @@ package br.com.involves.selecao.principal;
 
 import org.junit.Test;
 
-public class InvolveAppTeste {
+public class InvolvesAppTeste {
 
     @Test
     public void testConstrutorInvolveAppSemParametros() {
-        InvolveApp app = new InvolveApp(new String[0]);
+        new InvolvesApp(new String[0]);
     }
 
     @Test
     public void testConstrutorInvolveAppComParametroNull() {
-        InvolveApp app = new InvolveApp(null);
+        new InvolvesApp(null);
     }
 
 }

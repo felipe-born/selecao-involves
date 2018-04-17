@@ -8,7 +8,7 @@ public class Programa {
      * @param args
      */
     public static void main(String[] args) {
-        InvolveApp app = new InvolveApp(args);
+        InvolvesApp app = new InvolvesApp(args);
         app.run();
     }
 }

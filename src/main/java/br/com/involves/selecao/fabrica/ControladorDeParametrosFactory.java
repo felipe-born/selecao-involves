@@ -1,10 +1,10 @@
 package br.com.involves.selecao.fabrica;
 
-import br.com.involves.selecao.builder.ControladorDeParametrosBuilder;
+import br.com.involves.selecao.builder.ControladorDeParametrosAplicacaoBuilder;
 
 public class ControladorDeParametrosFactory {
 
-    public ControladorDeParametrosBuilder getControladorDeParametros() {
-        return new ControladorDeParametrosBuilder();
+    public ControladorDeParametrosAplicacaoBuilder getControladorDeParametros() {
+        return new ControladorDeParametrosAplicacaoBuilder();
     }
 }
