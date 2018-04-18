@@ -4,7 +4,10 @@ import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.modelo.ArquivoDeLeitura;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -24,14 +27,16 @@ public class LeitorDeArquivo {
 
 
     public List<EntidadeDeLeitura> leia() throws LeituraDeArquivoException {
-        try (Stream<String> stream = Files.lines(Paths.get(arquivo.getCaminhoArquivo()))) {
+        InputStream inputStream = arquivo.getInputStream();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+        try (Stream<String> stream = bufferedReader.lines()) {
             List<EntidadeDeLeitura> entidadesDeLeitura = stream
                     .map(conteudo -> linhaHandler.lidarCom(conteudo))
                     .collect(Collectors.toList());
             return entidadesDeLeitura;
-
-        } catch (IOException exception) {
-            throw new LeituraDeArquivoException(exception);
+        } catch (Exception e) {
+            throw new LeituraDeArquivoException(e);
         }
     }
 }

@@ -1,12 +1,18 @@
 package br.com.involves.selecao.builder;
 
+import br.com.involves.selecao.dominio.TipoDeParametro;
 import br.com.involves.selecao.modelo.ArquivoDeLeitura;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import javafx.util.Builder;
 
+import java.io.*;
+import java.net.URL;
+import java.util.stream.Collectors;
+
 public class ArquivoDeLeituraBuilder implements Builder<ArquivoDeLeitura> {
     private String arquivo;
     private ParametrosAplicacao parametrosAplicacao;
+    private InputStream inputStream;
 
 
     public ArquivoDeLeituraBuilder(ParametrosAplicacao parametrosAplicacao) {
@@ -14,24 +20,31 @@ public class ArquivoDeLeituraBuilder implements Builder<ArquivoDeLeitura> {
     }
 
 
-    public ArquivoDeLeituraBuilder comArquivo(String arquivo) {
-        this.arquivo = isArquivoDefault(arquivo) ? getCaminhoArquivoDoResource(arquivo) : arquivo;
+    public ArquivoDeLeituraBuilder comArquivo(String arquivo) throws FileNotFoundException {
+        this.arquivo = arquivo;
+        this.inputStream = getInputStream(arquivo);
         return this;
     }
 
-    private String getCaminhoArquivoDoResource(String arquivo) {
-        ClassLoader classLoader = getClass().getClassLoader();
-        String caminhoArquivo = classLoader.getResource(arquivo).getFile();
+    private InputStream getInputStream(String arquivo) throws FileNotFoundException {
+        return isArquivoDefault(arquivo) ?
+                getResourceStreamDo(arquivo)
+                : new FileInputStream(arquivo);
+    }
 
-        return caminhoArquivo;
+    private InputStream getResourceStreamDo(String arquivo) {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream resourceAsStream = classLoader.getResourceAsStream(arquivo);
+
+        return resourceAsStream;
     }
 
     private boolean isArquivoDefault(String arquivo) {
-        return parametrosAplicacao.getArquivo().equals(arquivo);
+        return TipoDeParametro.PARAMETRO_ARQUIVO.getValorPadrao().equals(arquivo);
     }
 
     @Override
     public ArquivoDeLeitura build() {
-        return new ArquivoDeLeitura(arquivo);
+        return new ArquivoDeLeitura(arquivo, inputStream);
     }
 }

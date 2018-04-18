@@ -7,6 +7,8 @@ import br.com.involves.selecao.modelo.ArquivoDeLeitura;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import javafx.util.Builder;
 
+import java.io.FileNotFoundException;
+
 public class LeitorDeArquivoBuilder implements Builder<LeitorDeArquivo> {
 
     private ArquivoDeLeitura arquivo;
@@ -17,7 +19,7 @@ public class LeitorDeArquivoBuilder implements Builder<LeitorDeArquivo> {
         this.parametrosAplicacao = parametrosAplicacao;
     }
 
-    public LeitorDeArquivoBuilder doArquivo(String arquivo) {
+    public LeitorDeArquivoBuilder doArquivo(String arquivo) throws FileNotFoundException {
         this.arquivo = new ArquivoDeLeituraBuilder(parametrosAplicacao)
                 .comArquivo(arquivo)
                 .build();

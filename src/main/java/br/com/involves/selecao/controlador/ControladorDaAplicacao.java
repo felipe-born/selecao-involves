@@ -9,6 +9,7 @@ import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import br.com.involves.selecao.validador.ValidadorDeParametrosAplicacao;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,9 +31,9 @@ public class ControladorDaAplicacao {
     public void inicializaAplicacao() {
 
         validaParametrosAplicacao();
-        inicializaLeitorDeArquivo();
         List<EntidadeDeLeitura> entidadesDeLeitura = new ArrayList<>();
         try {
+            inicializaLeitorDeArquivo();
             entidadesDeLeitura = leitorDeArquivo.leia();
         } catch (LeituraDeArquivoException e) {
             e.printStackTrace();
@@ -42,11 +43,15 @@ public class ControladorDaAplicacao {
 
     }
 
-    private void inicializaLeitorDeArquivo() {
-        leitorDeArquivo = new LeitorDeArquivoFactory()
-                .getLeitorDeArquivo(parametrosAplicacao)
-                .doArquivo(parametrosAplicacao.getArquivo())
-                .build();
+    private void inicializaLeitorDeArquivo() throws LeituraDeArquivoException {
+        try {
+            leitorDeArquivo = new LeitorDeArquivoFactory()
+                    .getLeitorDeArquivo(parametrosAplicacao)
+                    .doArquivo(parametrosAplicacao.getArquivo())
+                    .build();
+        } catch (FileNotFoundException ex) {
+            throw new LeituraDeArquivoException(ex);
+        }
     }
 
     private void validaParametrosAplicacao() {
