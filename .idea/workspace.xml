@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="575db639-2c7d-466e-b357-9eca971cb126" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ControladorDeInterfaceDeUsuarioBuilder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeEntrada.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/fabrica/ControladorDeInterfaceDeUsuarioFactory.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeComando.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/AjudaHandler.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ComandoHandler.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ComandoNaoDefinidoHandler.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ExitHandler.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDaAplicacao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDaAplicacao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,38 +43,76 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControladorDeInterfaceDeUsuarioFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/fabrica/ControladorDeInterfaceDeUsuarioFactory.java">
+      <file leaf-file-name="ControladorDeInterfaceDeUsuario.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoDeComando.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeComando.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1144#1145#0" expanded="true" />
+                <element signature="e#1183#1184#0" expanded="true" />
+                <element signature="e#1225#1226#0" expanded="true" />
+                <element signature="e#1255#1256#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComandoNaoDefinidoHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ComandoNaoDefinidoHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#159#160#0" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExitHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ExitHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControladorDeInterfaceDeUsuarioBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ControladorDeInterfaceDeUsuarioBuilder.java">
+      <file leaf-file-name="AjudaHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/AjudaHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+            <state relative-caret-position="85">
+              <caret line="5" column="79" lean-forward="false" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#725#726#0" expanded="true" />
+                <element signature="e#146#147#0" expanded="true" />
+                <element signature="e#235#236#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControladorDeInterfaceDeUsuario.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java">
+      <file leaf-file-name="ComandoHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ComandoHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeEntrada.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+              <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,8 +160,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -151,12 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ControladorDeParametrosBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/principal/InvolveApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TiposDeParametro.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/iu/Saida.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeParametro.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/principal/InvolvesAppTeste.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -202,6 +234,12 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeEntrada.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/Comando.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ComandoHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ExitHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/AjudaHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ComandoNaoDefinidoHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeComando.java" />
       </list>
     </option>
   </component>
@@ -398,11 +436,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.involves.selecao.modelo" />
       <recent name="br.com.involves.selecao.entrada_saida.usuario" />
       <recent name="br.com.involves.selecao.controlador" />
       <recent name="br.com.involves.selecao.builder" />
       <recent name="br.com.involves.selecao.fabrica" />
-      <recent name="br.com.involves.selecao.excecao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -563,7 +601,7 @@
       <workItem from="1523965343448" duration="17801000" />
       <workItem from="1523997065982" duration="2773000" />
       <workItem from="1524053684054" duration="4687000" />
-      <workItem from="1524076603523" duration="6963000" />
+      <workItem from="1524076603523" duration="8048000" />
     </task>
     <servers />
   </component>
@@ -600,11 +638,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35711000" />
+    <option name="totallyTimeSpent" value="36796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="1" width="1924" height="1085" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -629,7 +666,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39959016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39959016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -651,48 +688,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeParametro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="e#421#422#0" expanded="false" />
-            <element signature="e#453#454#0" expanded="false" />
-            <element signature="e#491#492#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/lang/Boolean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="120" column="26" lean-forward="false" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/fabrica/ControladorDeParametrosFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/principal/Programa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1090,19 +1085,71 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeEntrada.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ComandoHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/AjudaHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="79" lean-forward="false" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+          <folding>
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ExitHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ComandoNaoDefinidoHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeComando.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
           </folding>
         </state>
       </provider>

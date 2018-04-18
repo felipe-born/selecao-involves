@@ -1,5 +1,6 @@
 package br.com.involves.selecao.controlador;
 
+import br.com.involves.selecao.dominio.TipoDeComando;
 import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeEntrada;
 import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeSaida;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
@@ -27,6 +28,12 @@ public class ControladorDeInterfaceDeUsuario {
     }
 
     public void recebeComando(String comando) {
+
+        TipoDeComando tipoDeComando = TipoDeComando.getComandoCom(comando);
+        tipoDeComando.getHandler().exec(comando);
+
+
+
         saida.fala(comando);
         entrada.aguardaEntrada();
     }
