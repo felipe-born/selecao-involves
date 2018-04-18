@@ -5,9 +5,9 @@ import br.com.involves.selecao.modelo.ArquivoDeLeitura;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import javafx.util.Builder;
 
-import java.io.*;
-import java.net.URL;
-import java.util.stream.Collectors;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 public class ArquivoDeLeituraBuilder implements Builder<ArquivoDeLeitura> {
     private String arquivo;
