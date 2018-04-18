@@ -3,6 +3,7 @@ package br.com.involves.selecao.controlador;
 import br.com.involves.selecao.entrada_saida.LeitorDeArquivo;
 import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.excecao.ValidacaoException;
+import br.com.involves.selecao.fabrica.ControladorDeInterfaceDeUsuarioFactory;
 import br.com.involves.selecao.fabrica.LeitorDeArquivoFactory;
 import br.com.involves.selecao.modelo.EntidadeComPropriedades;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
@@ -19,6 +20,7 @@ public class ControladorDaAplicacao {
     private final ValidadorDeParametrosAplicacao validadorDeParametrosAplicacao;
 
     private LeitorDeArquivo leitorDeArquivo;
+    private ControladorDeInterfaceDeUsuario controladorDeInterfaceDeUsuario;
 
 
     public ControladorDaAplicacao(ControladorDeAlertas controladorDeAlertas, ParametrosAplicacao parametrosAplicacao) {
@@ -39,7 +41,12 @@ public class ControladorDaAplicacao {
             e.printStackTrace();
         }
 
-        entidadesDeLeitura.forEach(entidade -> System.out.println(entidade.toString()));
+        controladorDeInterfaceDeUsuario = new ControladorDeInterfaceDeUsuarioFactory()
+                .getControladorDeInterface()
+                .comEntidades(entidadesDeLeitura)
+                .build();
+
+        controladorDeInterfaceDeUsuario.iniciaComunicacaoComUsuario();
 
     }
 
