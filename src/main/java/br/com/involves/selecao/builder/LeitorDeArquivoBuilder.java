@@ -4,14 +4,23 @@ import br.com.involves.selecao.dominio.TipoDeArquivo;
 import br.com.involves.selecao.entrada_saida.LeitorDeArquivo;
 import br.com.involves.selecao.excecao.TipoDeArquivoNaoSuportadoException;
 import br.com.involves.selecao.modelo.ArquivoDeLeitura;
+import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import javafx.util.Builder;
 
 public class LeitorDeArquivoBuilder implements Builder<LeitorDeArquivo> {
 
     private ArquivoDeLeitura arquivo;
+    private final ParametrosAplicacao parametrosAplicacao;
+
+    public LeitorDeArquivoBuilder(ParametrosAplicacao parametrosAplicacao) {
+
+        this.parametrosAplicacao = parametrosAplicacao;
+    }
 
     public LeitorDeArquivoBuilder doArquivo(String arquivo) {
-        this.arquivo = new ArquivoDeLeitura(arquivo);
+        this.arquivo = new ArquivoDeLeituraBuilder(parametrosAplicacao)
+                .comArquivo(arquivo)
+                .build();
         return this;
     }
 

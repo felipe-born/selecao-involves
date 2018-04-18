@@ -1,12 +1,14 @@
 package br.com.involves.selecao.modelo;
 
+import com.sun.istack.internal.NotNull;
+
 public class ArquivoDeLeitura {
     private final String extensao;
     private final String caminhoArquivo;
 
-    public ArquivoDeLeitura(String arquivo) {
+    public ArquivoDeLeitura(@NotNull String arquivo) {
         int indiceTipoDeArquivo = arquivo.lastIndexOf(".");
-        this.extensao = indiceTipoDeArquivo == -1 ? "" : arquivo.substring(indiceTipoDeArquivo+1, arquivo.length());
+        this.extensao = indiceTipoDeArquivo == -1 ? "" : arquivo.substring(indiceTipoDeArquivo + 1, arquivo.length());
         this.caminhoArquivo = arquivo;
     }
 

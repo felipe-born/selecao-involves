@@ -44,7 +44,7 @@ public class ControladorDaAplicacao {
 
     private void inicializaLeitorDeArquivo() {
         leitorDeArquivo = new LeitorDeArquivoFactory()
-                .getLeitorDeArquivo()
+                .getLeitorDeArquivo(parametrosAplicacao)
                 .doArquivo(parametrosAplicacao.getArquivo())
                 .build();
     }

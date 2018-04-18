@@ -4,8 +4,6 @@ import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.modelo.ArquivoDeLeitura;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -26,11 +24,7 @@ public class LeitorDeArquivo {
 
 
     public List<EntidadeDeLeitura> leia() throws LeituraDeArquivoException {
-        File file = new File(arquivo.getCaminhoArquivo());
-        boolean ehArquivo = file.isFile();
-
-        String caminhoArquivo = "resources/" + arquivo.getCaminhoArquivo();
-        try (Stream<String> stream = Files.lines(Paths.get(caminhoArquivo))) {
+        try (Stream<String> stream = Files.lines(Paths.get(arquivo.getCaminhoArquivo()))) {
             List<EntidadeDeLeitura> entidadesDeLeitura = stream
                     .map(conteudo -> linhaHandler.lidarCom(conteudo))
                     .collect(Collectors.toList());
