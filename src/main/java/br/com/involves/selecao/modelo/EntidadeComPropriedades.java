@@ -29,4 +29,9 @@ public class EntidadeComPropriedades implements EntidadeDeLeitura {
                 .map(entry -> entry.getValue())
                 .collect(Collectors.joining("|"));
     }
+
+    public String getValor(String coluna) {
+        return propriedades
+                .get(coluna);
+    }
 }
