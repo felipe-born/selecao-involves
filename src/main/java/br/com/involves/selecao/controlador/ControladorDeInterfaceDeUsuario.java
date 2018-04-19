@@ -1,21 +1,22 @@
 package br.com.involves.selecao.controlador;
 
+import br.com.involves.selecao.conversor.ConversorEntidadeParaEntradaComando;
 import br.com.involves.selecao.dominio.TipoDeComando;
 import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeEntrada;
 import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeSaida;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
+import br.com.involves.selecao.modelo.EntradaDeComando;
 
-import java.util.Collections;
 import java.util.List;
 
 public class ControladorDeInterfaceDeUsuario {
-    private final List<EntidadeDeLeitura> entidadesDeLeitura;
+    private final EntradaDeComando entradaDeComando;
     private InterfaceDeSaida saida;
     private InterfaceDeEntrada entrada;
 
-    public ControladorDeInterfaceDeUsuario(List<EntidadeDeLeitura> entidadesDeLeitura) {
+    public ControladorDeInterfaceDeUsuario(List<EntidadeDeLeitura> entidadesDeLeitura, ConversorEntidadeParaEntradaComando conversor) {
 
-        this.entidadesDeLeitura = Collections.unmodifiableList(entidadesDeLeitura);
+        this.entradaDeComando = conversor.converter(entidadesDeLeitura);
     }
 
     public void iniciaComunicacaoComUsuario() {
@@ -28,11 +29,8 @@ public class ControladorDeInterfaceDeUsuario {
     }
 
     public void recebeComando(String comando) {
-
         TipoDeComando tipoDeComando = TipoDeComando.getComandoCom(comando);
-        tipoDeComando.getHandler().exec(comando);
-
-
+        tipoDeComando.getHandler().exec(comando, entradaDeComando);
 
         saida.fala(comando);
         entrada.aguardaEntrada();

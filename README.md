@@ -1,6 +1,6 @@
 # Seleção Involves - Desenvolvedor Java
 
-Especificações em: https://github.com/involvestecnologia/selecaoinvolves/blob/master/teste-java-2017-07.md.
+Especificações em: https://github.com/involvestecnologia/selecaoinvolves/blob/master/teste-java-2017-07.md
 
 ## Usage
 

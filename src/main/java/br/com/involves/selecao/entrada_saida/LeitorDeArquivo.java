@@ -3,14 +3,12 @@ package br.com.involves.selecao.entrada_saida;
 import br.com.involves.selecao.excecao.EntidadeDeLeituraException;
 import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.modelo.ArquivoDeLeitura;
+import br.com.involves.selecao.modelo.EntidadeComPropriedades;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -41,6 +39,7 @@ public class LeitorDeArquivo {
                             return null;
                         }
                     })
+                    .filter(entidade -> entidade instanceof EntidadeComPropriedades)
                     .collect(Collectors.toList());
             return entidadesDeLeitura;
         } catch (Exception e) {
