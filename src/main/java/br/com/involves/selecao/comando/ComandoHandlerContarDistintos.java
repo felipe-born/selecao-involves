@@ -1,6 +1,7 @@
 package br.com.involves.selecao.comando;
 
 import br.com.involves.selecao.modelo.ConjuntoDadosComPropriedade;
+import br.com.involves.selecao.parser.ParametroComandoParser;
 
 import java.util.List;
 import java.util.stream.Collectors;

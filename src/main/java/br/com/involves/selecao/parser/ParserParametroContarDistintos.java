@@ -1,4 +1,4 @@
-package br.com.involves.selecao.comando;
+package br.com.involves.selecao.parser;
 
 import br.com.involves.selecao.dominio.TipoDeComando;
 

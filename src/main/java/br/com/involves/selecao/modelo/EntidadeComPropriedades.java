@@ -34,4 +34,9 @@ public class EntidadeComPropriedades implements EntidadeDeLeitura {
         return propriedades
                 .get(coluna);
     }
+
+    public boolean possuiPropriedadeComValor(String propriedade, String valor) {
+        String valorDaPropriedade = propriedades.get(propriedade);
+        return valorDaPropriedade != null && valorDaPropriedade.equals(valor);
+    }
 }

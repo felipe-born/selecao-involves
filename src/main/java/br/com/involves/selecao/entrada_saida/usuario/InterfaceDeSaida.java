@@ -11,7 +11,7 @@ public class InterfaceDeSaida {
         this.controladorDeInterfaceDeUsuario = controladorDeInterfaceDeUsuario;
     }
 
-    public void fala(String comando) {
-        System.out.println("Recebi o comando: " + comando);
+    public void solicitaComando() {
+        System.out.println(("Por favor, digite um comando: "));
     }
 }

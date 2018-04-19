@@ -22,17 +22,17 @@ public class ControladorDeInterfaceDeUsuario {
     public void iniciaComunicacaoComUsuario() {
         entrada = new InterfaceDeEntrada(this);
         saida = new InterfaceDeSaida(this);
-
-        saida.fala("Por favor, digite um comando: ");
-
-        entrada.aguardaEntrada();
+        aguardaComando();
     }
 
     public void recebeComando(String comando) {
         TipoDeComando tipoDeComando = TipoDeComando.getComandoCom(comando);
         tipoDeComando.getHandler().exec(comando, entradaDeComando);
+        aguardaComando();
+    }
 
-        saida.fala(comando);
+    private void aguardaComando() {
+        saida.solicitaComando();
         entrada.aguardaEntrada();
     }
 

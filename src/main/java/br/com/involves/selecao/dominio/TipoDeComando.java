@@ -1,14 +1,19 @@
 package br.com.involves.selecao.dominio;
 
 import br.com.involves.selecao.comando.*;
+import br.com.involves.selecao.parser.ParserParametroContarDistintos;
+import br.com.involves.selecao.parser.ParserParametroFiltrarPropriedade;
 
 import java.util.Arrays;
 import java.util.List;
 
 public enum TipoDeComando {
-    CONTAR_TODOS("count *", "Contagem total de registros importados (sem incluir o cabeçalho)", new ComandoHandlerContarTodos()),
-    CONTAR_PROPRIEDADES_DISTINTAS("count distinct", "Total de valores distintos da propriedade enviada", new ComandoHandlerContarDistintos(new ParserParametroContarDistintos())),
-    FILTRAR_PROPRIEDADE("filter", "Linha de cabeçalho e todas as linhas em que a propriedade enviada possua o valor especificado", new ComandoNaoDefinidoHandler()),
+    CONTAR_TODOS("count *",
+            "Contagem total de registros importados (sem incluir o cabeçalho)", new ComandoHandlerContarTodos()),
+    CONTAR_PROPRIEDADES_DISTINTAS("count distinct", "Total de valores distintos da propriedade enviada",
+            new ComandoHandlerContarDistintos(new ParserParametroContarDistintos())),
+    FILTRAR_PROPRIEDADE("filter", "Linha de cabeçalho e todas as linhas em que a propriedade enviada possua o valor especificado",
+            new ComandoHandlerFiltrarPropriedade(new ParserParametroFiltrarPropriedade())),
     SAIR("exit", "Finaliza a execução do programa", new ComandoHandlerExit()),
     AJUDA("help", "Mostra os comandos disponíveis", new ComandoHandlerAjuda());
 
