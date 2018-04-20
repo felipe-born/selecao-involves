@@ -1,6 +1,5 @@
 package br.com.involves.selecao.entrada_saida;
 
-import br.com.involves.selecao.excecao.EntidadeDeLeituraException;
 import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.modelo.ArquivoDeLeitura;
 import br.com.involves.selecao.modelo.EntidadeComPropriedades;
@@ -31,14 +30,7 @@ public class LeitorDeArquivo {
 
         try (Stream<String> stream = bufferedReader.lines()) {
             List<EntidadeDeLeitura> entidadesDeLeitura = stream
-                    .map(conteudo -> {
-                        try {
-                            return linhaHandler.lidarCom(conteudo);
-                        } catch (EntidadeDeLeituraException e) {
-                            e.printStackTrace();
-                            return null;
-                        }
-                    })
+                    .map(conteudo -> linhaHandler.lidarCom(conteudo))
                     .filter(entidade -> entidade instanceof EntidadeComPropriedades)
                     .collect(Collectors.toList());
             return entidadesDeLeitura;

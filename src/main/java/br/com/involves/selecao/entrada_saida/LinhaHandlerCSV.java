@@ -3,9 +3,7 @@ package br.com.involves.selecao.entrada_saida;
 import br.com.involves.selecao.builder.EntidadeComPropriedadesBuilder;
 import br.com.involves.selecao.excecao.EntidadeDeLeituraException;
 import br.com.involves.selecao.modelo.EntidadeCabecalho;
-import br.com.involves.selecao.modelo.EntidadeComPropriedades;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
-import br.com.involves.selecao.modelo.ParametrosAplicacao;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,6 +19,8 @@ public class LinhaHandlerCSV implements LinhaHandler {
             return new EntidadeCabecalho(cabecalhoCSV);
         }
         List<String> valores = leiaCSV(conteudo);
+        if (valores.size() != cabecalhoCSV.size())
+            throw new EntidadeDeLeituraException("Conteúdo com quantidade de parâmetros divergente: " + conteudo);
 
         return new EntidadeComPropriedadesBuilder()
                 .comPropriedades(cabecalhoCSV)

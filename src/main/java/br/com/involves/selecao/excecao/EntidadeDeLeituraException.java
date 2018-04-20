@@ -1,6 +1,6 @@
 package br.com.involves.selecao.excecao;
 
-public class EntidadeDeLeituraException extends Throwable {
+public class EntidadeDeLeituraException extends RuntimeException {
     public EntidadeDeLeituraException(Exception e) {
         super(e);
     }
