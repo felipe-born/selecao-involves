@@ -18,6 +18,10 @@ public class ConjuntoDadosComPropriedade implements EntradaDeComando {
         this.valores.addAll(valor);
     }
 
+    public void adiciona(EntidadeComPropriedades entidadeComPropriedades) {
+        valores.add(entidadeComPropriedades);
+    }
+
     public EntidadeCabecalho getCabecalho() {
         return cabecalho;
     }

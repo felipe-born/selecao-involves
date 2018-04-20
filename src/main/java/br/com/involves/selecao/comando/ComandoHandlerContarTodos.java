@@ -5,9 +5,11 @@ import br.com.involves.selecao.modelo.ConjuntoDadosComPropriedade;
 public class ComandoHandlerContarTodos implements ComandoHandler<ConjuntoDadosComPropriedade> {
 
     @Override
-    public void exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
-        int totalDeValores = entradaDeComando
+    public String exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
+        if (entradaDeComando == null)
+            return "0";
+        Integer totalDeValores = entradaDeComando
                 .getTotalDeValores();
-        System.out.println(totalDeValores);
+        return totalDeValores.toString();
     }
 }

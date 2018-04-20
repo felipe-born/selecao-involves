@@ -37,7 +37,9 @@ public class ControladorDeInterfaceDeUsuario {
 
         ComandoHandler comandoHandler = comandoHandlerFlyweight.getInstance(tipoDeComando.getHandlerClazz());
 
-        comandoHandler.exec(comando, entradaDeComando);
+        String retorno = comandoHandler.exec(comando, entradaDeComando);
+        saida.imprime(retorno);
+
         aguardaComando();
     }
 

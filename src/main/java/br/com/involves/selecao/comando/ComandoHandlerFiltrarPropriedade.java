@@ -15,7 +15,7 @@ public class ComandoHandlerFiltrarPropriedade implements ComandoHandler<Conjunto
     }
 
     @Override
-    public void exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
+    public String exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
         List<String> parametros = parser.parse(comando);
 
         String propriedade = parametros.get(0);
@@ -25,9 +25,8 @@ public class ComandoHandlerFiltrarPropriedade implements ComandoHandler<Conjunto
                 .stream()
                 .filter(entidade -> entidade.possuiPropriedadeComValor(propriedade, valor))
                 .map(entidade -> entidade.toString())
-                .collect(Collectors.joining("\n"));
+                .collect(Collectors.joining("\n", propriedade + "\n", ""));
 
-        System.out.println(listagemDeValores);
-
+        return listagemDeValores;
     }
 }

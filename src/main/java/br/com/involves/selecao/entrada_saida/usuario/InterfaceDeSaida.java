@@ -14,4 +14,8 @@ public class InterfaceDeSaida {
     public void solicitaComando() {
         System.out.println(("Por favor, digite um comando: "));
     }
+
+    public void imprime(String exec) {
+        System.out.println(exec);
+    }
 }

@@ -16,16 +16,17 @@ public class ComandoHandlerContarDistintos implements ComandoHandler<ConjuntoDad
     }
 
     @Override
-    public void exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
+    public String exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
         String valorParametro = this.comandoParser
                 .parse(comando)
                 .get(0);
         List<String> valoresDistintos = entradaDeComando.getValores()
                 .stream()
                 .map(entidade -> entidade.getValor(valorParametro))
+                .filter(valor -> valor != null && !valor.isEmpty())
                 .distinct()
                 .collect(Collectors.toList());
-        int quantidadeDeValoresDistintos = valoresDistintos.size();
-        System.out.println(quantidadeDeValoresDistintos);
+        Integer quantidadeDeValoresDistintos = valoresDistintos.size();
+        return quantidadeDeValoresDistintos.toString();
     }
 }

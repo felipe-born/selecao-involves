@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="575db639-2c7d-466e-b357-9eca971cb126" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerAjudaTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintosTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarTodosTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedadeTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/cidades.csv" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/EntidadeComPropriedadesBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/EntidadeComPropriedadesBuilder.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandler.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerAjuda.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerAjuda.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintos.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintos.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarTodos.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarTodos.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerExit.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerExit.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ConjuntoDadosComPropriedade.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ConjuntoDadosComPropriedade.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,7 +29,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/selecao_involves$run_teste.coverage" NAME="run-teste Coverage Results" MODIFIED="1524251512442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/selecao_involves$run_teste.coverage" NAME="run-teste Coverage Results" MODIFIED="1524258574579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/selecao_involves$run_app.coverage" NAME="run-app Coverage Results" MODIFIED="1524243963763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageOptionsProvider">
@@ -27,38 +40,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ValidadorDeParametrosAplicacao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacao.java">
+      <file leaf-file-name="ComandoHandlerFiltrarPropriedade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="349">
+              <caret line="27" column="63" lean-forward="false" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ValidadorDeParametrosAplicacaoTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java">
+      <file leaf-file-name="ComandoHandlerFiltrarPropriedadeTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedadeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="1972">
+              <caret line="116" column="31" lean-forward="false" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#422#423#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParametrosAplicacao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java">
+      <file leaf-file-name="ComandoHandlerContarDistintos.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComandoHandlerContarDistintosTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintosTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
-                <element signature="e#231#232#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,26 +120,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/EntidadeParaEntradaComandoConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/Conversor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/ConversorEntidadeParaEntradaComando.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/ConversorConjuntoDadosComPropriedades.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoNaoDefinidoHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarTodos.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerAjuda.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ParserParametroPropriedadesDistintas.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ParametroComandoParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ParserParametroContarDistintos.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintos.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ConjuntoDadosComPropriedade.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/EntidadeComPropriedades.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeComando.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/flyweight/Flyweight.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/flyweight/ControleRemoto.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ConstantesComando.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ControladorDeInterfaceDeUsuarioBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/parser/ParserParametroContarDistintosTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParserParametroContarDistintosTest.java" />
@@ -151,6 +156,21 @@
         <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerAjuda.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerAjudaTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerExit.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerExitTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/EntidadeComPropriedadesBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarTodos.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarTodosTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ConjuntoDadosComPropriedade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintos.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintosTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedadeTest.java" />
       </list>
     </option>
   </component>
@@ -240,6 +260,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="selecao" type="462c0819:PsiDirectoryNode" />
+              <item name="comando" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selecao-involves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selecao-involves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="selecao" type="462c0819:PsiDirectoryNode" />
+              <item name="controlador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selecao-involves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selecao-involves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="selecao" type="462c0819:PsiDirectoryNode" />
               <item name="entrada_saida" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -278,6 +316,15 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="selecao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selecao-involves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selecao-involves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="selecao" type="462c0819:PsiDirectoryNode" />
+              <item name="comando" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="selecao-involves" type="b2602c69:ProjectViewProjectNode" />
@@ -324,6 +371,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.involves.selecao.comando" />
       <recent name="br.com.involves.selecao.validador" />
       <recent name="br.com.involves.selecao.entrada_saida" />
       <recent name="br.com.involves.selecao.parser" />
@@ -503,44 +551,44 @@
       <workItem from="1524076603523" duration="8149000" />
       <workItem from="1524137638349" duration="11057000" />
       <workItem from="1524239076258" duration="8505000" />
-      <workItem from="1524249441789" duration="2113000" />
+      <workItem from="1524249441789" duration="6891000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="run-teste - 2018.04.20 at 15h 43m 49s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 17h 58m 01s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 15h 45m 06s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 17h 58m 52s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 15h 46m 21s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 18h 03m 36s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 15h 51m 40s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 18h 04m 07s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 16h 00m 17s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 18h 04m 59s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 16h 01m 24s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 18h 05m 12s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 16h 05m 21s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 18h 07m 15s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 16h 07m 01s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 18h 07m 51s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 16h 10m 15s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 18h 08m 29s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 16h 11m 53s.xml">
+    <history-entry file="run-teste - 2018.04.20 at 18h 09m 35s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58572000" />
+    <option name="totallyTimeSpent" value="63350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="1" width="1924" height="1085" extended-state="6" />
@@ -586,138 +634,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="22" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/EntidadeComPropriedades.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ConjuntoDadosComPropriedade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/flyweight/Flyweight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerExit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParserParametroContarDistintosTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/fabrica/ControladorDeInterfaceDeUsuarioFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/ConversorConjuntoDadosComPropriedades.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/ConversorEntidadeParaEntradaComando.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/flyweight/ControleRemoto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1104#1105#0" expanded="false" />
-            <element signature="e#1170#1171#0" expanded="false" />
-            <element signature="e#1264#1265#0" expanded="false" />
-            <element signature="e#1315#1316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ControladorDeInterfaceDeUsuarioBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="62" lean-forward="true" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/excecao/ParametroParserException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="64" lean-forward="true" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/parser/ParserParametroContarDistintosTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ConstantesComando.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeComando.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/parser/ParametroComandoParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -729,6 +650,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -736,13 +658,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="18" column="78" lean-forward="false" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/parser/ParserParametroFiltrarPropriedadeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -793,20 +709,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/EntidadeCabecalho.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="65" lean-forward="false" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/EntidadeComPropriedadesBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -814,6 +717,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="64" lean-forward="false" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -821,6 +725,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -839,9 +744,9 @@
         <state relative-caret-position="986">
           <caret line="68" column="51" lean-forward="false" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#513#514#0" expanded="false" />
+            <element signature="e#573#574#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -891,7 +796,7 @@
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -909,8 +814,8 @@
         <state relative-caret-position="221">
           <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
           <folding>
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1451#1452#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="false" />
+            <element signature="e#1451#1452#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -920,8 +825,8 @@
         <state relative-caret-position="451">
           <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
           <folding>
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="false" />
+            <element signature="e#1639#1640#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -931,9 +836,9 @@
         <state relative-caret-position="255">
           <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#672#673#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -951,7 +856,7 @@
         <state relative-caret-position="434">
           <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -967,10 +872,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="false" />
+            <element signature="e#261#262#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -978,20 +883,213 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#358#359#0" expanded="false" />
+            <element signature="e#422#423#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="238">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ConstantesComando.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/flyweight/ControleRemoto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="28" column="39" lean-forward="false" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_162/src.zip!/java/lang/SecurityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="760" column="16" lean-forward="false" selection-start-line="760" selection-start-column="16" selection-end-line="760" selection-end-column="16" />
+          <folding>
+            <element signature="e#30871#30872#0" expanded="false" />
+            <element signature="e#30943#30944#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerExitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerExit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="75" lean-forward="true" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/parser/ParserParametroFiltrarPropriedadeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding>
+            <element signature="e#839#840#0" expanded="false" />
+            <element signature="e#892#893#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerAjuda.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/EntidadeComPropriedadesBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <folding>
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/EntidadeCabecalho.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/ConversorConjuntoDadosComPropriedades.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerAjudaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarTodos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarTodosTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="57" column="68" lean-forward="false" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ConjuntoDadosComPropriedade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding>
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="27" column="63" lean-forward="false" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintosTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedadeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" column="31" lean-forward="false" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
