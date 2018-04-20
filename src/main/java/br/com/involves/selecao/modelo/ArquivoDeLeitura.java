@@ -1,5 +1,7 @@
 package br.com.involves.selecao.modelo;
 
+import br.com.involves.selecao.utilitarios.UtilitarioArquivo;
+
 import java.io.InputStream;
 
 public class ArquivoDeLeitura {
@@ -11,8 +13,7 @@ public class ArquivoDeLeitura {
         if (arquivo == null)
             throw new NullPointerException("Arquivo não pode ser nulo");
 
-        int indiceTipoDeArquivo = arquivo.lastIndexOf(".");
-        this.extensao = indiceTipoDeArquivo == -1 ? "" : arquivo.substring(indiceTipoDeArquivo + 1, arquivo.length());
+        this.extensao = UtilitarioArquivo.getExtensao(arquivo);
         this.caminhoArquivo = arquivo;
         this.inputStream = inputStream;
     }

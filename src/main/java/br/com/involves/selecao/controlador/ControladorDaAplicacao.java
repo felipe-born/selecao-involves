@@ -56,7 +56,6 @@ public class ControladorDaAplicacao {
         try {
             leitorDeArquivo = new LeitorDeArquivoFactory()
                     .getLeitorDeArquivo(parametrosAplicacao)
-                    .doArquivo(parametrosAplicacao.getArquivo())
                     .build();
         } catch (FileNotFoundException ex) {
             throw new LeituraDeArquivoException(ex);

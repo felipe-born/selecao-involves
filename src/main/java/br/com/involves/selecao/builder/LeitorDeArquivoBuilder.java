@@ -2,9 +2,11 @@ package br.com.involves.selecao.builder;
 
 import br.com.involves.selecao.dominio.TipoDeArquivo;
 import br.com.involves.selecao.entrada_saida.LeitorDeArquivo;
+import br.com.involves.selecao.entrada_saida.LinhaHandler;
 import br.com.involves.selecao.excecao.TipoDeArquivoNaoSuportadoException;
 import br.com.involves.selecao.modelo.ArquivoDeLeitura;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
+import br.com.involves.selecao.utilitarios.UtilitarioArquivo;
 import javafx.util.Builder;
 
 import java.io.FileNotFoundException;
@@ -12,25 +14,22 @@ import java.io.FileNotFoundException;
 public class LeitorDeArquivoBuilder implements Builder<LeitorDeArquivo> {
 
     private ArquivoDeLeitura arquivo;
-    private final ParametrosAplicacao parametrosAplicacao;
+    private LinhaHandler linhaHandler;
 
-    public LeitorDeArquivoBuilder(ParametrosAplicacao parametrosAplicacao) {
+    public LeitorDeArquivoBuilder(ParametrosAplicacao parametrosAplicacao) throws FileNotFoundException {
+        String extensaoArquivo = UtilitarioArquivo.getExtensao(parametrosAplicacao.getArquivo());
+        TipoDeArquivo tipoDeArquivo = TipoDeArquivo.getTipoDeArquivo(extensaoArquivo);
+        if (tipoDeArquivo == null)
+            throw new TipoDeArquivoNaoSuportadoException(parametrosAplicacao.getArquivo());
+        this.linhaHandler = tipoDeArquivo.getLinhaHandler();
 
-        this.parametrosAplicacao = parametrosAplicacao;
-    }
-
-    public LeitorDeArquivoBuilder doArquivo(String arquivo) throws FileNotFoundException {
         this.arquivo = new ArquivoDeLeituraBuilder(parametrosAplicacao)
-                .comArquivo(arquivo)
+                .comArquivo(parametrosAplicacao.getArquivo())
                 .build();
-        return this;
     }
 
     @Override
     public LeitorDeArquivo build() {
-        TipoDeArquivo tipoDeArquivo = TipoDeArquivo.getTipoDeArquivo(arquivo.getExtensao());
-        if (tipoDeArquivo == null)
-            throw new TipoDeArquivoNaoSuportadoException(arquivo);
-        return new LeitorDeArquivo(tipoDeArquivo.getLinhaHandler(), arquivo);
+        return new LeitorDeArquivo(linhaHandler, arquivo);
     }
 }
