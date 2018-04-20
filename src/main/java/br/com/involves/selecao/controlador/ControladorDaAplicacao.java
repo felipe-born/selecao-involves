@@ -1,11 +1,12 @@
 package br.com.involves.selecao.controlador;
 
+import br.com.involves.selecao.conversor.ConversorConjuntoDadosComPropriedades;
 import br.com.involves.selecao.entrada_saida.LeitorDeArquivo;
 import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.excecao.ValidacaoException;
 import br.com.involves.selecao.fabrica.ControladorDeInterfaceDeUsuarioFactory;
 import br.com.involves.selecao.fabrica.LeitorDeArquivoFactory;
-import br.com.involves.selecao.modelo.EntidadeComPropriedades;
+import br.com.involves.selecao.flyweight.ControleRemoto;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import br.com.involves.selecao.validador.ValidadorDeParametrosAplicacao;
@@ -44,10 +45,11 @@ public class ControladorDaAplicacao {
         controladorDeInterfaceDeUsuario = new ControladorDeInterfaceDeUsuarioFactory()
                 .getControladorDeInterface()
                 .comEntidades(entidadesDeLeitura)
+                .comComandoFlyweight(ControleRemoto.getInstancia())
+                .comConversor(new ConversorConjuntoDadosComPropriedades())
                 .build();
 
         controladorDeInterfaceDeUsuario.iniciaComunicacaoComUsuario();
-
     }
 
     private void inicializaLeitorDeArquivo() throws LeituraDeArquivoException {
