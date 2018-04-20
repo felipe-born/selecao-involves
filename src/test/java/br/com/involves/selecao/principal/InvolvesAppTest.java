@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 
 public class InvolvesAppTest {
@@ -25,11 +25,10 @@ public class InvolvesAppTest {
 
     @Test
     public void testConstrutorInvolveComParametrosValidos() {
-        InvolvesApp involvesApp = new InvolvesApp("--file=meuOutroArquivo.csv", "--ignorarErros=true");
+        InvolvesApp involvesApp = new InvolvesApp("--file=meuOutroArquivo.csv");
         String valorEsperadoArquivo = "meuOutroArquivo.csv";
-        boolean valorEsperadoIgnorarErro = true;
 
-        assertInvolves(valorEsperadoArquivo, valorEsperadoIgnorarErro, involvesApp);
+        assertInvolves(valorEsperadoArquivo, involvesApp);
     }
 
     @Test
@@ -44,14 +43,12 @@ public class InvolvesAppTest {
 
     private void expectDefaultParamsValues(InvolvesApp involvesApp) {
         String valorEsperadoArquivo = TipoDeParametro.PARAMETRO_ARQUIVO.getValorPadrao();
-        boolean valorEsperadoIgnorarErro = Boolean.getBoolean(TipoDeParametro.PARAMETRO_IGNORAR_ERROS.getValorPadrao());
 
-        assertInvolves(valorEsperadoArquivo, valorEsperadoIgnorarErro, involvesApp);
+        assertInvolves(valorEsperadoArquivo, involvesApp);
     }
 
-    private void assertInvolves(String valorEsperadoArquivo, boolean valorEsperadoIgnorarErro, InvolvesApp involvesApp) {
+    private void assertInvolves(String valorEsperadoArquivo, InvolvesApp involvesApp) {
         assertEquals(valorEsperadoArquivo, involvesApp.getParametroArquivo());
-        assertEquals(valorEsperadoIgnorarErro, involvesApp.getParametroIgnorarErroDasLinhas());
     }
 
 }

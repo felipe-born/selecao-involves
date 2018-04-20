@@ -44,10 +44,6 @@ public class InvolvesApp {
         return parametrosAplicacao.getArquivo();
     }
 
-    public boolean getParametroIgnorarErroDasLinhas() {
-        return parametrosAplicacao.isIgnorarErrosDasLinhas();
-    }
-
     public List<Alerta> getAlertas() {
         return controladorDeAlertas.getAlertas();
     }

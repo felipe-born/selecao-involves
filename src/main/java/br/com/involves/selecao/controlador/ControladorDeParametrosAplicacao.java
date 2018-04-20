@@ -31,9 +31,8 @@ public class ControladorDeParametrosAplicacao implements Controlador<ParametrosA
 
     private ParametrosAplicacao geraParametrosAplicacao() {
         String arquivo = getValorDoParametro(TipoDeParametro.PARAMETRO_ARQUIVO);
-        boolean ignorarErro = Boolean.parseBoolean(getValorDoParametro(TipoDeParametro.PARAMETRO_IGNORAR_ERROS));
 
-        return new ParametrosAplicacao(arquivo, ignorarErro);
+        return new ParametrosAplicacao(arquivo);
     }
 
     private String getValorDoParametro(TipoDeParametro tipoDeParametro) {
