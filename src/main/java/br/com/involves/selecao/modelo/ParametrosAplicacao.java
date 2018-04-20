@@ -4,8 +4,6 @@ public class ParametrosAplicacao {
     private final String arquivo;
 
     public ParametrosAplicacao(String arquivo) {
-        if (arquivo == null)
-            throw new NullPointerException("Arquivo não pode ser nulo!");
 
         this.arquivo = arquivo;
     }

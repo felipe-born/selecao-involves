@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="575db639-2c7d-466e-b357-9eca971cb126" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/utilitarios/UtilitarioArquivo.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivoTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/cidades.csv" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/LeitorDeArquivoBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/LeitorDeArquivoBuilder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDaAplicacao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDaAplicacao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/excecao/TipoDeArquivoNaoSuportadoException.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/excecao/TipoDeArquivoNaoSuportadoException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/fabrica/LeitorDeArquivoFactory.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/fabrica/LeitorDeArquivoFactory.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ArquivoDeLeitura.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ArquivoDeLeitura.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/selecao_involves$run_teste.coverage" NAME="run-teste Coverage Results" MODIFIED="1524251119936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/selecao_involves$run_teste.coverage" NAME="run-teste Coverage Results" MODIFIED="1524251512442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/selecao_involves$run_app.coverage" NAME="run-app Coverage Results" MODIFIED="1524243963763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageOptionsProvider">
@@ -34,106 +27,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LeitorDeArquivo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivo.java">
+      <file leaf-file-name="ValidadorDeParametrosAplicacao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+            <state relative-caret-position="170">
+              <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LeitorDeArquivoTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivoTest.java">
+      <file leaf-file-name="ValidadorDeParametrosAplicacaoTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="366">
+              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TipoDeArquivoNaoSuportadoException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/excecao/TipoDeArquivoNaoSuportadoException.java">
+      <file leaf-file-name="ParametrosAplicacao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cidades.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/cidades.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="99" lean-forward="true" selection-start-line="5" selection-start-column="99" selection-end-line="5" selection-end-column="99" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LeitorDeArquivoBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/LeitorDeArquivoBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="56" lean-forward="false" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-              <folding>
-                <element signature="e#1386#1387#0" expanded="true" />
-                <element signature="e#1451#1452#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArquivoDeLeituraBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ArquivoDeLeituraBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-              <folding>
-                <element signature="e#1574#1575#0" expanded="true" />
-                <element signature="e#1639#1640#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArquivoDeLeitura.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ArquivoDeLeitura.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-                <element signature="e#672#673#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UtilitarioArquivo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/utilitarios/UtilitarioArquivo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TipoDeArquivo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeArquivo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -145,8 +71,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -174,8 +100,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerExit.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/EntidadeParaEntradaComandoConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/Conversor.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/ConversorEntidadeParaEntradaComando.java" />
@@ -207,7 +131,6 @@
         <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/parser/ParserParametroFiltrarPropriedadeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/dominio/TipoDeParametro.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeParametrosAplicacao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/principal/InvolvesApp.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/principal/InvolvesAppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/EntidadeCabecalho.java" />
@@ -225,6 +148,9 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/LeitorDeArquivoBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/excecao/TipoDeArquivoNaoSuportadoException.java" />
         <option value="$PROJECT_DIR$/src/test/resources/cidades.csv" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java" />
       </list>
     </option>
   </component>
@@ -398,6 +324,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.involves.selecao.validador" />
       <recent name="br.com.involves.selecao.entrada_saida" />
       <recent name="br.com.involves.selecao.parser" />
     </key>
@@ -576,20 +503,11 @@
       <workItem from="1524076603523" duration="8149000" />
       <workItem from="1524137638349" duration="11057000" />
       <workItem from="1524239076258" duration="8505000" />
-      <workItem from="1524249441789" duration="1756000" />
+      <workItem from="1524249441789" duration="2113000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="run-teste - 2018.04.20 at 15h 23m 24s.xml">
-      <configuration name="run-teste" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 15h 28m 14s.xml">
-      <configuration name="run-teste" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="run-teste - 2018.04.20 at 15h 29m 28s.xml">
-      <configuration name="run-teste" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="run-teste - 2018.04.20 at 15h 43m 49s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
@@ -611,9 +529,18 @@
     <history-entry file="run-teste - 2018.04.20 at 16h 05m 21s.xml">
       <configuration name="run-teste" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="run-teste - 2018.04.20 at 16h 07m 01s.xml">
+      <configuration name="run-teste" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="run-teste - 2018.04.20 at 16h 10m 15s.xml">
+      <configuration name="run-teste" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="run-teste - 2018.04.20 at 16h 11m 53s.xml">
+      <configuration name="run-teste" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58215000" />
+    <option name="totallyTimeSpent" value="58572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1918" y="1" width="1924" height="1085" extended-state="6" />
@@ -659,12 +586,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoNaoDefinidoHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -855,13 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/principal/InvolvesApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
@@ -927,14 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/cidades.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -975,41 +886,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/utilitarios/UtilitarioArquivo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ArquivoDeLeitura.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/excecao/TipoDeArquivoNaoSuportadoException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ArquivoDeLeituraBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/cidades.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-          <folding>
-            <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+        <state relative-caret-position="85">
+          <caret line="5" column="99" lean-forward="true" selection-start-line="5" selection-start-column="99" selection-end-line="5" selection-end-column="99" />
           <folding />
         </state>
       </provider>
@@ -1025,21 +915,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/cidades.csv">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ArquivoDeLeituraBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="99" lean-forward="true" selection-start-line="5" selection-start-column="99" selection-end-line="5" selection-end-column="99" />
-          <folding />
+        <state relative-caret-position="451">
+          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+          <folding>
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1639#1640#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/excecao/TipoDeArquivoNaoSuportadoException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ArquivoDeLeitura.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/utilitarios/UtilitarioArquivo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,6 +953,45 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/ParametrosAplicacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
