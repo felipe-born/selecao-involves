@@ -1,6 +1,7 @@
 package br.com.involves.selecao.parser;
 
 import br.com.involves.selecao.dominio.TipoDeComando;
+import br.com.involves.selecao.excecao.ParametroParserException;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,13 +11,14 @@ public class ParserParametroContarDistintos implements ParametroComandoParser {
 
     @Override
     public List<String> parse(String comandoParametrizado) {
-        String[] palavrasDoComandoParametrizado = comandoParametrizado.split(" ");
-        String[] palavrasDoComando = TipoDeComando.CONTAR_PROPRIEDADES_DISTINTAS
-                .getNomeDoComando()
-                .split(" ");
-        String[] parametrosDoComando = Arrays
-                .copyOfRange(palavrasDoComandoParametrizado, palavrasDoComando.length, palavrasDoComandoParametrizado.length);
-        String parametrosUnidos = Arrays.asList(parametrosDoComando).stream().collect(Collectors.joining(" "));
+        if (comandoParametrizado == null)
+            throw new NullPointerException("Comando não pode ser nulo");
+        if (!verificaComandoComParametro(comandoParametrizado, TipoDeComando.CONTAR_PROPRIEDADES_DISTINTAS.getNomeDoComando()))
+            throw new ParametroParserException();
+        String parametrosUnidos = getListaDeParametros(comandoParametrizado,
+                TipoDeComando.CONTAR_PROPRIEDADES_DISTINTAS.getNomeDoComando())
+                .stream()
+                .collect(Collectors.joining(" "));
         return Arrays.asList(parametrosUnidos);
     }
 }
