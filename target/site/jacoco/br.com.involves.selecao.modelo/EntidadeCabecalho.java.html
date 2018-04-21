@@ -9,10 +9,10 @@ public class EntidadeCabecalho implements EntidadeDeLeitura {
     private Collection&lt;String&gt; cabecalhoCSV;
 
 <span class="fc" id="L11">    public EntidadeCabecalho(Collection&lt;String&gt; cabecalhoCSV) throws EntidadeDeLeituraException {</span>
-<span class="pc bpc" id="L12" title="1 of 2 branches missed.">        if (cabecalhoCSV == null)</span>
-<span class="nc" id="L13">            throw new EntidadeDeLeituraException(new NullPointerException(&quot;Cabeçalho CSV não pode ser nulo!&quot;));</span>
-<span class="pc bpc" id="L14" title="1 of 2 branches missed.">        if (cabecalhoCSV.isEmpty())</span>
-<span class="nc" id="L15">            throw new EntidadeDeLeituraException(&quot;Cabeçalho CSV não pode estar vazio!&quot;);</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        if (cabecalhoCSV == null)</span>
+<span class="fc" id="L13">            throw new EntidadeDeLeituraException(new NullPointerException(&quot;Cabeçalho CSV não pode ser nulo!&quot;));</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        if (cabecalhoCSV.isEmpty())</span>
+<span class="fc" id="L15">            throw new EntidadeDeLeituraException(&quot;Cabeçalho CSV não pode estar vazio!&quot;);</span>
 
 <span class="fc" id="L17">        this.cabecalhoCSV = Collections.unmodifiableCollection(cabecalhoCSV);</span>
 <span class="fc" id="L18">    }</span>

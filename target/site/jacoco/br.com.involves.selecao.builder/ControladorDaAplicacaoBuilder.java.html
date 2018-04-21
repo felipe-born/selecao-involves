@@ -5,22 +5,31 @@ import br.com.involves.selecao.controlador.ControladorDeAlertas;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import javafx.util.Builder;
 
-<span class="fc" id="L8">public class ControladorDaAplicacaoBuilder implements Builder&lt;ControladorDaAplicacao&gt; {</span>
+import java.io.InputStream;
+
+<span class="fc" id="L10">public class ControladorDaAplicacaoBuilder implements Builder&lt;ControladorDaAplicacao&gt; {</span>
     private ControladorDeAlertas controladorDeAlertas;
     private ParametrosAplicacao parametrosAplicacao;
+    private InputStream inputStream;
 
     public ControladorDaAplicacaoBuilder comControladorDeAlertas(ControladorDeAlertas controladorDeAlertas) {
-<span class="fc" id="L13">        this.controladorDeAlertas = controladorDeAlertas;</span>
-<span class="fc" id="L14">        return this;</span>
+<span class="fc" id="L16">        this.controladorDeAlertas = controladorDeAlertas;</span>
+<span class="fc" id="L17">        return this;</span>
     }
 
     public ControladorDaAplicacaoBuilder comParametros(ParametrosAplicacao parametrosAplicacao) {
-<span class="fc" id="L18">        this.parametrosAplicacao = parametrosAplicacao;</span>
-<span class="fc" id="L19">        return this;</span>
+<span class="fc" id="L21">        this.parametrosAplicacao = parametrosAplicacao;</span>
+<span class="fc" id="L22">        return this;</span>
+    }
+
+    public ControladorDaAplicacaoBuilder comInputStream(InputStream inputStream) {
+
+<span class="fc" id="L27">        this.inputStream = inputStream;</span>
+<span class="fc" id="L28">        return this;</span>
     }
 
     public ControladorDaAplicacao build() {
-<span class="fc" id="L23">        return new ControladorDaAplicacao(controladorDeAlertas, parametrosAplicacao);</span>
+<span class="fc" id="L32">        return new ControladorDaAplicacao(controladorDeAlertas, parametrosAplicacao, inputStream);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

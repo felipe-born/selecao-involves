@@ -10,8 +10,8 @@ public class ArquivoDeLeitura {
     private final InputStream inputStream;
 
 <span class="fc" id="L12">    public ArquivoDeLeitura(String arquivo, InputStream inputStream) {</span>
-<span class="pc bpc" id="L13" title="1 of 2 branches missed.">        if (arquivo == null)</span>
-<span class="nc" id="L14">            throw new NullPointerException(&quot;Arquivo não pode ser nulo&quot;);</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        if (arquivo == null)</span>
+<span class="fc" id="L14">            throw new NullPointerException(&quot;Arquivo não pode ser nulo&quot;);</span>
 
 <span class="fc" id="L16">        this.extensao = UtilitarioArquivo.getExtensao(arquivo);</span>
 <span class="fc" id="L17">        this.caminhoArquivo = arquivo;</span>
@@ -19,11 +19,11 @@ public class ArquivoDeLeitura {
 <span class="fc" id="L19">    }</span>
 
     public String getExtensao() {
-<span class="nc" id="L22">        return extensao;</span>
+<span class="fc" id="L22">        return extensao;</span>
     }
 
     public String getCaminhoArquivo() {
-<span class="nc" id="L26">        return caminhoArquivo;</span>
+<span class="fc" id="L26">        return caminhoArquivo;</span>
     }
 
     public InputStream getInputStream() {

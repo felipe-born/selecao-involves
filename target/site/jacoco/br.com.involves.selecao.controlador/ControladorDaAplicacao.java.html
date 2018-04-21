@@ -14,66 +14,71 @@ import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import br.com.involves.selecao.validador.ValidadorDeParametrosAplicacao;
 
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ControladorDaAplicacao {
+public class ControladorDaAplicacao implements Controlador {
     private final ControladorDeAlertas controladorDeAlertas;
     private final ParametrosAplicacao parametrosAplicacao;
     private final ValidadorDeParametrosAplicacao validadorDeParametrosAplicacao;
 
+    private InputStream inputStream;
     private LeitorDeArquivo leitorDeArquivo;
     private ControladorDeInterfaceDeUsuario controladorDeInterfaceDeUsuario;
 
 
-<span class="fc" id="L29">    public ControladorDaAplicacao(ControladorDeAlertas controladorDeAlertas, ParametrosAplicacao parametrosAplicacao) {</span>
+    public ControladorDaAplicacao(ControladorDeAlertas controladorDeAlertas,
+                                  ParametrosAplicacao parametrosAplicacao,
+<span class="fc" id="L33">                                  InputStream inputStream) {</span>
 
-<span class="fc" id="L31">        this.controladorDeAlertas = controladorDeAlertas;</span>
-<span class="fc" id="L32">        this.parametrosAplicacao = parametrosAplicacao;</span>
-<span class="fc" id="L33">        this.validadorDeParametrosAplicacao = new ValidadorDeParametrosAplicacao();</span>
-<span class="fc" id="L34">    }</span>
+<span class="fc" id="L35">        this.controladorDeAlertas = controladorDeAlertas;</span>
+<span class="fc" id="L36">        this.parametrosAplicacao = parametrosAplicacao;</span>
+<span class="fc" id="L37">        this.inputStream = inputStream;</span>
+<span class="fc" id="L38">        this.validadorDeParametrosAplicacao = new ValidadorDeParametrosAplicacao();</span>
+<span class="fc" id="L39">    }</span>
 
     public void inicializaAplicacao() {
 
-<span class="nc" id="L38">        validaParametrosAplicacao();</span>
-<span class="nc" id="L39">        List&lt;EntidadeDeLeitura&gt; entidadesDeLeitura = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L43">        validaParametrosAplicacao();</span>
+<span class="fc" id="L44">        List&lt;EntidadeDeLeitura&gt; entidadesDeLeitura = new ArrayList&lt;&gt;();</span>
         try {
-<span class="nc" id="L41">            inicializaLeitorDeArquivo();</span>
-<span class="nc" id="L42">            entidadesDeLeitura = leitorDeArquivo.leia();</span>
-<span class="nc" id="L43">        } catch (LeituraDeArquivoException e) {</span>
-<span class="nc" id="L44">            e.printStackTrace();</span>
-<span class="nc" id="L45">        }</span>
+<span class="fc" id="L46">            inicializaLeitorDeArquivo();</span>
+<span class="fc" id="L47">            entidadesDeLeitura = leitorDeArquivo.leia();</span>
+<span class="nc" id="L48">        } catch (LeituraDeArquivoException e) {</span>
+<span class="nc" id="L49">            e.printStackTrace();</span>
+<span class="fc" id="L50">        }</span>
 
-<span class="nc" id="L47">        controladorDeInterfaceDeUsuario = new ControladorDeInterfaceDeUsuarioFactory()</span>
-<span class="nc" id="L48">                .getControladorDeInterface()</span>
-<span class="nc" id="L49">                .comEntidades(entidadesDeLeitura)</span>
-<span class="nc" id="L50">                .comComandoFlyweight(ControleRemoto.getInstancia())</span>
-<span class="nc" id="L51">                .comConversor(new ConversorConjuntoDadosComPropriedades())</span>
-<span class="nc" id="L52">                .comInterfaceDeEntrada(new EntradaConsole())</span>
-<span class="nc" id="L53">                .comInterfaceDeSaida(new SaidaConsole())</span>
-<span class="nc" id="L54">                .build();</span>
+<span class="fc" id="L52">        controladorDeInterfaceDeUsuario = new ControladorDeInterfaceDeUsuarioFactory()</span>
+<span class="fc" id="L53">                .getControladorDeInterface()</span>
+<span class="fc" id="L54">                .comEntidades(entidadesDeLeitura)</span>
+<span class="fc" id="L55">                .comComandoFlyweight(ControleRemoto.getInstancia())</span>
+<span class="fc" id="L56">                .comConversor(new ConversorConjuntoDadosComPropriedades())</span>
+<span class="fc" id="L57">                .comInterfaceDeEntrada(new EntradaConsole(inputStream))</span>
+<span class="fc" id="L58">                .comInterfaceDeSaida(new SaidaConsole())</span>
+<span class="fc" id="L59">                .build();</span>
 
-<span class="nc" id="L56">        controladorDeInterfaceDeUsuario.iniciaComunicacaoComUsuario();</span>
-<span class="nc" id="L57">    }</span>
+<span class="fc" id="L61">        controladorDeInterfaceDeUsuario.iniciaComunicacaoComUsuario();</span>
+<span class="fc" id="L62">    }</span>
 
     private void inicializaLeitorDeArquivo() throws LeituraDeArquivoException {
         try {
-<span class="nc" id="L61">            leitorDeArquivo = new LeitorDeArquivoFactory()</span>
-<span class="nc" id="L62">                    .getLeitorDeArquivo(parametrosAplicacao)</span>
-<span class="nc" id="L63">                    .build();</span>
-<span class="nc" id="L64">        } catch (FileNotFoundException ex) {</span>
-<span class="nc" id="L65">            throw new LeituraDeArquivoException(ex);</span>
-<span class="nc" id="L66">        }</span>
-<span class="nc" id="L67">    }</span>
+<span class="fc" id="L66">            leitorDeArquivo = new LeitorDeArquivoFactory()</span>
+<span class="fc" id="L67">                    .getLeitorDeArquivo(parametrosAplicacao)</span>
+<span class="fc" id="L68">                    .build();</span>
+<span class="nc" id="L69">        } catch (FileNotFoundException ex) {</span>
+<span class="nc" id="L70">            throw new LeituraDeArquivoException(ex);</span>
+<span class="fc" id="L71">        }</span>
+<span class="fc" id="L72">    }</span>
 
     private void validaParametrosAplicacao() {
         try {
-<span class="nc" id="L71">            validadorDeParametrosAplicacao.valida(parametrosAplicacao);</span>
-<span class="nc" id="L72">        } catch (ValidacaoException e) {</span>
-<span class="nc" id="L73">            System.out.println(&quot;Ocorreu problema na aplicação: &quot; + e.getMessage());</span>
-<span class="nc" id="L74">            System.out.println(&quot;Aplicação finalizada com erro&quot;);</span>
-<span class="nc" id="L75">            System.exit(1);</span>
-<span class="nc" id="L76">        }</span>
-<span class="nc" id="L77">    }</span>
+<span class="fc" id="L76">            validadorDeParametrosAplicacao.valida(parametrosAplicacao);</span>
+<span class="fc" id="L77">        } catch (ValidacaoException e) {</span>
+<span class="fc" id="L78">            System.out.println(&quot;Ocorreu problema na aplicação: &quot; + e.getMessage());</span>
+<span class="fc" id="L79">            System.out.println(&quot;Aplicação finalizada com erro&quot;);</span>
+<span class="fc" id="L80">            throw new RuntimeException(e);</span>
+<span class="fc" id="L81">        }</span>
+<span class="fc" id="L82">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

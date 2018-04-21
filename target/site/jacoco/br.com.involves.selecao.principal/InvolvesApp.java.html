@@ -8,6 +8,7 @@ import br.com.involves.selecao.fabrica.ControladorDeParametrosFactory;
 import br.com.involves.selecao.modelo.Alerta;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 
+import javax.swing.plaf.synth.SynthFormattedTextFieldUI;
 import java.util.List;
 
 public class InvolvesApp {
@@ -17,33 +18,34 @@ public class InvolvesApp {
     private ControladorDaAplicacao controladorDaAplicacao;
 
 
-<span class="fc" id="L20">    public InvolvesApp(String... args) {</span>
-<span class="fc" id="L21">        controladorDeAlertas = new ControladorDeAlertasFactory()</span>
-<span class="fc" id="L22">                .getControladorDeAlertas()</span>
-<span class="fc" id="L23">                .build();</span>
-<span class="fc" id="L24">        parametrosAplicacao = new ControladorDeParametrosFactory()</span>
-<span class="fc" id="L25">                .getControladorDeParametros()</span>
-<span class="fc" id="L26">                .comControladorDeAlertas(controladorDeAlertas)</span>
-<span class="fc" id="L27">                .comParametros(args)</span>
-<span class="fc" id="L28">                .build()</span>
-<span class="fc" id="L29">                .controle();</span>
-<span class="fc" id="L30">        controladorDaAplicacao = new ControladorDaAplicacaoFactory()</span>
-<span class="fc" id="L31">                .getControladorDaAplicacao()</span>
-<span class="fc" id="L32">                .comControladorDeAlertas(controladorDeAlertas)</span>
-<span class="fc" id="L33">                .comParametros(parametrosAplicacao)</span>
-<span class="fc" id="L34">                .build();</span>
-<span class="fc" id="L35">    }</span>
+<span class="fc" id="L21">    public InvolvesApp(String... args) {</span>
+<span class="fc" id="L22">        controladorDeAlertas = new ControladorDeAlertasFactory()</span>
+<span class="fc" id="L23">                .getControladorDeAlertas()</span>
+<span class="fc" id="L24">                .build();</span>
+<span class="fc" id="L25">        parametrosAplicacao = new ControladorDeParametrosFactory()</span>
+<span class="fc" id="L26">                .getControladorDeParametros()</span>
+<span class="fc" id="L27">                .comControladorDeAlertas(controladorDeAlertas)</span>
+<span class="fc" id="L28">                .comParametros(args)</span>
+<span class="fc" id="L29">                .build()</span>
+<span class="fc" id="L30">                .controle();</span>
+<span class="fc" id="L31">        controladorDaAplicacao = new ControladorDaAplicacaoFactory()</span>
+<span class="fc" id="L32">                .getControladorDaAplicacao()</span>
+<span class="fc" id="L33">                .comControladorDeAlertas(controladorDeAlertas)</span>
+<span class="fc" id="L34">                .comParametros(parametrosAplicacao)</span>
+<span class="fc" id="L35">                .comInputStream(System.in)</span>
+<span class="fc" id="L36">                .build();</span>
+<span class="fc" id="L37">    }</span>
 
     public void run() {
-<span class="nc" id="L38">        controladorDaAplicacao.inicializaAplicacao();</span>
-<span class="nc" id="L39">    }</span>
+<span class="nc" id="L40">        controladorDaAplicacao.inicializaAplicacao();</span>
+<span class="nc" id="L41">    }</span>
 
     public String getParametroArquivo() {
-<span class="fc" id="L42">        return parametrosAplicacao.getArquivo();</span>
+<span class="fc" id="L44">        return parametrosAplicacao.getArquivo();</span>
     }
 
     public List&lt;Alerta&gt; getAlertas() {
-<span class="fc" id="L46">        return controladorDeAlertas.getAlertas();</span>
+<span class="fc" id="L48">        return controladorDeAlertas.getAlertas();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
