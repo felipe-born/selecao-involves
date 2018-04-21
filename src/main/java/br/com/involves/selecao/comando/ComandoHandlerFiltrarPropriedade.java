@@ -21,12 +21,13 @@ public class ComandoHandlerFiltrarPropriedade implements ComandoHandler<Conjunto
         String propriedade = parametros.get(0);
         String valor = parametros.get(1);
 
+        String cabecalho = entradaDeComando.getCabecalhoAsString();
+
         String listagemDeValores = entradaDeComando.getValores()
                 .stream()
                 .filter(entidade -> entidade.possuiPropriedadeComValor(propriedade, valor))
                 .map(entidade -> entidade.toString())
-                .collect(Collectors.joining("\n", propriedade + "\n", ""));
-
+                .collect(Collectors.joining("\n", cabecalho + "\n", ""));
         return listagemDeValores;
     }
 }

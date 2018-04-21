@@ -1,1 +1,10 @@
-/home/desenvolvimento/projetos/involves/selecao-involves/src/test/java/br/com/involves/selecao/principal/InvolvesAppTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarTodosTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedadeTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintosTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/entrada_saida/LinhaHandlerCSVTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerAjudaTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/principal/InvolvesAppTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/parser/ParserParametroContarDistintosTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/parser/ParserParametroFiltrarPropriedadeTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivoTest.java
