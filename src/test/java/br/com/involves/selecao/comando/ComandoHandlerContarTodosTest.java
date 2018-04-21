@@ -9,9 +9,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class ComandoHandlerContarTodosTest {
 
@@ -57,6 +55,17 @@ public class ComandoHandlerContarTodosTest {
     public void testarComandoComParametroNulo() {
         String exec = comandoHandlerContarTodos.exec("count *", null);
         Assert.assertEquals("0", exec);
+    }
+
+    @Test
+    public void testarConversorComValorNulo() {
+        ConversorConjuntoDadosComPropriedades conversorConjuntoDadosComPropriedades = new ConversorConjuntoDadosComPropriedades();
+
+        ConjuntoDadosComPropriedade converter = conversorConjuntoDadosComPropriedades.converter(null);
+        Assert.assertNull(converter);
+        converter = conversorConjuntoDadosComPropriedades.converter(new ArrayList<>());
+        Assert.assertNull(converter);
+
     }
 
 }

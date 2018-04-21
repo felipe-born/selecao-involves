@@ -28,8 +28,7 @@ public class ConversorConjuntoDadosComPropriedades implements ConversorEntidadeP
             return conjuntoDadosComPropriedade;
         } catch (EntidadeDeLeituraException e) {
             e.printStackTrace();
+            return null;
         }
-
-        return null;
     }
 }

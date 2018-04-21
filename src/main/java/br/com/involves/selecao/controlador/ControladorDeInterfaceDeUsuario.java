@@ -3,8 +3,10 @@ package br.com.involves.selecao.controlador;
 import br.com.involves.selecao.comando.ComandoHandler;
 import br.com.involves.selecao.conversor.ConversorEntidadeParaEntradaComando;
 import br.com.involves.selecao.dominio.TipoDeComando;
+import br.com.involves.selecao.entrada_saida.usuario.EntradaConsole;
 import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeEntrada;
 import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeSaida;
+import br.com.involves.selecao.entrada_saida.usuario.SaidaConsole;
 import br.com.involves.selecao.flyweight.Flyweight;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 import br.com.involves.selecao.modelo.EntradaDeComando;
@@ -27,8 +29,9 @@ public class ControladorDeInterfaceDeUsuario {
     }
 
     public void iniciaComunicacaoComUsuario() {
-        entrada = new InterfaceDeEntrada(this);
-        saida = new InterfaceDeSaida(this);
+        entrada = new EntradaConsole(this);
+        saida = new SaidaConsole();
+        saida.boasVindas();
         aguardaComando();
     }
 

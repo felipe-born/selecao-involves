@@ -35,8 +35,6 @@ public class InvolvesApp {
     }
 
     public void run() {
-        System.out.println("======================== Involves APP ========================");
-        System.out.println("========== Felipe Born de Jesus __ Futuro Involvido ==========");
         controladorDaAplicacao.inicializaAplicacao();
     }
 
