@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LeitorDeArquivoBuilder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">selecao-involves</a> &gt; <a href="index.source.html" class="el_package">br.com.involves.selecao.builder</a> &gt; <span class="el_source">LeitorDeArquivoBuilder.java</span></div><h1>LeitorDeArquivoBuilder.java</h1><pre class="source lang-java linenums">package br.com.involves.selecao.builder;
+
+import br.com.involves.selecao.dominio.TipoDeArquivo;
+import br.com.involves.selecao.entrada_saida.LeitorDeArquivo;
+import br.com.involves.selecao.entrada_saida.LinhaHandler;
+import br.com.involves.selecao.excecao.TipoDeArquivoNaoSuportadoException;
+import br.com.involves.selecao.modelo.ArquivoDeLeitura;
+import br.com.involves.selecao.modelo.ParametrosAplicacao;
+import br.com.involves.selecao.utilitarios.UtilitarioArquivo;
+import javafx.util.Builder;
+
+import java.io.FileNotFoundException;
+
+public class LeitorDeArquivoBuilder implements Builder&lt;LeitorDeArquivo&gt; {
+
+    private ArquivoDeLeitura arquivo;
+    private LinhaHandler linhaHandler;
+
+<span class="fc" id="L19">    public LeitorDeArquivoBuilder(ParametrosAplicacao parametrosAplicacao) throws FileNotFoundException {</span>
+<span class="fc" id="L20">        String extensaoArquivo = UtilitarioArquivo.getExtensao(parametrosAplicacao.getArquivo());</span>
+<span class="fc" id="L21">        TipoDeArquivo tipoDeArquivo = TipoDeArquivo.getTipoDeArquivo(extensaoArquivo);</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (tipoDeArquivo == null)</span>
+<span class="fc" id="L23">            throw new TipoDeArquivoNaoSuportadoException(parametrosAplicacao.getArquivo());</span>
+<span class="fc" id="L24">        this.linhaHandler = tipoDeArquivo.getLinhaHandler();</span>
+
+<span class="fc" id="L26">        this.arquivo = new ArquivoDeLeituraBuilder(parametrosAplicacao)</span>
+<span class="fc" id="L27">                .comArquivo(parametrosAplicacao.getArquivo())</span>
+<span class="fc" id="L28">                .build();</span>
+<span class="fc" id="L29">    }</span>
+
+    @Override
+    public LeitorDeArquivo build() {
+<span class="fc" id="L33">        return new LeitorDeArquivo(linhaHandler, arquivo);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

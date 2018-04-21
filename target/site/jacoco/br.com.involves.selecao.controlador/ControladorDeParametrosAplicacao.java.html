@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ControladorDeParametrosAplicacao.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">selecao-involves</a> &gt; <a href="index.source.html" class="el_package">br.com.involves.selecao.controlador</a> &gt; <span class="el_source">ControladorDeParametrosAplicacao.java</span></div><h1>ControladorDeParametrosAplicacao.java</h1><pre class="source lang-java linenums">package br.com.involves.selecao.controlador;
+
+import br.com.involves.selecao.dominio.TipoDeParametro;
+import br.com.involves.selecao.modelo.ParametrosAplicacao;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class ControladorDeParametrosAplicacao implements Controlador&lt;ParametrosAplicacao&gt; {
+    private final ControladorDeAlertas controladorDeAlertas;
+    private List&lt;String&gt; parametros;
+
+<span class="fc" id="L13">    public ControladorDeParametrosAplicacao(String[] parametros, ControladorDeAlertas controladorDeAlertas) {</span>
+
+<span class="fc" id="L15">        this.parametros = Arrays.asList(parametros);</span>
+<span class="fc" id="L16">        this.controladorDeAlertas = controladorDeAlertas;</span>
+<span class="fc" id="L17">    }</span>
+
+    public ParametrosAplicacao controle() {
+<span class="fc" id="L20">        lidaComParametrosInexistentes();</span>
+<span class="fc" id="L21">        return geraParametrosAplicacao();</span>
+    }
+
+    private void lidaComParametrosInexistentes() {
+<span class="fc" id="L25">        parametros</span>
+<span class="fc" id="L26">                .stream()</span>
+<span class="fc" id="L27">                .map(argumento -&gt; argumento.substring(0, argumento.indexOf(&quot;=&quot;) + 1))</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">                .filter(argumento -&gt; TipoDeParametro.getTipo(argumento) == null)</span>
+<span class="fc" id="L29">                .forEach(argumento -&gt; controladorDeAlertas.criaNovoAlerta(argumento));</span>
+<span class="fc" id="L30">    }</span>
+
+    private ParametrosAplicacao geraParametrosAplicacao() {
+<span class="fc" id="L33">        String arquivo = getValorDoParametro(TipoDeParametro.PARAMETRO_ARQUIVO);</span>
+
+<span class="fc" id="L35">        return new ParametrosAplicacao(arquivo);</span>
+    }
+
+    private String getValorDoParametro(TipoDeParametro tipoDeParametro) {
+<span class="fc" id="L39">        return parametros</span>
+<span class="fc" id="L40">                .stream()</span>
+<span class="fc" id="L41">                .filter(parametro -&gt; parametro.startsWith(tipoDeParametro.getArgumento()))</span>
+<span class="fc" id="L42">                .map(parametro -&gt; parametro.substring(tipoDeParametro.getArgumento().length()))</span>
+<span class="fc" id="L43">                .findAny()</span>
+<span class="fc" id="L44">                .orElse(tipoDeParametro.getValorPadrao());</span>
+    }
+
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
