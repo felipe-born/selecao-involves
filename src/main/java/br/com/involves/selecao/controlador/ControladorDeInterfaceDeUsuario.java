@@ -1,6 +1,7 @@
 package br.com.involves.selecao.controlador;
 
 import br.com.involves.selecao.comando.ComandoHandler;
+import br.com.involves.selecao.modelo.RetornoComando;
 import br.com.involves.selecao.conversor.ConversorEntidadeParaEntradaComando;
 import br.com.involves.selecao.dominio.TipoDeComando;
 import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeEntrada;
@@ -11,7 +12,7 @@ import br.com.involves.selecao.modelo.EntradaDeComando;
 
 import java.util.List;
 
-public class ControladorDeInterfaceDeUsuario {
+public class ControladorDeInterfaceDeUsuario implements Controlador {
     private final EntradaDeComando entradaDeComando;
     private Flyweight<ComandoHandler> comandoHandlerFlyweight;
 
@@ -20,15 +21,19 @@ public class ControladorDeInterfaceDeUsuario {
 
     public ControladorDeInterfaceDeUsuario(List<EntidadeDeLeitura> entidadesDeLeitura,
                                            ConversorEntidadeParaEntradaComando conversor,
-                                           Flyweight<ComandoHandler> comandoHandlerFlyweight) {
+                                           Flyweight<ComandoHandler> comandoHandlerFlyweight,
+                                           InterfaceDeEntrada entrada,
+                                           InterfaceDeSaida saida) {
 
         this.entradaDeComando = conversor.converter(entidadesDeLeitura);
         this.comandoHandlerFlyweight = comandoHandlerFlyweight;
+        this.entrada = entrada;
+        this.saida = saida;
     }
 
     public void iniciaComunicacaoComUsuario() {
-        entrada = new InterfaceDeEntrada(this);
-        saida = new InterfaceDeSaida(this);
+        entrada.recebeControlador(this);
+        saida.boasVindas();
         aguardaComando();
     }
 
@@ -36,11 +41,10 @@ public class ControladorDeInterfaceDeUsuario {
         TipoDeComando tipoDeComando = TipoDeComando.getComandoCom(comando);
 
         ComandoHandler comandoHandler = comandoHandlerFlyweight.getInstance(tipoDeComando.getHandlerClazz());
-
-        String retorno = comandoHandler.exec(comando, entradaDeComando);
+        RetornoComando retorno = comandoHandler.exec(comando, entradaDeComando);
         saida.imprime(retorno);
-
-        aguardaComando();
+        if (!retorno.indicaFimExecucao())
+            aguardaComando();
     }
 
     private void aguardaComando() {

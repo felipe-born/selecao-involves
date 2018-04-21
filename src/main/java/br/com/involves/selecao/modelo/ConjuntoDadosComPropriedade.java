@@ -33,4 +33,10 @@ public class ConjuntoDadosComPropriedade implements EntradaDeComando {
     public int getTotalDeValores() {
         return valores.size();
     }
+
+    public String getCabecalhoAsString() {
+        if (getCabecalho() == null)
+            return "";
+        return getCabecalho().toString();
+    }
 }

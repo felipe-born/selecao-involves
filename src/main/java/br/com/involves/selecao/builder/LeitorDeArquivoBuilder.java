@@ -27,6 +27,10 @@ public class LeitorDeArquivoBuilder implements Builder<LeitorDeArquivo> {
                 .comArquivo(parametrosAplicacao.getArquivo())
                 .build();
     }
+    public LeitorDeArquivoBuilder comLinhaHandler(LinhaHandler linhaHandler) {
+        this.linhaHandler = linhaHandler;
+        return this;
+    }
 
     @Override
     public LeitorDeArquivo build() {

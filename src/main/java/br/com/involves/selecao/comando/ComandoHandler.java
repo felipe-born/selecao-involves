@@ -1,7 +1,8 @@
 package br.com.involves.selecao.comando;
 
 import br.com.involves.selecao.modelo.EntradaDeComando;
+import br.com.involves.selecao.modelo.RetornoComando;
 
 public interface ComandoHandler<T extends EntradaDeComando> {
-    String exec(String comando, T entradaDeComando);
+    RetornoComando exec(String comando, T entradaDeComando);
 }

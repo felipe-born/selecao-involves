@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ArquivoDeLeituraBuilder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">selecao-involves</a> &gt; <a href="index.source.html" class="el_package">br.com.involves.selecao.builder</a> &gt; <span class="el_source">ArquivoDeLeituraBuilder.java</span></div><h1>ArquivoDeLeituraBuilder.java</h1><pre class="source lang-java linenums">package br.com.involves.selecao.builder;
+
+import br.com.involves.selecao.dominio.TipoDeParametro;
+import br.com.involves.selecao.modelo.ArquivoDeLeitura;
+import br.com.involves.selecao.modelo.ParametrosAplicacao;
+import javafx.util.Builder;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+public class ArquivoDeLeituraBuilder implements Builder&lt;ArquivoDeLeitura&gt; {
+    private String arquivo;
+    private ParametrosAplicacao parametrosAplicacao;
+    private InputStream inputStream;
+
+
+<span class="fc" id="L18">    public ArquivoDeLeituraBuilder(ParametrosAplicacao parametrosAplicacao) {</span>
+<span class="fc" id="L19">        this.parametrosAplicacao = parametrosAplicacao;</span>
+<span class="fc" id="L20">    }</span>
+
+
+    public ArquivoDeLeituraBuilder comArquivo(String arquivo) throws FileNotFoundException {
+<span class="fc" id="L24">        this.arquivo = arquivo;</span>
+<span class="fc" id="L25">        this.inputStream = getInputStream(arquivo);</span>
+<span class="fc" id="L26">        return this;</span>
+    }
+
+    private InputStream getInputStream(String arquivo) throws FileNotFoundException {
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">        return isArquivoDefault(arquivo) ?</span>
+<span class="pc" id="L31">                getResourceStreamDo(arquivo)</span>
+                : new FileInputStream(arquivo);
+    }
+
+    private InputStream getResourceStreamDo(String arquivo) {
+<span class="fc" id="L36">        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();</span>
+<span class="fc" id="L37">        InputStream resourceAsStream = classLoader.getResourceAsStream(arquivo);</span>
+
+<span class="fc" id="L39">        return resourceAsStream;</span>
+    }
+
+    private boolean isArquivoDefault(String arquivo) {
+<span class="fc" id="L43">        return TipoDeParametro.PARAMETRO_ARQUIVO.getValorPadrao().equals(arquivo);</span>
+    }
+
+    @Override
+    public ArquivoDeLeitura build() {
+<span class="fc" id="L48">        return new ArquivoDeLeitura(arquivo, inputStream);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,28 +1,10 @@
 package br.com.involves.selecao.entrada_saida.usuario;
 
-import br.com.involves.selecao.controlador.ControladorDeInterfaceDeUsuario;
+import br.com.involves.selecao.controlador.Controlador;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+public interface InterfaceDeEntrada<T extends Controlador> {
 
-public class InterfaceDeEntrada {
+    void aguardaEntrada();
 
-    private final ControladorDeInterfaceDeUsuario controladorDeInterfaceDeUsuario;
-
-    public InterfaceDeEntrada(ControladorDeInterfaceDeUsuario controladorDeInterfaceDeUsuario) {
-
-        this.controladorDeInterfaceDeUsuario = controladorDeInterfaceDeUsuario;
-    }
-
-    public void aguardaEntrada() {
-
-        try (BufferedReader leitor = new BufferedReader(new InputStreamReader(System.in))) {
-            String linha = leitor.readLine();
-            controladorDeInterfaceDeUsuario.recebeComando(linha);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
+    void recebeControlador(T controlador);
 }

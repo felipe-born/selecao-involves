@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.involves.selecao.entrada_saida.LinhaHandlerCSVTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in br.com.involves.selecao.entrada_saida.LinhaHandlerCSVTest

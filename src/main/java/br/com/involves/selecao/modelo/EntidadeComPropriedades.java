@@ -1,14 +1,11 @@
 package br.com.involves.selecao.modelo;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class EntidadeComPropriedades implements EntidadeDeLeitura {
 
-    private Map<String, String> propriedades = new HashMap<>();
+    private Map<String, String> propriedades = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
 
     public EntidadeComPropriedades() {
     }
@@ -22,21 +19,24 @@ public class EntidadeComPropriedades implements EntidadeDeLeitura {
     }
 
 
-    @Override
-    public String toString() {
-        return propriedades.entrySet()
-                .stream()
-                .map(entry -> entry.getValue())
-                .collect(Collectors.joining("|"));
-    }
-
     public String getValor(String coluna) {
         return propriedades
                 .get(coluna);
     }
 
     public boolean possuiPropriedadeComValor(String propriedade, String valor) {
+        if (propriedade == null || valor == null)
+            return false;
         String valorDaPropriedade = propriedades.get(propriedade);
-        return valorDaPropriedade != null && valorDaPropriedade.equals(valor);
+        return valorDaPropriedade != null && valorDaPropriedade.equalsIgnoreCase(valor);
+    }
+
+    @Override
+    public String toString() {
+        return propriedades.entrySet()
+                .stream()
+                .sorted(Comparator.comparing(Map.Entry::getKey))
+                .map(entry -> entry.getValue())
+                .collect(Collectors.joining("|"));
     }
 }

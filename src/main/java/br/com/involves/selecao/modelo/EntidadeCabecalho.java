@@ -2,10 +2,7 @@ package br.com.involves.selecao.modelo;
 
 import br.com.involves.selecao.excecao.EntidadeDeLeituraException;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class EntidadeCabecalho implements EntidadeDeLeitura {
@@ -28,6 +25,7 @@ public class EntidadeCabecalho implements EntidadeDeLeitura {
     public String toString() {
         return cabecalhoCSV
                 .stream()
+                .sorted(String::compareTo)
                 .collect(Collectors.joining(" | "));
     }
 

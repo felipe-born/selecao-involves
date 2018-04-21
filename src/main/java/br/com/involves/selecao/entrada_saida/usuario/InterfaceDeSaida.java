@@ -1,21 +1,12 @@
 package br.com.involves.selecao.entrada_saida.usuario;
 
-import br.com.involves.selecao.controlador.ControladorDeInterfaceDeUsuario;
+import br.com.involves.selecao.modelo.Saida;
 
-public class InterfaceDeSaida {
+public interface InterfaceDeSaida<S extends Saida> {
 
-    private final ControladorDeInterfaceDeUsuario controladorDeInterfaceDeUsuario;
+    void solicitaComando();
 
-    public InterfaceDeSaida(ControladorDeInterfaceDeUsuario controladorDeInterfaceDeUsuario) {
+    void imprime(S mensagem);
 
-        this.controladorDeInterfaceDeUsuario = controladorDeInterfaceDeUsuario;
-    }
-
-    public void solicitaComando() {
-        System.out.println(("Por favor, digite um comando: "));
-    }
-
-    public void imprime(String exec) {
-        System.out.println(exec);
-    }
+    void boasVindas();
 }

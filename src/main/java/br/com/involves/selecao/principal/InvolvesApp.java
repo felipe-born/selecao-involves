@@ -8,6 +8,7 @@ import br.com.involves.selecao.fabrica.ControladorDeParametrosFactory;
 import br.com.involves.selecao.modelo.Alerta;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 
+import javax.swing.plaf.synth.SynthFormattedTextFieldUI;
 import java.util.List;
 
 public class InvolvesApp {
@@ -31,12 +32,11 @@ public class InvolvesApp {
                 .getControladorDaAplicacao()
                 .comControladorDeAlertas(controladorDeAlertas)
                 .comParametros(parametrosAplicacao)
+                .comInputStream(System.in)
                 .build();
     }
 
     public void run() {
-        System.out.println("======================== Involves APP ========================");
-        System.out.println("========== Felipe Born de Jesus __ Futuro Involvido ==========");
         controladorDaAplicacao.inicializaAplicacao();
     }
 

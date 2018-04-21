@@ -1,6 +1,7 @@
 package br.com.involves.selecao.comando;
 
 import br.com.involves.selecao.modelo.ConjuntoDadosComPropriedade;
+import br.com.involves.selecao.modelo.RetornoComando;
 import br.com.involves.selecao.parser.ParametroComandoParser;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class ComandoHandlerContarDistintos implements ComandoHandler<ConjuntoDad
     }
 
     @Override
-    public String exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
+    public RetornoComando exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
         String valorParametro = this.comandoParser
                 .parse(comando)
                 .get(0);
@@ -27,6 +28,6 @@ public class ComandoHandlerContarDistintos implements ComandoHandler<ConjuntoDad
                 .distinct()
                 .collect(Collectors.toList());
         Integer quantidadeDeValoresDistintos = valoresDistintos.size();
-        return quantidadeDeValoresDistintos.toString();
+        return new RetornoComando(quantidadeDeValoresDistintos.toString());
     }
 }

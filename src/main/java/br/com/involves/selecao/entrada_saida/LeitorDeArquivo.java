@@ -26,9 +26,8 @@ public class LeitorDeArquivo {
 
     public List<EntidadeDeLeitura> leia() throws LeituraDeArquivoException {
         InputStream inputStream = arquivo.getInputStream();
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
-        try (Stream<String> stream = bufferedReader.lines()) {
+        try (Stream<String> stream = new BufferedReader(new InputStreamReader(inputStream)).lines()) {
             List<EntidadeDeLeitura> entidadesDeLeitura = stream
                     .map(conteudo -> linhaHandler.lidarCom(conteudo))
                     .filter(entidade -> entidade instanceof EntidadeComPropriedades)
