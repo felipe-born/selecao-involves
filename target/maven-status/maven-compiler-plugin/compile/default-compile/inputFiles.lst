@@ -32,8 +32,10 @@
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/dominio/TipoDeParametro.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeEntrada.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/excecao/ParametroParserException.java
+/home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsole.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/fabrica/ControladorDeAlertasFactory.java
+/home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/entrada_saida/usuario/SaidaConsole.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/fabrica/ControladorDaAplicacaoFactory.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/dominio/TipoDeComando.java

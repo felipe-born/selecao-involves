@@ -14,29 +14,29 @@ public class ControleRemoto implements Flyweight&lt;ComandoHandler&gt; {
      * Singleton
      */
     public static ControleRemoto getInstancia() {
-<span class="nc bnc" id="L17" title="All 2 branches missed.">        if (instancia == null)</span>
-<span class="nc" id="L18">            instancia = new ControleRemoto();</span>
-<span class="nc" id="L19">        return instancia;</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        if (instancia == null)</span>
+<span class="fc" id="L18">            instancia = new ControleRemoto();</span>
+<span class="fc" id="L19">        return instancia;</span>
     }
 
 
-<span class="nc" id="L23">    private Map&lt;Class&lt;? extends ComandoHandler&gt;, ComandoHandler&gt; mapClazzToHandler = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L23">    private Map&lt;Class&lt;? extends ComandoHandler&gt;, ComandoHandler&gt; mapClazzToHandler = new HashMap&lt;&gt;();</span>
 
-<span class="nc" id="L25">    private ControleRemoto() {</span>
-<span class="nc" id="L26">        adiciona(new ComandoHandlerAjuda());</span>
-<span class="nc" id="L27">        adiciona(new ComandoHandlerContarTodos());</span>
-<span class="nc" id="L28">        adiciona(new ComandoHandlerContarDistintos(new ParserParametroContarDistintos()));</span>
-<span class="nc" id="L29">        adiciona(new ComandoHandlerExit());</span>
-<span class="nc" id="L30">        adiciona(new ComandoHandlerFiltrarPropriedade(new ParserParametroFiltrarPropriedade()));</span>
-<span class="nc" id="L31">    }</span>
+<span class="fc" id="L25">    private ControleRemoto() {</span>
+<span class="fc" id="L26">        adiciona(new ComandoHandlerAjuda());</span>
+<span class="fc" id="L27">        adiciona(new ComandoHandlerContarTodos());</span>
+<span class="fc" id="L28">        adiciona(new ComandoHandlerContarDistintos(new ParserParametroContarDistintos()));</span>
+<span class="fc" id="L29">        adiciona(new ComandoHandlerExit());</span>
+<span class="fc" id="L30">        adiciona(new ComandoHandlerFiltrarPropriedade(new ParserParametroFiltrarPropriedade()));</span>
+<span class="fc" id="L31">    }</span>
 
     private void adiciona(ComandoHandler handler) {
-<span class="nc" id="L34">        mapClazzToHandler.put(handler.getClass(), handler);</span>
-<span class="nc" id="L35">    }</span>
+<span class="fc" id="L34">        mapClazzToHandler.put(handler.getClass(), handler);</span>
+<span class="fc" id="L35">    }</span>
 
     @Override
     public ComandoHandler getInstance(Class&lt;? extends ComandoHandler&gt; clazz) {
-<span class="nc" id="L39">        return mapClazzToHandler.get(clazz);</span>
+<span class="fc" id="L39">        return mapClazzToHandler.get(clazz);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

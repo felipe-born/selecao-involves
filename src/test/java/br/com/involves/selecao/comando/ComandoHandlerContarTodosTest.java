@@ -5,6 +5,7 @@ import br.com.involves.selecao.conversor.ConversorConjuntoDadosComPropriedades;
 import br.com.involves.selecao.modelo.ConjuntoDadosComPropriedade;
 import br.com.involves.selecao.modelo.EntidadeCabecalho;
 import br.com.involves.selecao.modelo.EntidadeComPropriedades;
+import br.com.involves.selecao.modelo.RetornoComando;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,8 +39,8 @@ public class ComandoHandlerContarTodosTest {
 
         List<EntidadeComPropriedades> entidadeComPropriedades = Arrays.asList(entidadeA, entidadeB, entidadeC);
         ConjuntoDadosComPropriedade entradaDeComando = conversorEntidadeParaEntradaComando.converter(entidadeComPropriedades);
-        String exec = comandoHandlerContarTodos.exec("count *", entradaDeComando);
-        Assert.assertEquals("3", exec);
+        RetornoComando exec = comandoHandlerContarTodos.exec("count *", entradaDeComando);
+        Assert.assertEquals("3", exec.toString());
     }
 
     @Test
@@ -47,14 +48,14 @@ public class ComandoHandlerContarTodosTest {
         Collection<String> cabecalhoCSV = Arrays.asList("p1", "p2", "p3");
         EntidadeCabecalho entidadeCabecalho = new EntidadeCabecalho(cabecalhoCSV);
         ConjuntoDadosComPropriedade entradaDeComando = new ConjuntoDadosComPropriedade(entidadeCabecalho);
-        String exec = comandoHandlerContarTodos.exec("count *", entradaDeComando);
-        Assert.assertEquals("0", exec);
+        RetornoComando exec = comandoHandlerContarTodos.exec("count *", entradaDeComando);
+        Assert.assertEquals("0", exec.toString());
     }
 
     @Test
     public void testarComandoComParametroNulo() {
-        String exec = comandoHandlerContarTodos.exec("count *", null);
-        Assert.assertEquals("0", exec);
+        RetornoComando exec = comandoHandlerContarTodos.exec("count *", null);
+        Assert.assertEquals("0", exec.toString());
     }
 
     @Test

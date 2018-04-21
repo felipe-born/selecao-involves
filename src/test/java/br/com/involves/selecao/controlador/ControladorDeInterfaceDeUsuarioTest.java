@@ -10,6 +10,7 @@ import br.com.involves.selecao.fabrica.ControladorDeInterfaceDeUsuarioFactory;
 import br.com.involves.selecao.flyweight.ControleRemoto;
 import br.com.involves.selecao.modelo.EntidadeComPropriedades;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
+import br.com.involves.selecao.modelo.RetornoComando;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -77,9 +78,9 @@ public class ControladorDeInterfaceDeUsuarioTest {
         interfaceDeUsuario.recebeComando("comando invalido");
 
         ComandoHandler comandoAjuda = ControleRemoto.getInstancia().getInstance(ComandoHandlerAjuda.class);
-        String resultadoDeAjuda = comandoAjuda.exec(null, null);
+        RetornoComando resultadoDeAjuda = comandoAjuda.exec(null, null);
 
-        Assert.assertTrue(interfaceDeSaidaDeTeste.estaComResultado(resultadoDeAjuda));
+        Assert.assertTrue(interfaceDeSaidaDeTeste.estaComResultado(resultadoDeAjuda.toString()));
     }
 
 }

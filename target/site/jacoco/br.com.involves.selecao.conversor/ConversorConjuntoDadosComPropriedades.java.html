@@ -11,8 +11,8 @@ import java.util.Collection;
 
     @Override
     public ConjuntoDadosComPropriedade converter(Collection&lt;EntidadeComPropriedades&gt; entrada) {
-<span class="pc bpc" id="L14" title="2 of 4 branches missed.">        if (entrada == null || entrada.isEmpty())</span>
-<span class="nc" id="L15">            return null;</span>
+<span class="fc bfc" id="L14" title="All 4 branches covered.">        if (entrada == null || entrada.isEmpty())</span>
+<span class="fc" id="L15">            return null;</span>
 
 <span class="fc" id="L17">        Collection&lt;String&gt; colunas = entrada.stream()</span>
 <span class="fc" id="L18">                .findAny()</span>
@@ -28,9 +28,8 @@ import java.util.Collection;
 <span class="fc" id="L28">            return conjuntoDadosComPropriedade;</span>
 <span class="nc" id="L29">        } catch (EntidadeDeLeituraException e) {</span>
 <span class="nc" id="L30">            e.printStackTrace();</span>
+<span class="nc" id="L31">            return null;</span>
         }
-
-<span class="nc" id="L33">        return null;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

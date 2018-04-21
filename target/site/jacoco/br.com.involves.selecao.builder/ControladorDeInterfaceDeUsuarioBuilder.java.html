@@ -3,37 +3,51 @@
 import br.com.involves.selecao.comando.ComandoHandler;
 import br.com.involves.selecao.controlador.ControladorDeInterfaceDeUsuario;
 import br.com.involves.selecao.conversor.ConversorEntidadeParaEntradaComando;
+import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeEntrada;
+import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeSaida;
 import br.com.involves.selecao.flyweight.Flyweight;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 import javafx.util.Builder;
 
 import java.util.List;
 
-<span class="nc" id="L12">public class ControladorDeInterfaceDeUsuarioBuilder implements Builder&lt;ControladorDeInterfaceDeUsuario&gt; {</span>
+<span class="fc" id="L14">public class ControladorDeInterfaceDeUsuarioBuilder implements Builder&lt;ControladorDeInterfaceDeUsuario&gt; {</span>
     private List&lt;EntidadeDeLeitura&gt; entidadesDeLeitura;
     private Flyweight&lt;ComandoHandler&gt; flyweight;
     private ConversorEntidadeParaEntradaComando conversor;
+    private InterfaceDeEntrada interfaceDeEntrada;
+    private InterfaceDeSaida interfaceDeSaida;
 
 
     public ControladorDeInterfaceDeUsuarioBuilder comEntidades(List&lt;EntidadeDeLeitura&gt; entidadesDeLeitura) {
-<span class="nc" id="L19">        this.entidadesDeLeitura = entidadesDeLeitura;</span>
-<span class="nc" id="L20">        return this;</span>
+<span class="fc" id="L23">        this.entidadesDeLeitura = entidadesDeLeitura;</span>
+<span class="fc" id="L24">        return this;</span>
     }
 
     public ControladorDeInterfaceDeUsuarioBuilder comComandoFlyweight(Flyweight&lt;ComandoHandler&gt; flyweight) {
-<span class="nc" id="L24">        this.flyweight = flyweight;</span>
-<span class="nc" id="L25">        return this;</span>
+<span class="fc" id="L28">        this.flyweight = flyweight;</span>
+<span class="fc" id="L29">        return this;</span>
     }
 
     public ControladorDeInterfaceDeUsuarioBuilder comConversor(ConversorEntidadeParaEntradaComando conversor) {
 
-<span class="nc" id="L30">        this.conversor = conversor;</span>
-<span class="nc" id="L31">        return this;</span>
+<span class="fc" id="L34">        this.conversor = conversor;</span>
+<span class="fc" id="L35">        return this;</span>
+    }
+
+    public ControladorDeInterfaceDeUsuarioBuilder comInterfaceDeEntrada(InterfaceDeEntrada interfaceDeEntrada) {
+<span class="fc" id="L39">        this.interfaceDeEntrada = interfaceDeEntrada;</span>
+<span class="fc" id="L40">        return this;</span>
+    }
+
+    public ControladorDeInterfaceDeUsuarioBuilder comInterfaceDeSaida(InterfaceDeSaida interfaceDeSaida) {
+<span class="fc" id="L44">        this.interfaceDeSaida = interfaceDeSaida;</span>
+<span class="fc" id="L45">        return this;</span>
     }
 
     @Override
     public ControladorDeInterfaceDeUsuario build() {
-<span class="nc" id="L36">        return new ControladorDeInterfaceDeUsuario(entidadesDeLeitura, conversor, flyweight);</span>
+<span class="fc" id="L50">        return new ControladorDeInterfaceDeUsuario(entidadesDeLeitura, conversor, flyweight, interfaceDeEntrada, interfaceDeSaida);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

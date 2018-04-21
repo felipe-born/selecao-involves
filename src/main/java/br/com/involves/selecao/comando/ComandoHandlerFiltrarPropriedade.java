@@ -1,6 +1,7 @@
 package br.com.involves.selecao.comando;
 
 import br.com.involves.selecao.modelo.ConjuntoDadosComPropriedade;
+import br.com.involves.selecao.modelo.RetornoComando;
 import br.com.involves.selecao.parser.ParametroComandoParser;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class ComandoHandlerFiltrarPropriedade implements ComandoHandler<Conjunto
     }
 
     @Override
-    public String exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
+    public RetornoComando exec(String comando, ConjuntoDadosComPropriedade entradaDeComando) {
         List<String> parametros = parser.parse(comando);
 
         String propriedade = parametros.get(0);
@@ -28,6 +29,6 @@ public class ComandoHandlerFiltrarPropriedade implements ComandoHandler<Conjunto
                 .filter(entidade -> entidade.possuiPropriedadeComValor(propriedade, valor))
                 .map(entidade -> entidade.toString())
                 .collect(Collectors.joining("\n", cabecalho + "\n", ""));
-        return listagemDeValores;
+        return new RetornoComando(listagemDeValores);
     }
 }

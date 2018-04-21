@@ -1,14 +1,20 @@
 package br.com.involves.selecao.entrada_saida.usuario;
 
-public class SaidaConsole implements InterfaceDeSaida {
+import br.com.involves.selecao.modelo.RetornoComando;
+
+public class SaidaConsole implements InterfaceDeSaida<RetornoComando> {
     @Override
     public void solicitaComando() {
         imprime("Por favor, digite um comando: ");
     }
 
     @Override
+    public void imprime(RetornoComando mensagem) {
+        this.imprime(mensagem.toString());
+    }
+
     public void imprime(String mensagem) {
-        System.out.printf(mensagem);
+        System.out.println(mensagem);
     }
 
     @Override

@@ -4,6 +4,7 @@ import br.com.involves.selecao.builder.EntidadeComPropriedadesBuilder;
 import br.com.involves.selecao.modelo.ConjuntoDadosComPropriedade;
 import br.com.involves.selecao.modelo.EntidadeCabecalho;
 import br.com.involves.selecao.modelo.EntidadeComPropriedades;
+import br.com.involves.selecao.modelo.RetornoComando;
 import br.com.involves.selecao.parser.ParametroComandoParser;
 import br.com.involves.selecao.parser.ParserParametroContarDistintos;
 import org.junit.Assert;
@@ -45,9 +46,9 @@ public class ComandoHandlerContarDistintosTest {
         dados.adiciona(entidadePoa);
         dados.adiciona(entidadeCuritiba);
 
-        String resultadoComando = handlerContarDistintos.exec("count distinct uf", dados);
+        RetornoComando resultadoComando = handlerContarDistintos.exec("count distinct uf", dados);
 
-        Assert.assertEquals("3", resultadoComando);
+        Assert.assertEquals("3", resultadoComando.toString());
     }
 
     @Test
@@ -76,9 +77,9 @@ public class ComandoHandlerContarDistintosTest {
         dados.adiciona(entidadeCuritiba);
         dados.adiciona(entidadeSaoJose);
 
-        String resultadoComando = handlerContarDistintos.exec("count distinct uf", dados);
+        RetornoComando resultadoComando = handlerContarDistintos.exec("count distinct uf", dados);
 
-        Assert.assertEquals("3", resultadoComando);
+        Assert.assertEquals("3", resultadoComando.toString());
     }
 
     @Test
@@ -92,17 +93,17 @@ public class ComandoHandlerContarDistintosTest {
 
         dados.adiciona(entidadeFlorianopolis);
 
-        String resultadoComando = handlerContarDistintos.exec("count distinct musica", dados);
+        RetornoComando resultadoComando = handlerContarDistintos.exec("count distinct musica", dados);
 
-        Assert.assertEquals("0", resultadoComando);
+        Assert.assertEquals("0", resultadoComando.toString());
     }
 
     @Test
     public void testarContagemSemLinhasAlemDoCabecalho() {
         ConjuntoDadosComPropriedade dados = new ConjuntoDadosComPropriedade(cabecalho);
 
-        String resultadoComando = handlerContarDistintos.exec("count distinct musica", dados);
+        RetornoComando resultadoComando = handlerContarDistintos.exec("count distinct musica", dados);
 
-        Assert.assertEquals("0", resultadoComando);
+        Assert.assertEquals("0", resultadoComando.toString());
     }
 }

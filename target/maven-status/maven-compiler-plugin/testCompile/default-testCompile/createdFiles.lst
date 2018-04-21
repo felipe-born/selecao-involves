@@ -1,6 +1,10 @@
+br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaidaDeTeste.class
 br/com/involves/selecao/parser/ParserParametroFiltrarPropriedadeTest.class
+br/com/involves/selecao/flyweight/ControleRemotoTest.class
+br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuarioTest.class
 br/com/involves/selecao/parser/ParserParametroContarDistintosTest.class
 br/com/involves/selecao/comando/ComandoHandlerContarDistintosTest.class
+br/com/involves/selecao/entrada_saida/usuario/InterfaceDeEntradaDeTeste.class
 br/com/involves/selecao/entrada_saida/LeitorDeArquivoTest.class
 br/com/involves/selecao/comando/ComandoHandlerContarTodosTest.class
 br/com/involves/selecao/dominio/TipoDeArquivoTest.class

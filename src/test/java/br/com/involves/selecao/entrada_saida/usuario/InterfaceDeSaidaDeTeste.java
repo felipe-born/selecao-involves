@@ -1,6 +1,8 @@
 package br.com.involves.selecao.entrada_saida.usuario;
 
-public class InterfaceDeSaidaDeTeste implements InterfaceDeSaida {
+import br.com.involves.selecao.modelo.RetornoComando;
+
+public class InterfaceDeSaidaDeTeste implements InterfaceDeSaida<RetornoComando> {
     private String resultado;
 
     @Override
@@ -9,8 +11,8 @@ public class InterfaceDeSaidaDeTeste implements InterfaceDeSaida {
     }
 
     @Override
-    public void imprime(String mensagem) {
-        this.resultado = mensagem;
+    public void imprime(RetornoComando retornoComando) {
+        this.resultado = retornoComando.toString();
     }
 
     @Override

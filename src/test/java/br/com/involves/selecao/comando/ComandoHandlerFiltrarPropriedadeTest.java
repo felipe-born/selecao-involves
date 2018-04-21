@@ -4,6 +4,7 @@ import br.com.involves.selecao.builder.EntidadeComPropriedadesBuilder;
 import br.com.involves.selecao.modelo.ConjuntoDadosComPropriedade;
 import br.com.involves.selecao.modelo.EntidadeCabecalho;
 import br.com.involves.selecao.modelo.EntidadeComPropriedades;
+import br.com.involves.selecao.modelo.RetornoComando;
 import br.com.involves.selecao.parser.ParametroComandoParser;
 import br.com.involves.selecao.parser.ParserParametroFiltrarPropriedade;
 import org.junit.Assert;
@@ -51,10 +52,10 @@ public class ComandoHandlerFiltrarPropriedadeTest {
         dados.adiciona(entidadeCuritiba);
         dados.adiciona(entidadeSaoJose);
 
-        String resultadoDoComando = comandoHandlerFiltrarPropriedade.exec("filter uf sc", dados);
-        Assert.assertTrue(resultadoDoComando.contains("sao jose"));
-        Assert.assertTrue(resultadoDoComando.contains("florianopolis"));
-        Assert.assertTrue(resultadoDoComando.contains("uf"));
+        RetornoComando resultadoDoComando = comandoHandlerFiltrarPropriedade.exec("filter uf sc", dados);
+        Assert.assertTrue(resultadoDoComando.toString().contains("sao jose"));
+        Assert.assertTrue(resultadoDoComando.toString().contains("florianopolis"));
+        Assert.assertTrue(resultadoDoComando.toString().contains("uf"));
     }
 
     @Test
@@ -83,9 +84,10 @@ public class ComandoHandlerFiltrarPropriedadeTest {
         dados.adiciona(entidadeCuritiba);
         dados.adiciona(entidadeSaoJose);
 
-        String resultadoDoComando = comandoHandlerFiltrarPropriedade.exec("filter musica gospel", dados);
-        Assert.assertTrue(resultadoDoComando.contains("uf"));
-        Assert.assertTrue(resultadoDoComando.contains("cidade")); }
+        RetornoComando resultadoDoComando = comandoHandlerFiltrarPropriedade.exec("filter musica gospel", dados);
+        Assert.assertTrue(resultadoDoComando.toString().contains("uf"));
+        Assert.assertTrue(resultadoDoComando.toString().contains("cidade"));
+    }
 
     @Test
     public void testarComandoComFiltroInexistente() {
@@ -113,8 +115,8 @@ public class ComandoHandlerFiltrarPropriedadeTest {
         dados.adiciona(entidadeCuritiba);
         dados.adiciona(entidadeSaoJose);
 
-        String resultadoDoComando = comandoHandlerFiltrarPropriedade.exec("filter uf sp", dados);
-        Assert.assertTrue(resultadoDoComando.contains("uf"));
-        Assert.assertTrue(resultadoDoComando.contains("cidade"));
+        RetornoComando resultadoDoComando = comandoHandlerFiltrarPropriedade.exec("filter uf sp", dados);
+        Assert.assertTrue(resultadoDoComando.toString().contains("uf"));
+        Assert.assertTrue(resultadoDoComando.toString().contains("cidade"));
     }
 }

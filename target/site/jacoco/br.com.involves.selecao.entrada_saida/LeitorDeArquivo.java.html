@@ -26,16 +26,15 @@ public class LeitorDeArquivo {
 
     public List&lt;EntidadeDeLeitura&gt; leia() throws LeituraDeArquivoException {
 <span class="fc" id="L28">        InputStream inputStream = arquivo.getInputStream();</span>
-<span class="fc" id="L29">        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));</span>
 
-<span class="pc" id="L31">        try (Stream&lt;String&gt; stream = bufferedReader.lines()) {</span>
-<span class="fc" id="L32">            List&lt;EntidadeDeLeitura&gt; entidadesDeLeitura = stream</span>
-<span class="fc" id="L33">                    .map(conteudo -&gt; linhaHandler.lidarCom(conteudo))</span>
-<span class="fc" id="L34">                    .filter(entidade -&gt; entidade instanceof EntidadeComPropriedades)</span>
-<span class="fc" id="L35">                    .collect(Collectors.toList());</span>
-<span class="fc" id="L36">            return entidadesDeLeitura;</span>
-<span class="pc bpc" id="L37" title="6 of 8 branches missed.">        } catch (Exception e) {</span>
-<span class="nc" id="L38">            throw new LeituraDeArquivoException(e);</span>
+<span class="pc" id="L30">        try (Stream&lt;String&gt; stream = new BufferedReader(new InputStreamReader(inputStream)).lines()) {</span>
+<span class="fc" id="L31">            List&lt;EntidadeDeLeitura&gt; entidadesDeLeitura = stream</span>
+<span class="fc" id="L32">                    .map(conteudo -&gt; linhaHandler.lidarCom(conteudo))</span>
+<span class="fc" id="L33">                    .filter(entidade -&gt; entidade instanceof EntidadeComPropriedades)</span>
+<span class="fc" id="L34">                    .collect(Collectors.toList());</span>
+<span class="fc" id="L35">            return entidadesDeLeitura;</span>
+<span class="pc bpc" id="L36" title="6 of 8 branches missed.">        } catch (Exception e) {</span>
+<span class="fc" id="L37">            throw new LeituraDeArquivoException(e);</span>
         }
     }
 }

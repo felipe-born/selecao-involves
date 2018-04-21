@@ -3,6 +3,7 @@ package br.com.involves.selecao.entrada_saida;
 import br.com.involves.selecao.builder.LeitorDeArquivoBuilder;
 import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.excecao.TipoDeArquivoNaoSuportadoException;
+import br.com.involves.selecao.modelo.ArquivoDeLeitura;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import org.junit.Assert;
@@ -38,6 +39,15 @@ public class LeitorDeArquivoTest {
     public void leiaArquivoComTipoIndisponivel() throws LeituraDeArquivoException, FileNotFoundException {
         LeitorDeArquivo leitor = getLeitor("arquivo_inexistente.inexistente");
         leitor.leia();
+    }
+
+    @Test(expected = LeituraDeArquivoException.class)
+    public void testarArquivoComStreamInvalido() throws LeituraDeArquivoException {
+        ArquivoDeLeitura arquivoDeLeitura = new ArquivoDeLeitura("cidades.csv", null);
+
+        LeitorDeArquivo leitorDeArquivo = new LeitorDeArquivo(new LinhaHandlerCSV(), arquivoDeLeitura);
+
+        leitorDeArquivo.leia();
     }
 
     private LeitorDeArquivo getLeitor(String arquivo) throws FileNotFoundException {
