@@ -2,6 +2,8 @@ package br.com.involves.selecao.controlador;
 
 import br.com.involves.selecao.conversor.ConversorConjuntoDadosComPropriedades;
 import br.com.involves.selecao.entrada_saida.LeitorDeArquivo;
+import br.com.involves.selecao.entrada_saida.usuario.EntradaConsole;
+import br.com.involves.selecao.entrada_saida.usuario.SaidaConsole;
 import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.excecao.ValidacaoException;
 import br.com.involves.selecao.fabrica.ControladorDeInterfaceDeUsuarioFactory;
@@ -47,6 +49,8 @@ public class ControladorDaAplicacao {
                 .comEntidades(entidadesDeLeitura)
                 .comComandoFlyweight(ControleRemoto.getInstancia())
                 .comConversor(new ConversorConjuntoDadosComPropriedades())
+                .comInterfaceDeEntrada(new EntradaConsole())
+                .comInterfaceDeSaida(new SaidaConsole())
                 .build();
 
         controladorDeInterfaceDeUsuario.iniciaComunicacaoComUsuario();

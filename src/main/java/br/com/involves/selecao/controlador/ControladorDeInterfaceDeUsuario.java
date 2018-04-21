@@ -13,7 +13,7 @@ import br.com.involves.selecao.modelo.EntradaDeComando;
 
 import java.util.List;
 
-public class ControladorDeInterfaceDeUsuario {
+public class ControladorDeInterfaceDeUsuario implements Controlador {
     private final EntradaDeComando entradaDeComando;
     private Flyweight<ComandoHandler> comandoHandlerFlyweight;
 
@@ -22,15 +22,18 @@ public class ControladorDeInterfaceDeUsuario {
 
     public ControladorDeInterfaceDeUsuario(List<EntidadeDeLeitura> entidadesDeLeitura,
                                            ConversorEntidadeParaEntradaComando conversor,
-                                           Flyweight<ComandoHandler> comandoHandlerFlyweight) {
+                                           Flyweight<ComandoHandler> comandoHandlerFlyweight,
+                                           InterfaceDeEntrada entrada,
+                                           InterfaceDeSaida saida) {
 
         this.entradaDeComando = conversor.converter(entidadesDeLeitura);
         this.comandoHandlerFlyweight = comandoHandlerFlyweight;
+        this.entrada = entrada;
+        this.saida = saida;
     }
 
     public void iniciaComunicacaoComUsuario() {
-        entrada = new EntradaConsole(this);
-        saida = new SaidaConsole();
+        entrada.recebeControlador(this);
         saida.boasVindas();
         aguardaComando();
     }

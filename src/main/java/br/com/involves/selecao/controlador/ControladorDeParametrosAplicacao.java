@@ -6,7 +6,7 @@ import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import java.util.Arrays;
 import java.util.List;
 
-public class ControladorDeParametrosAplicacao implements Controlador<ParametrosAplicacao> {
+public class ControladorDeParametrosAplicacao implements Controlador {
     private final ControladorDeAlertas controladorDeAlertas;
     private List<String> parametros;
 
