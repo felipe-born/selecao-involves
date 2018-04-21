@@ -1,4 +1,6 @@
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/dominio/TipoDeComandoTest.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarTodosTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/dominio/TipoDeArquivoTest.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedadeTest.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintosTest.java

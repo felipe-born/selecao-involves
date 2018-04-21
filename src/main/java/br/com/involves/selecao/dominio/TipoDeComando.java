@@ -36,7 +36,7 @@ public enum TipoDeComando {
 
     @Override
     public String toString() {
-        return super.toString();
+        return getNomeDoComando();
     }
 
     public String getNomeDoComando() {
