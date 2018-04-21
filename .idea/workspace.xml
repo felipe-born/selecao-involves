@@ -5,108 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bde99c4-4015-47ce-b014-1fd3005f56fc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/RetornoComando.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/Saida.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerExitTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsoleTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandler.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerAjuda.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerAjuda.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintos.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintos.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarTodos.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerContarTodos.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerExit.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerExit.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedade.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivo.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivo.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsole.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsole.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaida.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/SaidaConsole.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/SaidaConsole.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerAjudaTest.java" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerAjudaTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintosTest.java" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarDistintosTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarTodosTest.java" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerContarTodosTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedadeTest.java" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedadeTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuarioTest.java" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuarioTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivoTest.java" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivoTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaidaDeTeste.java" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaidaDeTeste.java" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" afterPath="$PROJECT_DIR$/target/jacoco.exec" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/ControladorDeInterfaceDeUsuarioBuilder.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/ControladorDeInterfaceDeUsuarioBuilder.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/ControladorDeInterfaceDeUsuarioBuilder.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/ControladorDeInterfaceDeUsuarioBuilder.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/ControladorDeParametrosAplicacaoBuilder.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/ControladorDeParametrosAplicacaoBuilder.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/ControladorDeParametrosAplicacaoBuilder.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/ControladorDeParametrosAplicacaoBuilder.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.builder/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.comando/ComandoHandlerExit.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.comando/ComandoHandlerExit.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.comando/ComandoHandlerExit.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.comando/ComandoHandlerExit.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.comando/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.comando/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.comando/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.comando/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDaAplicacao.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDaAplicacao.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDaAplicacao.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDaAplicacao.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDeInterfaceDeUsuario.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDeInterfaceDeUsuario.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDeInterfaceDeUsuario.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDeInterfaceDeUsuario.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDeParametrosAplicacao.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/ControladorDeParametrosAplicacao.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.controlador/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.conversor/ConversorConjuntoDadosComPropriedades.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.conversor/ConversorConjuntoDadosComPropriedades.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.conversor/ConversorConjuntoDadosComPropriedades.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.conversor/ConversorConjuntoDadosComPropriedades.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.conversor/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.conversor/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.conversor/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.conversor/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida.usuario/InterfaceDeEntrada.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida.usuario/InterfaceDeEntrada.java.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida.usuario/InterfaceDeSaida.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida.usuario/InterfaceDeSaida.java.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida.usuario/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida.usuario/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida.usuario/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida.usuario/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida/LeitorDeArquivo.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida/LeitorDeArquivo.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida/LeitorDeArquivo.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida/LeitorDeArquivo.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.entrada_saida/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.excecao/LeituraDeArquivoException.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.excecao/LeituraDeArquivoException.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.excecao/LeituraDeArquivoException.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.excecao/LeituraDeArquivoException.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.excecao/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.excecao/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.excecao/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.excecao/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.fabrica/ControladorDeInterfaceDeUsuarioFactory.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.fabrica/ControladorDeInterfaceDeUsuarioFactory.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.fabrica/ControladorDeInterfaceDeUsuarioFactory.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.fabrica/ControladorDeInterfaceDeUsuarioFactory.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.fabrica/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.fabrica/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.fabrica/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.fabrica/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.flyweight/ControleRemoto.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.flyweight/ControleRemoto.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.flyweight/ControleRemoto.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.flyweight/ControleRemoto.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.flyweight/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.flyweight/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.flyweight/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.flyweight/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.principal/InvolvesApp.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.principal/InvolvesApp.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.principal/InvolvesApp.java.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.principal/InvolvesApp.java.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.principal/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.principal/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.principal/index.source.html" afterPath="$PROJECT_DIR$/target/site/jacoco/br.com.involves.selecao.principal/index.source.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.comando.ComandoHandlerAjudaTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.comando.ComandoHandlerAjudaTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.comando.ComandoHandlerContarDistintosTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.comando.ComandoHandlerContarDistintosTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.comando.ComandoHandlerContarTodosTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.comando.ComandoHandlerContarTodosTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.comando.ComandoHandlerFiltrarPropriedadeTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.comando.ComandoHandlerFiltrarPropriedadeTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.dominio.TipoDeComandoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.dominio.TipoDeComandoTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.entrada_saida.LeitorDeArquivoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.entrada_saida.LeitorDeArquivoTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.entrada_saida.LinhaHandlerCSVTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.entrada_saida.LinhaHandlerCSVTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.parser.ParserParametroContarDistintosTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.parser.ParserParametroContarDistintosTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.principal.InvolvesAppTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.principal.InvolvesAppTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.validador.ValidadorDeParametrosAplicacaoTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.involves.selecao.validador.ValidadorDeParametrosAplicacaoTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.comando.ComandoHandlerAjudaTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.comando.ComandoHandlerAjudaTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.comando.ComandoHandlerContarDistintosTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.comando.ComandoHandlerContarDistintosTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.comando.ComandoHandlerContarTodosTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.comando.ComandoHandlerContarTodosTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.comando.ComandoHandlerFiltrarPropriedadeTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.comando.ComandoHandlerFiltrarPropriedadeTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.dominio.TipoDeArquivoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.dominio.TipoDeArquivoTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.dominio.TipoDeComandoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.dominio.TipoDeComandoTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.entrada_saida.LeitorDeArquivoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.entrada_saida.LeitorDeArquivoTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.entrada_saida.LinhaHandlerCSVTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.entrada_saida.LinhaHandlerCSVTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.parser.ParserParametroContarDistintosTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.parser.ParserParametroContarDistintosTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.principal.InvolvesAppTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.principal.InvolvesAppTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.validador.ValidadorDeParametrosAplicacaoTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.involves.selecao.validador.ValidadorDeParametrosAplicacaoTest.txt" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsoleTest.java" afterPath="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsoleTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -117,8 +17,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/selecao_involves$run.coverage" NAME="run Coverage Results" MODIFIED="1524315803209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/selecao_involves$test.coverage" NAME="test Coverage Results" MODIFIED="1524335284548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/selecao_involves$run.coverage" NAME="run Coverage Results" MODIFIED="1524335805403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/selecao_involves$test.coverage" NAME="test Coverage Results" MODIFIED="1524335990751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
   </component>
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="0" />
@@ -128,54 +28,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EntradaConsole.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EntradaConsole.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConversorConjuntoDadosComPropriedades.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/conversor/ConversorConjuntoDadosComPropriedades.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Optional.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/Optional.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="132" column="13" lean-forward="false" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntidadeComPropriedades.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/EntidadeComPropriedades.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="244">
+              <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="22" />
               <folding>
-                <element signature="e#470#471#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
+                <element signature="e#1080#1081#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntidadeCabecalho.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/EntidadeCabecalho.java">
+      <file leaf-file-name="EntradaConsoleTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsoleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="366">
+              <caret line="55" column="50" lean-forward="false" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControladorDeInterfaceDeUsuarioBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ControladorDeInterfaceDeUsuarioBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="49" column="49" lean-forward="true" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControladorDeInterfaceDeUsuario.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -228,7 +120,6 @@
         <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeEntradaDeTeste.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/LeitorDeArquivo.java" />
-        <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsoleTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/ComandoHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/comando/RetornoComando.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/Saida.java" />
@@ -249,6 +140,7 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/modelo/RetornoComando.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/comando/ComandoHandlerExitTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsole.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsoleTest.java" />
       </list>
     </option>
   </component>
@@ -360,6 +252,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="selecao" type="462c0819:PsiDirectoryNode" />
+              <item name="entrada_saida" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selecao-involves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selecao-involves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="selecao" type="462c0819:PsiDirectoryNode" />
+              <item name="entrada_saida" type="462c0819:PsiDirectoryNode" />
+              <item name="usuario" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="selecao-involves" type="b2602c69:ProjectViewProjectNode" />
+              <item name="selecao-involves" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="selecao" type="462c0819:PsiDirectoryNode" />
               <item name="modelo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -462,7 +373,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.run">
+  <component name="RunManager" selected="JUnit.test">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -604,17 +515,11 @@
       <workItem from="1524270466234" duration="348000" />
       <workItem from="1524313859658" duration="5606000" />
       <workItem from="1524324472338" duration="6800000" />
-      <workItem from="1524334016234" duration="1552000" />
+      <workItem from="1524334016234" duration="1995000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test - 2018.04.21 at 12h 35m 22s.xml">
-      <configuration name="test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test - 2018.04.21 at 12h 47m 39s.xml">
-      <configuration name="test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="test - 2018.04.21 at 12h 59m 36s.xml">
       <configuration name="test" configurationId="JUnit" />
     </history-entry>
@@ -639,9 +544,15 @@
     <history-entry file="test - 2018.04.21 at 15h 28m 15s.xml">
       <configuration name="test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="test - 2018.04.21 at 15h 36m 56s.xml">
+      <configuration name="test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test - 2018.04.21 at 15h 39m 53s.xml">
+      <configuration name="test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14306000" />
+    <option name="totallyTimeSpent" value="14749000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="75" y="6" width="1303" height="780" extended-state="6" />
@@ -656,14 +567,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3183183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5626441" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3183183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5626441" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4181399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -843,6 +754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -858,6 +770,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -881,24 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsoleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ControladorDeInterfaceDeUsuarioBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="49" column="43" lean-forward="false" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1068,14 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDaAplicacao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -1119,11 +1006,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/builder/ControladorDeInterfaceDeUsuarioBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="49" column="49" lean-forward="true" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/controlador/ControladorDeInterfaceDeUsuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="244">
+          <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="22" />
+          <folding>
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1080#1081#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsoleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="55" column="50" lean-forward="false" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

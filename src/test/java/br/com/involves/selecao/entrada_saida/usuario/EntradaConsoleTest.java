@@ -4,10 +4,15 @@ import br.com.involves.selecao.controlador.ControladorDeInterfaceDeUsuario;
 import br.com.involves.selecao.conversor.ConversorConjuntoDadosComPropriedades;
 import br.com.involves.selecao.fabrica.ControladorDeInterfaceDeUsuarioFactory;
 import br.com.involves.selecao.flyweight.ControleRemoto;
+import br.com.involves.selecao.modelo.EntidadeDeLeitura;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EntradaConsoleTest {
 
@@ -17,12 +22,13 @@ public class EntradaConsoleTest {
 
     @Before
     public void inicializa() {
-        String comando = "help";
-        new ByteArrayInputStream(comando.getBytes());
+        String comando = "exit";
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(comando.getBytes());
 
-        console = new EntradaConsole();
+        console = new EntradaConsole(inputStream);
         interfaceDeSaidaDeTeste = new InterfaceDeSaidaDeTeste();
 
+        List<EntidadeDeLeitura> entidadeDeLeituras = new ArrayList<>();
         interfaceDeUsuario =
                 new ControladorDeInterfaceDeUsuarioFactory()
                         .getControladorDeInterface()
@@ -30,13 +36,24 @@ public class EntradaConsoleTest {
                         .comInterfaceDeEntrada(console)
                         .comComandoFlyweight(ControleRemoto.getInstancia())
                         .comConversor(new ConversorConjuntoDadosComPropriedades())
-                        //.comEntidades(entidadeDeLeituras)
+                        .comEntidades(entidadeDeLeituras)
                         .build();
 
     }
 
     @Test
-    public void test() {
+    public void testarEntradaDeComando() {
+        this.console.recebeControlador(interfaceDeUsuario);
+        this.console.aguardaEntrada();
+    }
+
+    @Test
+    public void testarConstrutorConsoleSemParametro() {
+        this.console = new EntradaConsole();
+
+        InputStream inputStream = console.getInputStream();
+
+        Assert.assertEquals(System.in, inputStream);
 
     }
 
