@@ -8,10 +8,6 @@ public class EntradaConsole implements InterfaceDeEntrada<ControladorDeInterface
     private ControladorDeInterfaceDeUsuario controladorDeInterfaceDeUsuario;
     private InputStream inputStream;
 
-    public EntradaConsole() {
-        this.inputStream = System.in;
-    }
-
     public EntradaConsole(InputStream inputStream) {
 
         this.inputStream = inputStream;

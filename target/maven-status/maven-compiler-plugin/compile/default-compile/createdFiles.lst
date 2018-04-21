@@ -14,6 +14,7 @@ br/com/involves/selecao/fabrica/ControladorDeInterfaceDeUsuarioFactory.class
 br/com/involves/selecao/builder/ControladorDaAplicacaoBuilder.class
 br/com/involves/selecao/fabrica/ControladorDaAplicacaoFactory.class
 br/com/involves/selecao/modelo/EntradaDeComando.class
+br/com/involves/selecao/modelo/RetornoComando.class
 br/com/involves/selecao/entrada_saida/LinhaHandlerCSV.class
 br/com/involves/selecao/builder/ControladorDeAlertasBuilder.class
 br/com/involves/selecao/excecao/LeituraDeArquivoException.class
@@ -45,6 +46,7 @@ br/com/involves/selecao/dominio/TipoDeComando.class
 br/com/involves/selecao/comando/ComandoHandlerContarTodos.class
 br/com/involves/selecao/validador/Validador.class
 br/com/involves/selecao/controlador/ControladorDaAplicacao.class
+br/com/involves/selecao/modelo/Saida.class
 br/com/involves/selecao/parser/ParametroComandoParser.class
 br/com/involves/selecao/conversor/Conversor.class
 br/com/involves/selecao/dominio/TipoDeArquivo.class

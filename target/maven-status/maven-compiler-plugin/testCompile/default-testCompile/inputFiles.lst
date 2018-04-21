@@ -10,7 +10,9 @@
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerFiltrarPropriedadeTest.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeEntradaDeTeste.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacaoTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/entrada_saida/usuario/EntradaConsoleTest.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerAjudaTest.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/entrada_saida/usuario/InterfaceDeSaidaDeTeste.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/parser/ParserParametroContarDistintosTest.java
 /home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/parser/ParserParametroFiltrarPropriedadeTest.java
+/home/develop/projects/involves/selecao-involves/src/test/java/br/com/involves/selecao/comando/ComandoHandlerExitTest.java

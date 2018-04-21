@@ -14,22 +14,27 @@ import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import br.com.involves.selecao.validador.ValidadorDeParametrosAplicacao;
 
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ControladorDaAplicacao {
+public class ControladorDaAplicacao implements Controlador {
     private final ControladorDeAlertas controladorDeAlertas;
     private final ParametrosAplicacao parametrosAplicacao;
     private final ValidadorDeParametrosAplicacao validadorDeParametrosAplicacao;
 
+    private InputStream inputStream;
     private LeitorDeArquivo leitorDeArquivo;
     private ControladorDeInterfaceDeUsuario controladorDeInterfaceDeUsuario;
 
 
-    public ControladorDaAplicacao(ControladorDeAlertas controladorDeAlertas, ParametrosAplicacao parametrosAplicacao) {
+    public ControladorDaAplicacao(ControladorDeAlertas controladorDeAlertas,
+                                  ParametrosAplicacao parametrosAplicacao,
+                                  InputStream inputStream) {
 
         this.controladorDeAlertas = controladorDeAlertas;
         this.parametrosAplicacao = parametrosAplicacao;
+        this.inputStream = inputStream;
         this.validadorDeParametrosAplicacao = new ValidadorDeParametrosAplicacao();
     }
 
@@ -49,7 +54,7 @@ public class ControladorDaAplicacao {
                 .comEntidades(entidadesDeLeitura)
                 .comComandoFlyweight(ControleRemoto.getInstancia())
                 .comConversor(new ConversorConjuntoDadosComPropriedades())
-                .comInterfaceDeEntrada(new EntradaConsole())
+                .comInterfaceDeEntrada(new EntradaConsole(inputStream))
                 .comInterfaceDeSaida(new SaidaConsole())
                 .build();
 
@@ -72,7 +77,7 @@ public class ControladorDaAplicacao {
         } catch (ValidacaoException e) {
             System.out.println("Ocorreu problema na aplicação: " + e.getMessage());
             System.out.println("Aplicação finalizada com erro");
-            System.exit(1);
+            throw new RuntimeException(e);
         }
     }
 }

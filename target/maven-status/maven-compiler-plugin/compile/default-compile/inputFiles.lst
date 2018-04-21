@@ -1,9 +1,11 @@
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/fabrica/ControladorDeInterfaceDeUsuarioFactory.java
+/home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/modelo/Saida.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/validador/ValidadorDeParametrosAplicacao.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/modelo/Alerta.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/fabrica/ControladorDeParametrosFactory.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/builder/ControladorDeParametrosAplicacaoBuilder.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/flyweight/Flyweight.java
+/home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/modelo/RetornoComando.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/modelo/EntradaDeComando.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/builder/LeitorDeArquivoBuilder.java
 /home/develop/projects/involves/selecao-involves/src/main/java/br/com/involves/selecao/entrada_saida/LinhaHandler.java

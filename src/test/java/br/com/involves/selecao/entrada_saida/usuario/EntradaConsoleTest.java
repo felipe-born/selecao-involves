@@ -48,8 +48,8 @@ public class EntradaConsoleTest {
     }
 
     @Test
-    public void testarConstrutorConsoleSemParametro() {
-        this.console = new EntradaConsole();
+    public void testarConstrutorConsoleComSystemIn() {
+        this.console = new EntradaConsole(System.in);
 
         InputStream inputStream = console.getInputStream();
 

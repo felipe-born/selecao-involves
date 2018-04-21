@@ -5,9 +5,12 @@ import br.com.involves.selecao.controlador.ControladorDeAlertas;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import javafx.util.Builder;
 
+import java.io.InputStream;
+
 public class ControladorDaAplicacaoBuilder implements Builder<ControladorDaAplicacao> {
     private ControladorDeAlertas controladorDeAlertas;
     private ParametrosAplicacao parametrosAplicacao;
+    private InputStream inputStream;
 
     public ControladorDaAplicacaoBuilder comControladorDeAlertas(ControladorDeAlertas controladorDeAlertas) {
         this.controladorDeAlertas = controladorDeAlertas;
@@ -19,7 +22,13 @@ public class ControladorDaAplicacaoBuilder implements Builder<ControladorDaAplic
         return this;
     }
 
+    public ControladorDaAplicacaoBuilder comInputStream(InputStream inputStream) {
+
+        this.inputStream = inputStream;
+        return this;
+    }
+
     public ControladorDaAplicacao build() {
-        return new ControladorDaAplicacao(controladorDeAlertas, parametrosAplicacao);
+        return new ControladorDaAplicacao(controladorDeAlertas, parametrosAplicacao, inputStream);
     }
 }

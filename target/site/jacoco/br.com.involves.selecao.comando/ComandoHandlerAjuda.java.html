@@ -2,19 +2,20 @@
 
 import br.com.involves.selecao.dominio.TipoDeComando;
 import br.com.involves.selecao.modelo.EntradaDeComando;
+import br.com.involves.selecao.modelo.RetornoComando;
 
 import java.util.stream.Collectors;
 
-<span class="fc" id="L8">public class ComandoHandlerAjuda implements ComandoHandler {</span>
+<span class="fc" id="L9">public class ComandoHandlerAjuda implements ComandoHandler {</span>
     @Override
-    public String exec(String comando, EntradaDeComando entradaDeComando) {
-<span class="fc" id="L11">        String textoDeAjuda = TipoDeComando.valuesAsList()</span>
-<span class="fc" id="L12">                .stream()</span>
-<span class="fc" id="L13">                .map(tipoDeComando -&gt; String.format(&quot;%s: %s&quot;, tipoDeComando.getNomeDoComando(), tipoDeComando.getDescricaoDoComando()))</span>
-<span class="fc" id="L14">                .collect(Collectors.joining(&quot;\n\t&quot;,</span>
+    public RetornoComando exec(String comando, EntradaDeComando entradaDeComando) {
+<span class="fc" id="L12">        String textoDeAjuda = TipoDeComando.valuesAsList()</span>
+<span class="fc" id="L13">                .stream()</span>
+<span class="fc" id="L14">                .map(tipoDeComando -&gt; String.format(&quot;%s: %s&quot;, tipoDeComando.getNomeDoComando(), tipoDeComando.getDescricaoDoComando()))</span>
+<span class="fc" id="L15">                .collect(Collectors.joining(&quot;\n\t&quot;,</span>
                         &quot;Os comandos disponíveis estão listados abaixo:\n&quot;,
                         &quot;\n___________________________&quot;));
-<span class="fc" id="L17">        return textoDeAjuda;</span>
+<span class="fc" id="L18">        return new RetornoComando(textoDeAjuda);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

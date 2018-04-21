@@ -52,7 +52,9 @@ public class LeitorDeArquivoTest {
 
     private LeitorDeArquivo getLeitor(String arquivo) throws FileNotFoundException {
         ParametrosAplicacao parametrosAplicacao = new ParametrosAplicacao(arquivo);
-        LeitorDeArquivoBuilder builder = new LeitorDeArquivoBuilder(parametrosAplicacao);
+        LeitorDeArquivoBuilder builder =
+                new LeitorDeArquivoBuilder(parametrosAplicacao)
+                        .comLinhaHandler(new LinhaHandlerCSV());
         return builder.build();
     }
 

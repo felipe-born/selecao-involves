@@ -41,7 +41,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="pt"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -60,8 +60,8 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase name="testarParserComMultiplosParametros" classname="br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest" time="0.001"/>
-  <testcase name="testarParserComParametroNulo" classname="br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest" time="0.001"/>
-  <testcase name="testarParserSemParametro" classname="br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest" time="0.003"/>
-  <testcase name="testarParserComUnicoParametro" classname="br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest" time="0.001"/>
+  <testcase name="testarParserComParametroNulo" classname="br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest" time="0"/>
+  <testcase name="testarParserSemParametro" classname="br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest" time="0.005"/>
+  <testcase name="testarParserComUnicoParametro" classname="br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest" time="0"/>
   <testcase name="testarParserComComandoErrado" classname="br.com.involves.selecao.parser.ParserParametroFiltrarPropriedadeTest" time="0"/>
 </testsuite>
