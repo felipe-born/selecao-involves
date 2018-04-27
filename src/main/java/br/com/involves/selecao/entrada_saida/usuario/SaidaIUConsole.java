@@ -27,8 +27,9 @@ public class SaidaIUConsole implements SaidaIU<RetornoComando> {
     }
 
     private void imprimeAjuda() {
-        ControleRemoto.getInstancia()
+        RetornoComando retornoComando = ControleRemoto.getInstancia()
                 .getInstance(ComandoAjuda.class)
                 .exec("help", null);
+        imprime(retornoComando);
     }
 }

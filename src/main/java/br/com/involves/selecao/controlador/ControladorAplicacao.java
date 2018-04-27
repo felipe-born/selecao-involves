@@ -23,18 +23,18 @@ public class ControladorAplicacao implements Controlador {
     private final ParametrosAplicacao parametrosAplicacao;
     private final ValidadorDeParametrosAplicacao validadorDeParametrosAplicacao;
 
-    private InputStream inputStream;
+    private InputStream inputStreamSaidaDoUsuario;
     private LeitorDeArquivo leitorDeArquivo;
     private ControladorInterfaceDeUsuario controladorInterfaceDeUsuario;
 
 
     public ControladorAplicacao(ControladorAlertas controladorAlertas,
                                 ParametrosAplicacao parametrosAplicacao,
-                                InputStream inputStream) {
+                                InputStream inputStreamSaidaDoUsuario) {
 
         this.controladorAlertas = controladorAlertas;
         this.parametrosAplicacao = parametrosAplicacao;
-        this.inputStream = inputStream;
+        this.inputStreamSaidaDoUsuario = inputStreamSaidaDoUsuario;
         this.validadorDeParametrosAplicacao = new ValidadorDeParametrosAplicacao();
     }
 
@@ -54,7 +54,7 @@ public class ControladorAplicacao implements Controlador {
                 .comEntidades(entidadesDeLeitura)
                 .comComandoFlyweight(ControleRemoto.getInstancia())
                 .comConversor(new ConversorDadosComPropriedades())
-                .comInterfaceDeEntrada(new EntradaIUConsole(inputStream))
+                .comInterfaceDeEntrada(new EntradaIUConsole(inputStreamSaidaDoUsuario))
                 .comInterfaceDeSaida(new SaidaIUConsole())
                 .build();
 
