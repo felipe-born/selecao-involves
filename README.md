@@ -2,7 +2,7 @@
 
 Especificações em: https://github.com/involvestecnologia/selecaoinvolves/blob/master/teste-java-2017-07.md
 
-Atualizado pela última vez em: 21/04/2018 às 16:40.
+Atualizado pela última vez em: 27/04/2018 às 17:45 (sim, depois do teste).
 
 ## Usage
 
