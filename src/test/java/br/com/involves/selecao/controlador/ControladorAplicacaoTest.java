@@ -1,7 +1,7 @@
 package br.com.involves.selecao.controlador;
 
 import br.com.involves.selecao.builder.ControladorDaAplicacaoBuilder;
-import br.com.involves.selecao.fabrica.ControladorDaAplicacaoFactory;
+import br.com.involves.selecao.factory.ControladorDaAplicacaoFactory;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import org.junit.Before;
 import org.junit.Test;

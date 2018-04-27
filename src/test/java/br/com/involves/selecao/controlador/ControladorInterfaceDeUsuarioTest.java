@@ -6,7 +6,7 @@ import br.com.involves.selecao.comando.ComandoAjuda;
 import br.com.involves.selecao.conversor.ConversorDadosComPropriedades;
 import br.com.involves.selecao.entrada_saida.usuario.TesteEntradaIU;
 import br.com.involves.selecao.entrada_saida.usuario.TesteSaidaIU;
-import br.com.involves.selecao.fabrica.ControladorDeInterfaceDeUsuarioFactory;
+import br.com.involves.selecao.factory.ControladorDeInterfaceDeUsuarioFactory;
 import br.com.involves.selecao.flyweight.ControleRemoto;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 import br.com.involves.selecao.modelo.Propriedades;

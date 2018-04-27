@@ -1,4 +1,4 @@
-package br.com.involves.selecao.fabrica;
+package br.com.involves.selecao.factory;
 
 import br.com.involves.selecao.builder.ControladorDeInterfaceDeUsuarioBuilder;
 

@@ -2,9 +2,9 @@ package br.com.involves.selecao.principal;
 
 import br.com.involves.selecao.controlador.ControladorAplicacao;
 import br.com.involves.selecao.controlador.ControladorAlertas;
-import br.com.involves.selecao.fabrica.ControladorDaAplicacaoFactory;
-import br.com.involves.selecao.fabrica.ControladorDeAlertasFactory;
-import br.com.involves.selecao.fabrica.ControladorDeParametrosFactory;
+import br.com.involves.selecao.factory.ControladorDaAplicacaoFactory;
+import br.com.involves.selecao.factory.ControladorDeAlertasFactory;
+import br.com.involves.selecao.factory.ControladorDeParametrosFactory;
 import br.com.involves.selecao.modelo.Alerta;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 
