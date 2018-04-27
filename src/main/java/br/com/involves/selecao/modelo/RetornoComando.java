@@ -6,9 +6,15 @@ public class RetornoComando implements Saida {
 
     private String mensagem;
     private int sinalTerminate = -1;
+    private Exception excecao;
 
     public RetornoComando(String mensagem) {
         this.mensagem = mensagem;
+    }
+
+    public RetornoComando(Exception excecao) {
+        this.mensagem = excecao.getMessage();
+        this.excecao = excecao;
     }
 
     public RetornoComando(String mensagem, int sinalTerminate) {
@@ -16,13 +22,17 @@ public class RetornoComando implements Saida {
         this.sinalTerminate = sinalTerminate;
     }
 
+    public boolean indicaFimExecucao() {
+        return sinalTerminate >= 0;
+    }
+
+    public boolean retornoComFalhas() {
+        return excecao != null;
+    }
+
     @Override
     public String toString() {
         return this.mensagem;
-    }
-
-    public boolean indicaFimExecucao() {
-        return sinalTerminate >= 0;
     }
 
     @Override

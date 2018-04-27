@@ -8,7 +8,9 @@ public interface ParametroComandoParser {
     default List<String> getListaDeParametros(String comandoParametrizado, String comando) {
         int tamanhoDoComando = comando.split(" ").length;
 
-        String[] palavrasDoComandoParametrizado = comandoParametrizado.split(" ");
+        String[] palavrasDoComandoParametrizado =
+                new AutomatoFinitoSeparadorPalavras()
+                        .separaPalavras(comandoParametrizado, "\"", " ");
         String[] parametrosDoComando = Arrays
                 .copyOfRange(palavrasDoComandoParametrizado, tamanhoDoComando, palavrasDoComandoParametrizado.length);
         return Arrays.asList(parametrosDoComando);

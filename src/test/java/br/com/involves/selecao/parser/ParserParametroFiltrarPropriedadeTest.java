@@ -24,6 +24,14 @@ public class ParserParametroFiltrarPropriedadeTest {
         Assert.assertEquals("SC", resultadoParse.get(1));
     }
 
+    @Test
+    public void testarParserComParametrosEntreAspas() {
+        List<String> resultadoParse = parser.parse("filter \"estado brasileiro\" \"santa catarina\"");
+        Assert.assertEquals(2, resultadoParse.size());
+        Assert.assertEquals("estado brasileiro", resultadoParse.get(0));
+        Assert.assertEquals("santa catarina", resultadoParse.get(1));
+    }
+
     @Test(expected = ParametroParserException.class)
     public void testarParserComMultiplosParametros() {
         parser.parse("filter codigo do ibge");

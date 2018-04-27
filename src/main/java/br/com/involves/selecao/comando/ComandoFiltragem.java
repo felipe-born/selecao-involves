@@ -17,8 +17,13 @@ public class ComandoFiltragem implements Comando<DadosComPropriedade> {
 
     @Override
     public RetornoComando exec(String comando, DadosComPropriedade entradaDeComando) {
-        List<String> parametros = parser.parse(comando);
-
+        List<String> parametros;
+        try {
+            parametros = parser.parse(comando);
+        } catch (Exception e) {
+            return new RetornoComando(e);
+        }
+        
         String propriedade = parametros.get(0);
         String valor = parametros.get(1);
 

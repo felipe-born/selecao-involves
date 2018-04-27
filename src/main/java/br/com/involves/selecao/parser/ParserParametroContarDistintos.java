@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static br.com.involves.selecao.excecao.ConstantesExcecao.COMANDO_INVALIDO;
+
 public class ParserParametroContarDistintos implements ParametroComandoParser {
 
     @Override
@@ -14,7 +16,7 @@ public class ParserParametroContarDistintos implements ParametroComandoParser {
         if (comandoParametrizado == null)
             throw new NullPointerException("Comando não pode ser nulo");
         if (!verificaComandoComParametro(comandoParametrizado, TipoDeComando.CONTAR_PROPRIEDADES_DISTINTAS.getNomeDoComando()))
-            throw new ParametroParserException();
+            throw new ParametroParserException(COMANDO_INVALIDO);
         String parametrosUnidos = getListaDeParametros(comandoParametrizado,
                 TipoDeComando.CONTAR_PROPRIEDADES_DISTINTAS.getNomeDoComando())
                 .stream()
