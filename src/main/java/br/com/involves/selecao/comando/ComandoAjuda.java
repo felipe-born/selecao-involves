@@ -13,7 +13,7 @@ public class ComandoAjuda implements Comando {
                 .stream()
                 .map(tipoDeComando -> String.format("%s: %s", tipoDeComando.getNomeDoComando(), tipoDeComando.getDescricaoDoComando()))
                 .collect(Collectors.joining("\n\t",
-                        "Os comandos disponíveis estão listados abaixo:\n",
+                        "Os comandos disponíveis estão listados abaixo:\n\t",
                         "\n___________________________"));
         return new RetornoComando(textoDeAjuda);
     }
