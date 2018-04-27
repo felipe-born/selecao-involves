@@ -1,12 +1,12 @@
 package br.com.involves.selecao.builder;
 
-import br.com.involves.selecao.modelo.EntidadeComPropriedades;
+import br.com.involves.selecao.modelo.Propriedades;
 import javafx.util.Builder;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class EntidadeComPropriedadesBuilder implements Builder<EntidadeComPropriedades> {
+public class EntidadeComPropriedadesBuilder implements Builder<Propriedades> {
     private List<String> cabecalho;
     private List<String> valores;
 
@@ -29,13 +29,13 @@ public class EntidadeComPropriedadesBuilder implements Builder<EntidadeComPropri
     }
 
     @Override
-    public EntidadeComPropriedades build() {
-        EntidadeComPropriedades entidadeComPropriedades = new EntidadeComPropriedades();
+    public Propriedades build() {
+        Propriedades propriedades = new Propriedades();
         for (int indiceDaPropriedade = 0; indiceDaPropriedade < cabecalho.size(); indiceDaPropriedade++) {
             String propriedade = cabecalho.get(indiceDaPropriedade);
             String valor = valores.get(indiceDaPropriedade);
-            entidadeComPropriedades.addPropriedade(propriedade, valor);
+            propriedades.addPropriedade(propriedade, valor);
         }
-        return entidadeComPropriedades;
+        return propriedades;
     }
 }

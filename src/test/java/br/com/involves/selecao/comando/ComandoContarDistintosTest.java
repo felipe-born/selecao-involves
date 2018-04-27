@@ -1,9 +1,9 @@
 package br.com.involves.selecao.comando;
 
 import br.com.involves.selecao.builder.EntidadeComPropriedadesBuilder;
-import br.com.involves.selecao.modelo.ConjuntoDadosComPropriedade;
-import br.com.involves.selecao.modelo.EntidadeCabecalho;
-import br.com.involves.selecao.modelo.EntidadeComPropriedades;
+import br.com.involves.selecao.modelo.DadosComPropriedade;
+import br.com.involves.selecao.modelo.Cabecalho;
+import br.com.involves.selecao.modelo.Propriedades;
 import br.com.involves.selecao.modelo.RetornoComando;
 import br.com.involves.selecao.parser.ParametroComandoParser;
 import br.com.involves.selecao.parser.ParserParametroContarDistintos;
@@ -13,31 +13,31 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class ComandoHandlerContarDistintosTest {
+public class ComandoContarDistintosTest {
 
-    ComandoHandlerContarDistintos handlerContarDistintos;
-    EntidadeCabecalho cabecalho;
+    ComandoContarDistintos handlerContarDistintos;
+    Cabecalho cabecalho;
 
     @Before
     public void init() {
         ParametroComandoParser parser = new ParserParametroContarDistintos();
-        handlerContarDistintos = new ComandoHandlerContarDistintos(parser);
-        cabecalho = new EntidadeCabecalho(Arrays.asList("uf", "cidade"));
+        handlerContarDistintos = new ComandoContarDistintos(parser);
+        cabecalho = new Cabecalho(Arrays.asList("uf", "cidade"));
     }
 
     @Test
     public void testarContagemComValoresDistintos() {
-        ConjuntoDadosComPropriedade dados = new ConjuntoDadosComPropriedade(cabecalho);
+        DadosComPropriedade dados = new DadosComPropriedade(cabecalho);
 
-        EntidadeComPropriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "florianopolis")
                 .build();
-        EntidadeComPropriedades entidadePoa = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadePoa = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("rs", "porto alegre")
                 .build();
-        EntidadeComPropriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("pr", "curitiba")
                 .build();
@@ -53,21 +53,21 @@ public class ComandoHandlerContarDistintosTest {
 
     @Test
     public void testarContagemComValoresRepetidos() {
-        ConjuntoDadosComPropriedade dados = new ConjuntoDadosComPropriedade(cabecalho);
+        DadosComPropriedade dados = new DadosComPropriedade(cabecalho);
 
-        EntidadeComPropriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "florianopolis")
                 .build();
-        EntidadeComPropriedades entidadePoa = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadePoa = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("rs", "porto alegre")
                 .build();
-        EntidadeComPropriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("pr", "curitiba")
                 .build();
-        EntidadeComPropriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "sao jose")
                 .build();
@@ -84,9 +84,9 @@ public class ComandoHandlerContarDistintosTest {
 
     @Test
     public void testarContagemComPropriedadeInexistente() {
-        ConjuntoDadosComPropriedade dados = new ConjuntoDadosComPropriedade(cabecalho);
+        DadosComPropriedade dados = new DadosComPropriedade(cabecalho);
 
-        EntidadeComPropriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "florianopolis")
                 .build();
@@ -100,7 +100,7 @@ public class ComandoHandlerContarDistintosTest {
 
     @Test
     public void testarContagemSemLinhasAlemDoCabecalho() {
-        ConjuntoDadosComPropriedade dados = new ConjuntoDadosComPropriedade(cabecalho);
+        DadosComPropriedade dados = new DadosComPropriedade(cabecalho);
 
         RetornoComando resultadoComando = handlerContarDistintos.exec("count distinct musica", dados);
 

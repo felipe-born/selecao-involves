@@ -8,17 +8,17 @@ import java.util.List;
 import static br.com.involves.selecao.comando.ConstantesComando.*;
 
 public enum TipoDeComando {
-    CONTAR_TODOS(CM_CONTAR_TODOS, DS_CONTAR_TODOS, ComandoHandlerContarTodos.class),
-    CONTAR_PROPRIEDADES_DISTINTAS(CM_PROPRIEDADES_DISTINTAS, DS_PROPRIEDADES_DISTINTAS, ComandoHandlerContarDistintos.class),
-    FILTRAR_PROPRIEDADE(CM_FILTRAR_PROPRIEDADES, DS_FILTRAR_PROPRIEDADES, ComandoHandlerFiltrarPropriedade.class),
-    SAIR(CM_SAIR, DS_SAIR, ComandoHandlerExit.class),
-    AJUDA(CM_AJUDA, DS_AJUDA, ComandoHandlerAjuda.class);
+    CONTAR_TODOS(CM_CONTAR_TODOS, DS_CONTAR_TODOS, ComandoContarTodos.class),
+    CONTAR_PROPRIEDADES_DISTINTAS(CM_PROPRIEDADES_DISTINTAS, DS_PROPRIEDADES_DISTINTAS, ComandoContarDistintos.class),
+    FILTRAR_PROPRIEDADE(CM_FILTRAR_PROPRIEDADES, DS_FILTRAR_PROPRIEDADES, ComandoFiltragem.class),
+    SAIR(CM_SAIR, DS_SAIR, ComandoSaida.class),
+    AJUDA(CM_AJUDA, DS_AJUDA, ComandoAjuda.class);
 
     private String nomeDoComando;
     private String descricaoDoComando;
-    private Class<? extends ComandoHandler> handler;
+    private Class<? extends Comando> handler;
 
-    TipoDeComando(String nomeDoComando, String descricaoDoComando, Class<? extends ComandoHandler> handler) {
+    TipoDeComando(String nomeDoComando, String descricaoDoComando, Class<? extends Comando> handler) {
 
         this.nomeDoComando = nomeDoComando;
         this.descricaoDoComando = descricaoDoComando;
@@ -47,7 +47,7 @@ public enum TipoDeComando {
         return descricaoDoComando;
     }
 
-    public Class<? extends ComandoHandler> getHandlerClazz() {
+    public Class<? extends Comando> getHandlerClazz() {
         return handler;
     }
 

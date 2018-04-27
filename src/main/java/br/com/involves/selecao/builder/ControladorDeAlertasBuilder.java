@@ -1,11 +1,11 @@
 package br.com.involves.selecao.builder;
 
-import br.com.involves.selecao.controlador.ControladorDeAlertas;
+import br.com.involves.selecao.controlador.ControladorAlertas;
 import javafx.util.Builder;
 
-public class ControladorDeAlertasBuilder implements Builder<ControladorDeAlertas> {
+public class ControladorDeAlertasBuilder implements Builder<ControladorAlertas> {
     @Override
-    public ControladorDeAlertas build() {
-        return new ControladorDeAlertas();
+    public ControladorAlertas build() {
+        return new ControladorAlertas();
     }
 }

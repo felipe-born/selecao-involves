@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ControladorDeAlertas implements Controlador{
+public class ControladorAlertas implements Controlador{
     private List<Alerta> alertas = new ArrayList<>();
 
     public List<Alerta> getAlertas() {

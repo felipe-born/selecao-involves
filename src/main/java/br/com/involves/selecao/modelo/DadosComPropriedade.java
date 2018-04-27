@@ -5,28 +5,28 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class ConjuntoDadosComPropriedade implements EntradaDeComando {
+public class DadosComPropriedade implements EntradaComando {
 
-    private final EntidadeCabecalho cabecalho;
-    private List<EntidadeComPropriedades> valores = new ArrayList<>();
+    private final Cabecalho cabecalho;
+    private List<Propriedades> valores = new ArrayList<>();
 
-    public ConjuntoDadosComPropriedade(EntidadeCabecalho cabecalho) {
+    public DadosComPropriedade(Cabecalho cabecalho) {
         this.cabecalho = cabecalho;
     }
 
-    public void adiciona(Collection<EntidadeComPropriedades> valor) {
+    public void adiciona(Collection<Propriedades> valor) {
         this.valores.addAll(valor);
     }
 
-    public void adiciona(EntidadeComPropriedades entidadeComPropriedades) {
-        valores.add(entidadeComPropriedades);
+    public void adiciona(Propriedades propriedades) {
+        valores.add(propriedades);
     }
 
-    public EntidadeCabecalho getCabecalho() {
+    public Cabecalho getCabecalho() {
         return cabecalho;
     }
 
-    public List<EntidadeComPropriedades> getValores() {
+    public List<Propriedades> getValores() {
         return Collections.unmodifiableList(valores);
     }
 

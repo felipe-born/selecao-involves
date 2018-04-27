@@ -7,7 +7,7 @@ public class SaidaConsoleTest {
 
     @Test
     public void testarExecucaoDeComandosDeSaidaDeConsole() {
-        SaidaConsole console = new SaidaConsole();
+        SaidaIUConsole console = new SaidaIUConsole();
 
         console.boasVindas();
         console.solicitaComando();

@@ -5,16 +5,16 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-public class EntidadeCabecalhoTest {
+public class CabecalhoTest {
 
 
     @Test(expected = EntidadeDeLeituraException.class)
     public void testaConstrutorParametroNulo() {
-        new EntidadeCabecalho(null);
+        new Cabecalho(null);
     }
 
     @Test(expected = EntidadeDeLeituraException.class)
     public void testaConstrutorParametroVazio() {
-        new EntidadeCabecalho(new ArrayList<>());
+        new Cabecalho(new ArrayList<>());
     }
 }

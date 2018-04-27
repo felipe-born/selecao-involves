@@ -2,7 +2,7 @@ package br.com.involves.selecao.entrada_saida.usuario;
 
 import br.com.involves.selecao.modelo.Saida;
 
-public interface InterfaceDeSaida<S extends Saida> {
+public interface SaidaIU<S extends Saida> {
 
     void solicitaComando();
 

@@ -1,19 +1,19 @@
 package br.com.involves.selecao.builder;
 
-import br.com.involves.selecao.controlador.ControladorDaAplicacao;
-import br.com.involves.selecao.controlador.ControladorDeAlertas;
+import br.com.involves.selecao.controlador.ControladorAplicacao;
+import br.com.involves.selecao.controlador.ControladorAlertas;
 import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import javafx.util.Builder;
 
 import java.io.InputStream;
 
-public class ControladorDaAplicacaoBuilder implements Builder<ControladorDaAplicacao> {
-    private ControladorDeAlertas controladorDeAlertas;
+public class ControladorDaAplicacaoBuilder implements Builder<ControladorAplicacao> {
+    private ControladorAlertas controladorAlertas;
     private ParametrosAplicacao parametrosAplicacao;
     private InputStream inputStream;
 
-    public ControladorDaAplicacaoBuilder comControladorDeAlertas(ControladorDeAlertas controladorDeAlertas) {
-        this.controladorDeAlertas = controladorDeAlertas;
+    public ControladorDaAplicacaoBuilder comControladorDeAlertas(ControladorAlertas controladorAlertas) {
+        this.controladorAlertas = controladorAlertas;
         return this;
     }
 
@@ -28,7 +28,7 @@ public class ControladorDaAplicacaoBuilder implements Builder<ControladorDaAplic
         return this;
     }
 
-    public ControladorDaAplicacao build() {
-        return new ControladorDaAplicacao(controladorDeAlertas, parametrosAplicacao, inputStream);
+    public ControladorAplicacao build() {
+        return new ControladorAplicacao(controladorAlertas, parametrosAplicacao, inputStream);
     }
 }

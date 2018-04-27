@@ -2,7 +2,7 @@ package br.com.involves.selecao.entrada_saida;
 
 import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.modelo.ArquivoDeLeitura;
-import br.com.involves.selecao.modelo.EntidadeComPropriedades;
+import br.com.involves.selecao.modelo.Propriedades;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 
 import java.io.BufferedReader;
@@ -30,7 +30,7 @@ public class LeitorDeArquivo {
         try (Stream<String> stream = new BufferedReader(new InputStreamReader(inputStream)).lines()) {
             List<EntidadeDeLeitura> entidadesDeLeitura = stream
                     .map(conteudo -> linhaHandler.lidarCom(conteudo))
-                    .filter(entidade -> entidade instanceof EntidadeComPropriedades)
+                    .filter(entidade -> entidade instanceof Propriedades)
                     .collect(Collectors.toList());
             return entidadesDeLeitura;
         } catch (Exception e) {

@@ -4,11 +4,11 @@ import br.com.involves.selecao.modelo.RetornoComando;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ComandoHandlerAjudaTest {
+public class ComandoAjudaTest {
 
     @Test
     public void testarHandlerAjuda() {
-        ComandoHandlerAjuda handlerAjuda = new ComandoHandlerAjuda();
+        ComandoAjuda handlerAjuda = new ComandoAjuda();
 
         RetornoComando saidaExecucaoNula = handlerAjuda.exec(null, null);
         RetornoComando saidaExecucaoVazia = handlerAjuda.exec("", null);

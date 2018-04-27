@@ -1,4 +1,4 @@
 package br.com.involves.selecao.modelo;
 
-public interface EntradaDeComando {
+public interface EntradaComando {
 }

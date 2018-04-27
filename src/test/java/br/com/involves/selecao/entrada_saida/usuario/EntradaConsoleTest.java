@@ -1,7 +1,7 @@
 package br.com.involves.selecao.entrada_saida.usuario;
 
-import br.com.involves.selecao.controlador.ControladorDeInterfaceDeUsuario;
-import br.com.involves.selecao.conversor.ConversorConjuntoDadosComPropriedades;
+import br.com.involves.selecao.controlador.ControladorInterfaceDeUsuario;
+import br.com.involves.selecao.conversor.ConversorDadosComPropriedades;
 import br.com.involves.selecao.fabrica.ControladorDeInterfaceDeUsuarioFactory;
 import br.com.involves.selecao.flyweight.ControleRemoto;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
@@ -16,17 +16,17 @@ import java.util.List;
 
 public class EntradaConsoleTest {
 
-    private ControladorDeInterfaceDeUsuario interfaceDeUsuario;
-    private EntradaConsole console;
-    private InterfaceDeSaidaDeTeste interfaceDeSaidaDeTeste;
+    private ControladorInterfaceDeUsuario interfaceDeUsuario;
+    private EntradaIUConsole console;
+    private TesteSaidaIU interfaceDeSaidaDeTeste;
 
     @Before
     public void inicializa() {
         String comando = "exit";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(comando.getBytes());
 
-        console = new EntradaConsole(inputStream);
-        interfaceDeSaidaDeTeste = new InterfaceDeSaidaDeTeste();
+        console = new EntradaIUConsole(inputStream);
+        interfaceDeSaidaDeTeste = new TesteSaidaIU();
 
         List<EntidadeDeLeitura> entidadeDeLeituras = new ArrayList<>();
         interfaceDeUsuario =
@@ -35,7 +35,7 @@ public class EntradaConsoleTest {
                         .comInterfaceDeSaida(interfaceDeSaidaDeTeste)
                         .comInterfaceDeEntrada(console)
                         .comComandoFlyweight(ControleRemoto.getInstancia())
-                        .comConversor(new ConversorConjuntoDadosComPropriedades())
+                        .comConversor(new ConversorDadosComPropriedades())
                         .comEntidades(entidadeDeLeituras)
                         .build();
 
@@ -49,7 +49,7 @@ public class EntradaConsoleTest {
 
     @Test
     public void testarConstrutorConsoleComSystemIn() {
-        this.console = new EntradaConsole(System.in);
+        this.console = new EntradaIUConsole(System.in);
 
         InputStream inputStream = console.getInputStream();
 

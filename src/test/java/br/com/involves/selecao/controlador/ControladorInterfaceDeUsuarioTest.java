@@ -1,15 +1,15 @@
 package br.com.involves.selecao.controlador;
 
 import br.com.involves.selecao.builder.EntidadeComPropriedadesBuilder;
-import br.com.involves.selecao.comando.ComandoHandler;
-import br.com.involves.selecao.comando.ComandoHandlerAjuda;
-import br.com.involves.selecao.conversor.ConversorConjuntoDadosComPropriedades;
-import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeEntradaDeTeste;
-import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeSaidaDeTeste;
+import br.com.involves.selecao.comando.Comando;
+import br.com.involves.selecao.comando.ComandoAjuda;
+import br.com.involves.selecao.conversor.ConversorDadosComPropriedades;
+import br.com.involves.selecao.entrada_saida.usuario.TesteEntradaIU;
+import br.com.involves.selecao.entrada_saida.usuario.TesteSaidaIU;
 import br.com.involves.selecao.fabrica.ControladorDeInterfaceDeUsuarioFactory;
 import br.com.involves.selecao.flyweight.ControleRemoto;
-import br.com.involves.selecao.modelo.EntidadeComPropriedades;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
+import br.com.involves.selecao.modelo.Propriedades;
 import br.com.involves.selecao.modelo.RetornoComando;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,29 +18,29 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ControladorDeInterfaceDeUsuarioTest {
+public class ControladorInterfaceDeUsuarioTest {
 
-    private ControladorDeInterfaceDeUsuario interfaceDeUsuario;
-    private InterfaceDeEntradaDeTeste interfaceDeEntradaDeTeste;
-    private InterfaceDeSaidaDeTeste interfaceDeSaidaDeTeste;
+    private ControladorInterfaceDeUsuario interfaceDeUsuario;
+    private TesteEntradaIU interfaceDeEntradaDeTeste;
+    private TesteSaidaIU interfaceDeSaidaDeTeste;
 
     @Before
     public void inicializa() {
         List<EntidadeDeLeitura> entidadeDeLeituras = new ArrayList<>();
 
-        EntidadeComPropriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "florianopolis")
                 .build();
-        EntidadeComPropriedades entidadePoa = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadePoa = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("rs", "porto alegre")
                 .build();
-        EntidadeComPropriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("pr", "curitiba")
                 .build();
-        EntidadeComPropriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "sao jose")
                 .build();
@@ -50,8 +50,8 @@ public class ControladorDeInterfaceDeUsuarioTest {
         entidadeDeLeituras.add(entidadeCuritiba);
         entidadeDeLeituras.add(entidadeSaoJose);
 
-        interfaceDeEntradaDeTeste = new InterfaceDeEntradaDeTeste();
-        interfaceDeSaidaDeTeste = new InterfaceDeSaidaDeTeste();
+        interfaceDeEntradaDeTeste = new TesteEntradaIU();
+        interfaceDeSaidaDeTeste = new TesteSaidaIU();
 
         interfaceDeUsuario =
                 new ControladorDeInterfaceDeUsuarioFactory()
@@ -59,7 +59,7 @@ public class ControladorDeInterfaceDeUsuarioTest {
                         .comInterfaceDeSaida(interfaceDeSaidaDeTeste)
                         .comInterfaceDeEntrada(interfaceDeEntradaDeTeste)
                         .comComandoFlyweight(ControleRemoto.getInstancia())
-                        .comConversor(new ConversorConjuntoDadosComPropriedades())
+                        .comConversor(new ConversorDadosComPropriedades())
                         .comEntidades(entidadeDeLeituras)
                         .build();
     }
@@ -77,7 +77,7 @@ public class ControladorDeInterfaceDeUsuarioTest {
         interfaceDeUsuario.iniciaComunicacaoComUsuario();
         interfaceDeUsuario.recebeComando("comando invalido");
 
-        ComandoHandler comandoAjuda = ControleRemoto.getInstancia().getInstance(ComandoHandlerAjuda.class);
+        Comando comandoAjuda = ControleRemoto.getInstancia().getInstance(ComandoAjuda.class);
         RetornoComando resultadoDeAjuda = comandoAjuda.exec(null, null);
 
         Assert.assertTrue(interfaceDeSaidaDeTeste.estaComResultado(resultadoDeAjuda.toString()));

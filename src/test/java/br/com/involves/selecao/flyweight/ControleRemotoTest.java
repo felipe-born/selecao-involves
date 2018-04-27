@@ -1,8 +1,8 @@
 package br.com.involves.selecao.flyweight;
 
-import br.com.involves.selecao.comando.ComandoHandler;
-import br.com.involves.selecao.comando.ComandoHandlerAjuda;
-import br.com.involves.selecao.comando.ComandoHandlerFiltrarPropriedade;
+import br.com.involves.selecao.comando.Comando;
+import br.com.involves.selecao.comando.ComandoAjuda;
+import br.com.involves.selecao.comando.ComandoFiltragem;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -21,17 +21,17 @@ public class ControleRemotoTest {
     @Test
     public void testeVerificarInstanciaClasseValidaSemParametroConstrutor() {
         ControleRemoto controleRemoto = ControleRemoto.getInstancia();
-        ComandoHandler instance = controleRemoto.getInstance(ComandoHandlerAjuda.class);
+        Comando instance = controleRemoto.getInstance(ComandoAjuda.class);
         Assert.assertNotNull(instance);
-        Assert.assertTrue(instance instanceof ComandoHandlerAjuda);
+        Assert.assertTrue(instance instanceof ComandoAjuda);
     }
 
     @Test
     public void testeVerificarInstanciaClasseValidaComParametroConstrutor() {
 
         ControleRemoto controleRemoto = ControleRemoto.getInstancia();
-        ComandoHandler instance = controleRemoto.getInstance(ComandoHandlerFiltrarPropriedade.class);
+        Comando instance = controleRemoto.getInstance(ComandoFiltragem.class);
         Assert.assertNotNull(instance);
-        Assert.assertTrue(instance instanceof ComandoHandlerFiltrarPropriedade);
+        Assert.assertTrue(instance instanceof ComandoFiltragem);
     }
 }

@@ -1,22 +1,22 @@
 package br.com.involves.selecao.builder;
 
-import br.com.involves.selecao.comando.ComandoHandler;
-import br.com.involves.selecao.controlador.ControladorDeInterfaceDeUsuario;
-import br.com.involves.selecao.conversor.ConversorEntidadeParaEntradaComando;
-import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeEntrada;
-import br.com.involves.selecao.entrada_saida.usuario.InterfaceDeSaida;
+import br.com.involves.selecao.comando.Comando;
+import br.com.involves.selecao.controlador.ControladorInterfaceDeUsuario;
+import br.com.involves.selecao.conversor.ConversorEntradaComando;
+import br.com.involves.selecao.entrada_saida.usuario.EntradaIU;
+import br.com.involves.selecao.entrada_saida.usuario.SaidaIU;
 import br.com.involves.selecao.flyweight.Flyweight;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 import javafx.util.Builder;
 
 import java.util.List;
 
-public class ControladorDeInterfaceDeUsuarioBuilder implements Builder<ControladorDeInterfaceDeUsuario> {
+public class ControladorDeInterfaceDeUsuarioBuilder implements Builder<ControladorInterfaceDeUsuario> {
     private List<EntidadeDeLeitura> entidadesDeLeitura;
-    private Flyweight<ComandoHandler> flyweight;
-    private ConversorEntidadeParaEntradaComando conversor;
-    private InterfaceDeEntrada interfaceDeEntrada;
-    private InterfaceDeSaida interfaceDeSaida;
+    private Flyweight<Comando> flyweight;
+    private ConversorEntradaComando conversor;
+    private EntradaIU entradaIU;
+    private SaidaIU saidaIU;
 
 
     public ControladorDeInterfaceDeUsuarioBuilder comEntidades(List<EntidadeDeLeitura> entidadesDeLeitura) {
@@ -24,29 +24,29 @@ public class ControladorDeInterfaceDeUsuarioBuilder implements Builder<Controlad
         return this;
     }
 
-    public ControladorDeInterfaceDeUsuarioBuilder comComandoFlyweight(Flyweight<ComandoHandler> flyweight) {
+    public ControladorDeInterfaceDeUsuarioBuilder comComandoFlyweight(Flyweight<Comando> flyweight) {
         this.flyweight = flyweight;
         return this;
     }
 
-    public ControladorDeInterfaceDeUsuarioBuilder comConversor(ConversorEntidadeParaEntradaComando conversor) {
+    public ControladorDeInterfaceDeUsuarioBuilder comConversor(ConversorEntradaComando conversor) {
 
         this.conversor = conversor;
         return this;
     }
 
-    public ControladorDeInterfaceDeUsuarioBuilder comInterfaceDeEntrada(InterfaceDeEntrada interfaceDeEntrada) {
-        this.interfaceDeEntrada = interfaceDeEntrada;
+    public ControladorDeInterfaceDeUsuarioBuilder comInterfaceDeEntrada(EntradaIU entradaIU) {
+        this.entradaIU = entradaIU;
         return this;
     }
 
-    public ControladorDeInterfaceDeUsuarioBuilder comInterfaceDeSaida(InterfaceDeSaida interfaceDeSaida) {
-        this.interfaceDeSaida = interfaceDeSaida;
+    public ControladorDeInterfaceDeUsuarioBuilder comInterfaceDeSaida(SaidaIU saidaIU) {
+        this.saidaIU = saidaIU;
         return this;
     }
 
     @Override
-    public ControladorDeInterfaceDeUsuario build() {
-        return new ControladorDeInterfaceDeUsuario(entidadesDeLeitura, conversor, flyweight, interfaceDeEntrada, interfaceDeSaida);
+    public ControladorInterfaceDeUsuario build() {
+        return new ControladorInterfaceDeUsuario(entidadesDeLeitura, conversor, flyweight, entradaIU, saidaIU);
     }
 }

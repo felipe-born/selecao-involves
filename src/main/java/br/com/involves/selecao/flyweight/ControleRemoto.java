@@ -7,7 +7,7 @@ import br.com.involves.selecao.parser.ParserParametroFiltrarPropriedade;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ControleRemoto implements Flyweight<ComandoHandler> {
+public class ControleRemoto implements Flyweight<Comando> {
     public static ControleRemoto instancia;
 
     /**
@@ -20,22 +20,22 @@ public class ControleRemoto implements Flyweight<ComandoHandler> {
     }
 
 
-    private Map<Class<? extends ComandoHandler>, ComandoHandler> mapClazzToHandler = new HashMap<>();
+    private Map<Class<? extends Comando>, Comando> mapClazzToHandler = new HashMap<>();
 
     private ControleRemoto() {
-        adiciona(new ComandoHandlerAjuda());
-        adiciona(new ComandoHandlerContarTodos());
-        adiciona(new ComandoHandlerContarDistintos(new ParserParametroContarDistintos()));
-        adiciona(new ComandoHandlerExit());
-        adiciona(new ComandoHandlerFiltrarPropriedade(new ParserParametroFiltrarPropriedade()));
+        adiciona(new ComandoAjuda());
+        adiciona(new ComandoContarTodos());
+        adiciona(new ComandoContarDistintos(new ParserParametroContarDistintos()));
+        adiciona(new ComandoSaida());
+        adiciona(new ComandoFiltragem(new ParserParametroFiltrarPropriedade()));
     }
 
-    private void adiciona(ComandoHandler handler) {
+    private void adiciona(Comando handler) {
         mapClazzToHandler.put(handler.getClass(), handler);
     }
 
     @Override
-    public ComandoHandler getInstance(Class<? extends ComandoHandler> clazz) {
+    public Comando getInstance(Class<? extends Comando> clazz) {
         return mapClazzToHandler.get(clazz);
     }
 }

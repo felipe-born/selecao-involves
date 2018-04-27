@@ -2,7 +2,7 @@ package br.com.involves.selecao.entrada_saida;
 
 import br.com.involves.selecao.builder.EntidadeComPropriedadesBuilder;
 import br.com.involves.selecao.excecao.EntidadeDeLeituraException;
-import br.com.involves.selecao.modelo.EntidadeCabecalho;
+import br.com.involves.selecao.modelo.Cabecalho;
 import br.com.involves.selecao.modelo.EntidadeDeLeitura;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class LinhaHandlerCSV implements LinhaHandler {
     public EntidadeDeLeitura lidarCom(String conteudo) throws EntidadeDeLeituraException {
         if (cabecalhoCSV.isEmpty()) {
             cabecalhoCSV = leiaCSV(conteudo);
-            return new EntidadeCabecalho(cabecalhoCSV);
+            return new Cabecalho(cabecalhoCSV);
         }
         List<String> valores = leiaCSV(conteudo);
         if (valores.size() != cabecalhoCSV.size())

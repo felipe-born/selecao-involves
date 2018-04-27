@@ -2,7 +2,7 @@ package br.com.involves.selecao.entrada_saida.usuario;
 
 import br.com.involves.selecao.modelo.RetornoComando;
 
-public class InterfaceDeSaidaDeTeste implements InterfaceDeSaida<RetornoComando> {
+public class TesteSaidaIU implements SaidaIU<RetornoComando> {
     private String resultado;
 
     @Override

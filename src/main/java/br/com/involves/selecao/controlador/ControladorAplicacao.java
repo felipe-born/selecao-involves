@@ -1,9 +1,9 @@
 package br.com.involves.selecao.controlador;
 
-import br.com.involves.selecao.conversor.ConversorConjuntoDadosComPropriedades;
+import br.com.involves.selecao.conversor.ConversorDadosComPropriedades;
 import br.com.involves.selecao.entrada_saida.LeitorDeArquivo;
-import br.com.involves.selecao.entrada_saida.usuario.EntradaConsole;
-import br.com.involves.selecao.entrada_saida.usuario.SaidaConsole;
+import br.com.involves.selecao.entrada_saida.usuario.EntradaIUConsole;
+import br.com.involves.selecao.entrada_saida.usuario.SaidaIUConsole;
 import br.com.involves.selecao.excecao.LeituraDeArquivoException;
 import br.com.involves.selecao.excecao.ValidacaoException;
 import br.com.involves.selecao.fabrica.ControladorDeInterfaceDeUsuarioFactory;
@@ -18,21 +18,21 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ControladorDaAplicacao implements Controlador {
-    private final ControladorDeAlertas controladorDeAlertas;
+public class ControladorAplicacao implements Controlador {
+    private final ControladorAlertas controladorAlertas;
     private final ParametrosAplicacao parametrosAplicacao;
     private final ValidadorDeParametrosAplicacao validadorDeParametrosAplicacao;
 
     private InputStream inputStream;
     private LeitorDeArquivo leitorDeArquivo;
-    private ControladorDeInterfaceDeUsuario controladorDeInterfaceDeUsuario;
+    private ControladorInterfaceDeUsuario controladorInterfaceDeUsuario;
 
 
-    public ControladorDaAplicacao(ControladorDeAlertas controladorDeAlertas,
-                                  ParametrosAplicacao parametrosAplicacao,
-                                  InputStream inputStream) {
+    public ControladorAplicacao(ControladorAlertas controladorAlertas,
+                                ParametrosAplicacao parametrosAplicacao,
+                                InputStream inputStream) {
 
-        this.controladorDeAlertas = controladorDeAlertas;
+        this.controladorAlertas = controladorAlertas;
         this.parametrosAplicacao = parametrosAplicacao;
         this.inputStream = inputStream;
         this.validadorDeParametrosAplicacao = new ValidadorDeParametrosAplicacao();
@@ -49,16 +49,16 @@ public class ControladorDaAplicacao implements Controlador {
             e.printStackTrace();
         }
 
-        controladorDeInterfaceDeUsuario = new ControladorDeInterfaceDeUsuarioFactory()
+        controladorInterfaceDeUsuario = new ControladorDeInterfaceDeUsuarioFactory()
                 .getControladorDeInterface()
                 .comEntidades(entidadesDeLeitura)
                 .comComandoFlyweight(ControleRemoto.getInstancia())
-                .comConversor(new ConversorConjuntoDadosComPropriedades())
-                .comInterfaceDeEntrada(new EntradaConsole(inputStream))
-                .comInterfaceDeSaida(new SaidaConsole())
+                .comConversor(new ConversorDadosComPropriedades())
+                .comInterfaceDeEntrada(new EntradaIUConsole(inputStream))
+                .comInterfaceDeSaida(new SaidaIUConsole())
                 .build();
 
-        controladorDeInterfaceDeUsuario.iniciaComunicacaoComUsuario();
+        controladorInterfaceDeUsuario.iniciaComunicacaoComUsuario();
     }
 
     private void inicializaLeitorDeArquivo() throws LeituraDeArquivoException {

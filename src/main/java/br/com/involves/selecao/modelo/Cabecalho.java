@@ -5,10 +5,10 @@ import br.com.involves.selecao.excecao.EntidadeDeLeituraException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class EntidadeCabecalho implements EntidadeDeLeitura {
+public class Cabecalho implements EntidadeDeLeitura {
     private Collection<String> cabecalhoCSV;
 
-    public EntidadeCabecalho(Collection<String> cabecalhoCSV) throws EntidadeDeLeituraException {
+    public Cabecalho(Collection<String> cabecalhoCSV) throws EntidadeDeLeituraException {
         if (cabecalhoCSV == null)
             throw new EntidadeDeLeituraException(new NullPointerException("Cabeçalho CSV não pode ser nulo!"));
         if (cabecalhoCSV.isEmpty())

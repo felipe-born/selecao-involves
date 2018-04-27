@@ -3,11 +3,11 @@ package br.com.involves.selecao.modelo;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class EntidadeComPropriedades implements EntidadeDeLeitura {
+public class Propriedades implements EntidadeDeLeitura {
 
     private Map<String, String> propriedades = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
 
-    public EntidadeComPropriedades() {
+    public Propriedades() {
     }
 
     public void addPropriedade(String propriedade, String valor) {

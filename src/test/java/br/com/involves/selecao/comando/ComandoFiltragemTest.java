@@ -1,9 +1,9 @@
 package br.com.involves.selecao.comando;
 
 import br.com.involves.selecao.builder.EntidadeComPropriedadesBuilder;
-import br.com.involves.selecao.modelo.ConjuntoDadosComPropriedade;
-import br.com.involves.selecao.modelo.EntidadeCabecalho;
-import br.com.involves.selecao.modelo.EntidadeComPropriedades;
+import br.com.involves.selecao.modelo.DadosComPropriedade;
+import br.com.involves.selecao.modelo.Cabecalho;
+import br.com.involves.selecao.modelo.Propriedades;
 import br.com.involves.selecao.modelo.RetornoComando;
 import br.com.involves.selecao.parser.ParametroComandoParser;
 import br.com.involves.selecao.parser.ParserParametroFiltrarPropriedade;
@@ -13,36 +13,36 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class ComandoHandlerFiltrarPropriedadeTest {
+public class ComandoFiltragemTest {
 
-    private ComandoHandlerFiltrarPropriedade comandoHandlerFiltrarPropriedade;
-    private EntidadeCabecalho cabecalho;
+    private ComandoFiltragem comandoFiltragem;
+    private Cabecalho cabecalho;
 
     @Before
     public void init() {
         ParametroComandoParser parser = new ParserParametroFiltrarPropriedade();
 
-        comandoHandlerFiltrarPropriedade = new ComandoHandlerFiltrarPropriedade(parser);
-        cabecalho = new EntidadeCabecalho(Arrays.asList("uf", "cidade"));
+        comandoFiltragem = new ComandoFiltragem(parser);
+        cabecalho = new Cabecalho(Arrays.asList("uf", "cidade"));
     }
 
     @Test
     public void testarComandoComValoresCorretos() {
-        ConjuntoDadosComPropriedade dados = new ConjuntoDadosComPropriedade(cabecalho);
+        DadosComPropriedade dados = new DadosComPropriedade(cabecalho);
 
-        EntidadeComPropriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "florianopolis")
                 .build();
-        EntidadeComPropriedades entidadePoa = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadePoa = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("rs", "porto alegre")
                 .build();
-        EntidadeComPropriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("pr", "curitiba")
                 .build();
-        EntidadeComPropriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "sao jose")
                 .build();
@@ -52,7 +52,7 @@ public class ComandoHandlerFiltrarPropriedadeTest {
         dados.adiciona(entidadeCuritiba);
         dados.adiciona(entidadeSaoJose);
 
-        RetornoComando resultadoDoComando = comandoHandlerFiltrarPropriedade.exec("filter uf sc", dados);
+        RetornoComando resultadoDoComando = comandoFiltragem.exec("filter uf sc", dados);
         Assert.assertTrue(resultadoDoComando.toString().contains("sao jose"));
         Assert.assertTrue(resultadoDoComando.toString().contains("florianopolis"));
         Assert.assertTrue(resultadoDoComando.toString().contains("uf"));
@@ -60,21 +60,21 @@ public class ComandoHandlerFiltrarPropriedadeTest {
 
     @Test
     public void testarComandoComFiltroInvalido() {
-        ConjuntoDadosComPropriedade dados = new ConjuntoDadosComPropriedade(cabecalho);
+        DadosComPropriedade dados = new DadosComPropriedade(cabecalho);
 
-        EntidadeComPropriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "florianopolis")
                 .build();
-        EntidadeComPropriedades entidadePoa = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadePoa = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("rs", "porto alegre")
                 .build();
-        EntidadeComPropriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("pr", "curitiba")
                 .build();
-        EntidadeComPropriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "sao jose")
                 .build();
@@ -84,28 +84,28 @@ public class ComandoHandlerFiltrarPropriedadeTest {
         dados.adiciona(entidadeCuritiba);
         dados.adiciona(entidadeSaoJose);
 
-        RetornoComando resultadoDoComando = comandoHandlerFiltrarPropriedade.exec("filter musica gospel", dados);
+        RetornoComando resultadoDoComando = comandoFiltragem.exec("filter musica gospel", dados);
         Assert.assertTrue(resultadoDoComando.toString().contains("uf"));
         Assert.assertTrue(resultadoDoComando.toString().contains("cidade"));
     }
 
     @Test
     public void testarComandoComFiltroInexistente() {
-        ConjuntoDadosComPropriedade dados = new ConjuntoDadosComPropriedade(cabecalho);
+        DadosComPropriedade dados = new DadosComPropriedade(cabecalho);
 
-        EntidadeComPropriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeFlorianopolis = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "florianopolis")
                 .build();
-        EntidadeComPropriedades entidadePoa = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadePoa = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("rs", "porto alegre")
                 .build();
-        EntidadeComPropriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeCuritiba = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("pr", "curitiba")
                 .build();
-        EntidadeComPropriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
+        Propriedades entidadeSaoJose = new EntidadeComPropriedadesBuilder()
                 .comPropriedades("uf", "cidade")
                 .comValores("sc", "sao jose")
                 .build();
@@ -115,7 +115,7 @@ public class ComandoHandlerFiltrarPropriedadeTest {
         dados.adiciona(entidadeCuritiba);
         dados.adiciona(entidadeSaoJose);
 
-        RetornoComando resultadoDoComando = comandoHandlerFiltrarPropriedade.exec("filter uf sp", dados);
+        RetornoComando resultadoDoComando = comandoFiltragem.exec("filter uf sp", dados);
         Assert.assertTrue(resultadoDoComando.toString().contains("uf"));
         Assert.assertTrue(resultadoDoComando.toString().contains("cidade"));
     }

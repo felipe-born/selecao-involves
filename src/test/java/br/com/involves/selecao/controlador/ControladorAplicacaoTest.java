@@ -9,7 +9,7 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-public class ControladorDaAplicacaoTest {
+public class ControladorAplicacaoTest {
 
     private ControladorDaAplicacaoBuilder controladorDaAplicacaoBuilder;
 
@@ -18,7 +18,7 @@ public class ControladorDaAplicacaoTest {
         InputStream exitInputStream = new ByteArrayInputStream("exit".getBytes());
         controladorDaAplicacaoBuilder = new ControladorDaAplicacaoFactory()
                 .getControladorDaAplicacao()
-                .comControladorDeAlertas(new ControladorDeAlertas())
+                .comControladorDeAlertas(new ControladorAlertas())
                 .comInputStream(exitInputStream)
         ;
     }
@@ -26,29 +26,29 @@ public class ControladorDaAplicacaoTest {
     @Test(expected = RuntimeException.class)
     public void inicializaConstrutorControladorComParametroVazio() {
 
-        ControladorDaAplicacao controladorDaAplicacao = controladorDaAplicacaoBuilder
+        ControladorAplicacao controladorAplicacao = controladorDaAplicacaoBuilder
                 .comParametros(new ParametrosAplicacao(""))
                 .build();
 
-        controladorDaAplicacao.inicializaAplicacao();
+        controladorAplicacao.inicializaAplicacao();
     }
 
     @Test(expected = RuntimeException.class)
     public void inicializaConstrutorControladorComParametroNulo() {
 
-        ControladorDaAplicacao controladorDaAplicacao = controladorDaAplicacaoBuilder
+        ControladorAplicacao controladorAplicacao = controladorDaAplicacaoBuilder
                 .comParametros(new ParametrosAplicacao(null))
                 .build();
 
-        controladorDaAplicacao.inicializaAplicacao();
+        controladorAplicacao.inicializaAplicacao();
     }
 
     @Test
     public void inicializaConstrutorControladorComParametroValido() {
-        ControladorDaAplicacao controladorDaAplicacao = controladorDaAplicacaoBuilder
+        ControladorAplicacao controladorAplicacao = controladorDaAplicacaoBuilder
                 .comParametros(new ParametrosAplicacao("cidades.csv"))
                 .build();
 
-        controladorDaAplicacao.inicializaAplicacao();
+        controladorAplicacao.inicializaAplicacao();
     }
 }

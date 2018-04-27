@@ -6,14 +6,14 @@ import br.com.involves.selecao.modelo.ParametrosAplicacao;
 import java.util.Arrays;
 import java.util.List;
 
-public class ControladorDeParametrosAplicacao implements Controlador {
-    private final ControladorDeAlertas controladorDeAlertas;
+public class ControladorParametros implements Controlador {
+    private final ControladorAlertas controladorAlertas;
     private List<String> parametros;
 
-    public ControladorDeParametrosAplicacao(String[] parametros, ControladorDeAlertas controladorDeAlertas) {
+    public ControladorParametros(String[] parametros, ControladorAlertas controladorAlertas) {
 
         this.parametros = Arrays.asList(parametros);
-        this.controladorDeAlertas = controladorDeAlertas;
+        this.controladorAlertas = controladorAlertas;
     }
 
     public ParametrosAplicacao controle() {
@@ -26,7 +26,7 @@ public class ControladorDeParametrosAplicacao implements Controlador {
                 .stream()
                 .map(argumento -> argumento.substring(0, argumento.indexOf("=") + 1))
                 .filter(argumento -> TipoDeParametro.getTipo(argumento) == null)
-                .forEach(argumento -> controladorDeAlertas.criaNovoAlerta(argumento));
+                .forEach(argumento -> controladorAlertas.criaNovoAlerta(argumento));
     }
 
     private ParametrosAplicacao geraParametrosAplicacao() {
